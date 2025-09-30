@@ -58,32 +58,36 @@ const About = () => {
     }
   }
 
-  return (
+  return null
+  const _aboutDisabled = `
+    <>
     <section
       ref={ref}
-      className="relative py-20 bg-gradient-to-br from-white via-orange-50/20 to-white overflow-hidden"
+      className="relative py-24 md:py-28 bg-gradient-to-b from-sky-50 via-indigo-50/60 to-white overflow-hidden"
     >
       {/* Enhanced Decorative elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        {/* Soft top-right ellipse */}
         <motion.div
-          className="absolute top-10 right-10 w-40 h-40 bg-orange-100 rounded-full opacity-30"
+          className="absolute -top-20 -right-24 w-[480px] h-[480px] bg-sky-200/40 rounded-full blur-3xl"
           animate={{
-            scale: [1, 1.2, 1],
-            rotate: [0, 180, 360]
+            scale: [1, 1.05, 1],
+            rotate: [0, 90, 180]
           }}
-          transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+          transition={{ duration: 30, repeat: Infinity, ease: "linear" }}
         />
+        {/* Floating accent bubble */}
         <motion.div
-          className="absolute bottom-20 left-10 w-24 h-24 bg-blue-100 rounded-full opacity-40"
+          className="absolute bottom-16 left-10 w-28 h-28 bg-indigo-200/60 rounded-full blur-xl"
           animate={{
             y: [0, -20, 0],
             scale: [1, 0.8, 1]
           }}
           transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
         />
-        <div className="absolute bottom-0 left-0 w-32 h-32 bg-orange-100/50 -z-10">
-          <div className="absolute w-full h-full border-2 border-orange-200 transform translate-x-8 translate-y-8" />
-        </div>
+        {/* Subtle diagonal wave using borders */}
+        <div className="absolute -bottom-12 -left-12 w-64 h-64 bg-sky-100/40 -z-10 rounded-full" />
+        <div className="absolute -bottom-20 left-20 w-72 h-72 border-2 border-indigo-100 rounded-full -z-10" />
       </div>
 
       <div className="container mx-auto px-4 relative z-10">
@@ -100,19 +104,20 @@ const About = () => {
           >
             <div className="relative group">
               {/* Decorative background elements */}
-              <div className="absolute -bottom-6 -right-6 w-full h-full border-2 border-orange-200 rounded-2xl transform rotate-3 group-hover:rotate-6 transition-transform duration-500" />
-              <div className="absolute -top-4 -left-4 w-20 h-20 bg-gradient-to-br from-orange-400 to-orange-600 rounded-full opacity-20 group-hover:opacity-30 transition-opacity duration-500" />
+              <div className="absolute -bottom-6 -right-6 w-full h-full border-2 border-sky-200 rounded-2xl transform rotate-3 group-hover:rotate-6 transition-transform duration-500" />
+              <div className="absolute -top-4 -left-4 w-20 h-20 bg-gradient-to-br from-sky-400 to-indigo-600 rounded-full opacity-20 group-hover:opacity-30 transition-opacity duration-500" />
 
               {/* Main image container */}
               <div className="relative rounded-2xl overflow-hidden bg-white shadow-2xl group-hover:shadow-3xl transition-all duration-500 hover-lift">
-                <div className="absolute inset-0 bg-gradient-to-tr from-orange-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                <div className="absolute inset-0 bg-gradient-to-tr from-sky-400/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                 <Image
                   src="/Webutsav_ITTeam.JPG"
                   alt="WebUtsav IT Team - Professional Digital Solutions"
                   width={600}
                   height={400}
-                  className="w-full h-[450px] object-cover transform group-hover:scale-105 transition-transform duration-700"
-                  priority
+                  className="w-full h-64 sm:h-80 md:h-[420px] object-cover transform group-hover:scale-105 transition-transform duration-700"
+                  loading="lazy"
+                  sizes="(min-width: 1024px) 600px, 100vw"
                 />
 
                 {/* Overlay badge */}
@@ -128,46 +133,37 @@ const About = () => {
 
           {/* Enhanced Content section */}
           <motion.div
-            className="flex flex-col gap-8"
+            className="flex flex-col gap-6 md:gap-8"
             variants={textVariants}
           >
             <motion.div variants={itemVariants}>
               <motion.h2
-                className="text-4xl lg:text-5xl xl:text-6xl font-bold text-gray-900 leading-tight"
+                className="text-3xl sm:text-4xl md:text-5xl xl:text-6xl font-extrabold tracking-tight text-gray-900 leading-[1.15]"
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
               >
-                About{" "}
-                <span className="gradient-text relative">
-                  WebUtsav
-                  <motion.div
-                    className="absolute -bottom-2 left-0 h-1 bg-gradient-to-r from-orange-500 to-orange-600 rounded-full"
-                    initial={{ width: 0 }}
-                    animate={{ width: "100%" }}
-                    transition={{ duration: 1, delay: 0.8 }}
-                  />
-                </span>
+                About <span className="text-brand-primary-dark">WebUtsav</span>
               </motion.h2>
             </motion.div>
 
             <motion.div
-              className="space-y-6"
+              className="space-y-4 md:space-y-6"
               variants={itemVariants}
             >
               <motion.p
-                className="text-lg text-gray-700 leading-relaxed"
+                className="text-base md:text-lg text-gray-700 leading-relaxed"
                 variants={itemVariants}
               >
-                <span className="text-orange-600 font-semibold">WebUtsav</span> is a leading digital solutions provider based in{" "}
+                <span className="text-brand-primary-dark font-semibold">WebUtsav</span> is a leading digital solutions provider based in{" "}
                 <span className="font-semibold text-gray-900">Kharadi, Pune</span>. We specialize in{" "}
-                <span className="text-blue-600 font-medium">App Development</span>,{" "}
+                <span className="text-brand-primary-dark font-medium">App Development</span>,{" "}
                 <span className="text-green-600 font-medium">Web Development</span>, and{" "}
                 <span className="text-purple-600 font-medium">Digital Marketing</span>.
               </motion.p>
 
               <motion.p
-                className="text-lg text-gray-700 leading-relaxed"
+                className="text-base md:text-lg text-gray-700 leading-relaxed"
                 variants={itemVariants}
               >
                 With a proven track record of success, we have successfully completed over{" "}
@@ -179,12 +175,12 @@ const About = () => {
 
             {/* Stats Section */}
             <motion.div
-              className="grid grid-cols-3 gap-6 py-6"
+              className="grid grid-cols-2 sm:grid-cols-3 gap-4 sm:gap-6 py-6"
               variants={itemVariants}
             >
               <div className="text-center">
                 <motion.div
-                  className="text-2xl font-bold text-orange-600"
+                  className="text-2xl font-bold text-brand-primary-dark"
                   initial={{ scale: 0 }}
                   animate={{ scale: 1 }}
                   transition={{ duration: 0.6, delay: 0.8 }}
@@ -195,7 +191,7 @@ const About = () => {
               </div>
               <div className="text-center">
                 <motion.div
-                  className="text-2xl font-bold text-orange-600"
+                  className="text-2xl font-bold text-brand-primary-dark"
                   initial={{ scale: 0 }}
                   animate={{ scale: 1 }}
                   transition={{ duration: 0.6, delay: 1 }}
@@ -206,7 +202,7 @@ const About = () => {
               </div>
               <div className="text-center">
                 <motion.div
-                  className="text-2xl font-bold text-orange-600"
+                  className="text-2xl font-bold text-brand-primary-dark"
                   initial={{ scale: 0 }}
                   animate={{ scale: 1 }}
                   transition={{ duration: 0.6, delay: 1.2 }}
@@ -219,7 +215,7 @@ const About = () => {
 
             <motion.div
               variants={itemVariants}
-              className="pt-4"
+              className="pt-2 md:pt-4"
             >
               <motion.div
                 whileHover={{ scale: 1.05 }}
@@ -228,11 +224,11 @@ const About = () => {
               >
                 <Link
                   href="/AboutUs"
-                  className="group inline-flex items-center px-8 py-4 bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white font-semibold rounded-full shadow-lg hover:shadow-xl transition-all duration-300 space-x-2"
+                  className="group inline-flex items-center px-7 py-3 md:px-8 md:py-4 bg-gradient-to-r from-sky-600 to-indigo-600 hover:from-sky-700 hover:to-indigo-700 text-white font-semibold rounded-full shadow-lg hover:shadow-xl transition-all duration-300 space-x-2"
                 >
                   <span>More About Us</span>
                   <motion.svg
-                    className="w-5 h-5"
+                    className="w-4 h-4 md:w-5 md:h-5"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -248,7 +244,10 @@ const About = () => {
         </motion.div>
       </div>
     </section>
+
+    </>
   )
+  `;
 }
 
 export default About

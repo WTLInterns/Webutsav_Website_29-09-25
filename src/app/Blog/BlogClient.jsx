@@ -136,24 +136,24 @@ export default function BlogPage() {
           transition={{ duration: 1 }}
         >
           {/* Brand Colors Gradient Background */}
-          <div className="absolute inset-0 bg-gradient-to-br from-blue-600 via-blue-500 to-orange-500"></div>
+          <div className="absolute inset-0 bg-gradient-to-br from-brand-primary-dark via-brand-primary-dark to-brand-secondary-dark"></div>
 
           {/* Transparent Overlay for Brand Consistency */}
-          <div className="absolute inset-0 bg-gradient-to-tr from-orange-500/30 via-transparent to-blue-600/20"></div>
+          <div className="absolute inset-0 bg-gradient-to-tr from-brand-primary/30 via-transparent to-brand-secondary-dark/20"></div>
 
           {/* Floating Brand Color Elements */}
           <motion.div
-            className="absolute top-10 right-10 w-64 h-64 bg-orange-400/20 rounded-full blur-3xl"
+            className="absolute top-10 right-10 w-64 h-64 bg-brand-primary/20 rounded-full blur-3xl"
             animate={{ y: [0, -20, 0], scale: [1, 1.1, 1] }}
             transition={{ duration: 8, repeat: Infinity }}
           />
           <motion.div
-            className="absolute bottom-10 left-10 w-48 h-48 bg-blue-300/25 rounded-full blur-2xl"
+            className="absolute bottom-10 left-10 w-48 h-48 bg-brand-secondary/25 rounded-full blur-2xl"
             animate={{ y: [0, 20, 0], scale: [1, 0.9, 1] }}
             transition={{ duration: 6, repeat: Infinity }}
           />
           <motion.div
-            className="absolute top-1/3 left-1/4 w-32 h-32 bg-orange-300/15 rounded-full blur-2xl"
+            className="absolute top-1/3 left-1/4 w-32 h-32 bg-brand-primary/15 rounded-full blur-2xl"
             animate={{ y: [0, -15, 0], x: [0, 15, 0] }}
             transition={{ duration: 9, repeat: Infinity }}
           />
@@ -202,9 +202,9 @@ export default function BlogPage() {
               transition={{ duration: 0.8 }}
             >
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-                Latest <span className="bg-gradient-to-r from-blue-600 to-orange-500 bg-clip-text text-transparent">Articles</span>
+                Latest <span className="bg-gradient-to-r from-brand-primary-dark to-brand-secondary bg-clip-text text-transparent">Articles</span>
               </h2>
-              <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-orange-500 mx-auto rounded-full"></div>
+              <div className="w-24 h-1 bg-gradient-to-r from-brand-primary to-brand-secondary mx-auto rounded-full"></div>
             </motion.div>
 
             {/* Blog Cards */}
@@ -232,9 +232,9 @@ export default function BlogPage() {
               transition={{ duration: 0.8 }}
             >
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-                Connect <span className="bg-gradient-to-r from-blue-600 to-orange-500 bg-clip-text text-transparent">With Us</span>
+                Connect <span className="bg-gradient-to-r from-brand-primary-dark to-brand-secondary bg-clip-text text-transparent">With Us</span>
               </h2>
-              <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-orange-500 mx-auto rounded-full"></div>
+              <div className="w-24 h-1 bg-gradient-to-r from-brand-primary to-brand-secondary mx-auto rounded-full"></div>
             </motion.div>
 
             <Connect />
@@ -245,8 +245,8 @@ export default function BlogPage() {
         <section className="py-20 bg-gradient-to-br from-gray-50 to-white relative overflow-hidden">
           {/* Background Elements */}
           <div className="absolute inset-0">
-            <div className="absolute top-20 left-10 w-64 h-64 bg-blue-100/20 rounded-full blur-3xl"></div>
-            <div className="absolute bottom-20 right-10 w-48 h-48 bg-orange-200/30 rounded-full blur-2xl"></div>
+            <div className="absolute top-20 left-10 w-64 h-64 bg-indigo-100/20 rounded-full blur-3xl"></div>
+            <div className="absolute bottom-20 right-10 w-48 h-48 bg-sky-200/30 rounded-full blur-2xl"></div>
           </div>
 
           <div className="max-w-6xl mx-auto px-4 relative z-10">
@@ -257,7 +257,7 @@ export default function BlogPage() {
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
             >
-              Why Businesses Around the World Choose <span className="bg-gradient-to-r from-blue-600 to-orange-500 bg-clip-text text-transparent">WebUtsav</span>
+              Why Businesses Around the World Choose <span className="bg-gradient-to-r from-brand-primary-dark to-brand-secondary bg-clip-text text-transparent">WebUtsav</span>
             </motion.h2>
 
             <motion.div
@@ -269,10 +269,10 @@ export default function BlogPage() {
               <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
                 {/* Feature 1 */}
                 <motion.div 
-                  className="bg-white rounded-xl shadow-md p-6 flex flex-col items-center text-center hover:shadow-lg transition-all duration-300 border border-blue-100/30 hover:border-orange-200/50"
+                  className="bg-white rounded-xl shadow-md p-6 flex flex-col items-center text-center hover:shadow-lg transition-all duration-300 border border-sky-100/30 hover:border-indigo-200/50"
                   whileHover={{ scale: 1.05, y: -5 }}
                 >
-                  <div className="w-16 h-16 rounded-full flex items-center justify-center mb-3 bg-gradient-to-br from-blue-500 to-blue-600">
+                  <div className="w-16 h-16 rounded-full flex items-center justify-center mb-3 bg-gradient-to-br from-brand-primary to-brand-primary-dark">
                     <svg xmlns="http://www.w3.org/2000/svg" className="text-white" width="32" height="32" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10"/></svg>
                   </div>
                   <h4 className="font-semibold text-lg">International Experience</h4>
@@ -281,10 +281,10 @@ export default function BlogPage() {
                 
                 {/* Feature 2 */}
                 <motion.div 
-                  className="bg-white rounded-xl shadow-md p-6 flex flex-col items-center text-center hover:shadow-lg transition-all duration-300 border border-blue-100/30 hover:border-orange-200/50"
+                  className="bg-white rounded-xl shadow-md p-6 flex flex-col items-center text-center hover:shadow-lg transition-all duration-300 border border-sky-100/30 hover:border-indigo-200/50"
                   whileHover={{ scale: 1.05, y: -5 }}
                 >
-                  <div className="w-16 h-16 rounded-full flex items-center justify-center mb-3 bg-gradient-to-br from-orange-500 to-orange-600">
+                  <div className="w-16 h-16 rounded-full flex items-center justify-center mb-3 bg-gradient-to-br from-brand-secondary to-brand-secondary-dark">
                     <svg xmlns="http://www.w3.org/2000/svg" className="text-white" width="32" height="32" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2h4"/><polyline points="16 3 21 3 21 8"/><line x1="15" y1="9" x2="21" y2="3"/></svg>
                   </div>
                   <h4 className="font-semibold text-lg">Cultural Sensitivity</h4>
@@ -293,10 +293,10 @@ export default function BlogPage() {
                 
                 {/* Feature 3 */}
                 <motion.div 
-                  className="bg-white rounded-xl shadow-md p-6 flex flex-col items-center text-center hover:shadow-lg transition-all duration-300 border border-blue-100/30 hover:border-orange-200/50"
+                  className="bg-white rounded-xl shadow-md p-6 flex flex-col items-center text-center hover:shadow-lg transition-all duration-300 border border-sky-100/30 hover:border-indigo-200/50"
                   whileHover={{ scale: 1.05, y: -5 }}
                 >
-                  <div className="w-16 h-16 rounded-full flex items-center justify-center mb-3 bg-gradient-to-br from-blue-500 to-blue-600">
+                  <div className="w-16 h-16 rounded-full flex items-center justify-center mb-3 bg-gradient-to-br from-brand-primary to-brand-primary-dark">
                     <svg xmlns="http://www.w3.org/2000/svg" className="text-white" width="32" height="32" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
                   </div>
                   <h4 className="font-semibold text-lg">Multi-Time-Zone Support</h4>
@@ -305,10 +305,10 @@ export default function BlogPage() {
                 
                 {/* Feature 4 */}
                 <motion.div 
-                  className="bg-white rounded-xl shadow-md p-6 flex flex-col items-center text-center hover:shadow-lg transition-all duration-300 border border-blue-100/30 hover:border-orange-200/50"
+                  className="bg-white rounded-xl shadow-md p-6 flex flex-col items-center text-center hover:shadow-lg transition-all duration-300 border border-sky-100/30 hover:border-indigo-200/50"
                   whileHover={{ scale: 1.05, y: -5 }}
                 >
-                  <div className="w-16 h-16 rounded-full flex items-center justify-center mb-3 bg-gradient-to-br from-orange-500 to-orange-600">
+                  <div className="w-16 h-16 rounded-full flex items-center justify-center mb-3 bg-gradient-to-br from-brand-secondary to-brand-secondary-dark">
                     <svg xmlns="http://www.w3.org/2000/svg" className="text-white" width="32" height="32" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 3v4"/><path d="M8 3v4"/><path d="M2 13h20"/></svg>
                   </div>
                   <h4 className="font-semibold text-lg">Cutting-Edge Technology</h4>
@@ -317,10 +317,10 @@ export default function BlogPage() {
                 
                 {/* Feature 5 */}
                 <motion.div 
-                  className="bg-white rounded-xl shadow-md p-6 flex flex-col items-center text-center hover:shadow-lg transition-all duration-300 border border-blue-100/30 hover:border-orange-200/50"
+                  className="bg-white rounded-xl shadow-md p-6 flex flex-col items-center text-center hover:shadow-lg transition-all duration-300 border border-sky-100/30 hover:border-indigo-200/50"
                   whileHover={{ scale: 1.05, y: -5 }}
                 >
-                  <div className="w-16 h-16 rounded-full flex items-center justify-center mb-3 bg-gradient-to-br from-blue-500 to-blue-600">
+                  <div className="w-16 h-16 rounded-full flex items-center justify-center mb-3 bg-gradient-to-br from-brand-primary to-brand-primary-dark">
                     <svg xmlns="http://www.w3.org/2000/svg" className="text-white" width="32" height="32" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M9 17v-2a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2"/><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M16 3v4"/><path d="M8 3v4"/></svg>
                   </div>
                   <h4 className="font-semibold text-lg">Proven Track Record</h4>
@@ -335,8 +335,8 @@ export default function BlogPage() {
         <section className="relative py-20 px-4 bg-gradient-to-b from-gray-50 to-white overflow-hidden">
           {/* Background Elements */}
           <div className="absolute inset-0">
-            <div className="absolute top-20 left-10 w-64 h-64 bg-blue-100/20 rounded-full blur-3xl"></div>
-            <div className="absolute bottom-20 right-10 w-48 h-48 bg-orange-200/30 rounded-full blur-2xl"></div>
+            <div className="absolute top-20 left-10 w-64 h-64 bg-indigo-100/20 rounded-full blur-3xl"></div>
+            <div className="absolute bottom-20 right-10 w-48 h-48 bg-sky-200/30 rounded-full blur-2xl"></div>
           </div>
 
           <div className="max-w-6xl mx-auto relative z-10">
@@ -347,7 +347,7 @@ export default function BlogPage() {
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
             >
-              Industries We Serve <span className="bg-gradient-to-r from-blue-600 to-orange-500 bg-clip-text text-transparent">Internationally</span>
+              Industries We Serve <span className="bg-gradient-to-r from-brand-primary-dark to-brand-secondary bg-clip-text text-transparent">Internationally</span>
             </motion.h2>
             <motion.h4 
               className="text-lg text-center mb-10 text-gray-700 font-medium"
@@ -415,8 +415,8 @@ export default function BlogPage() {
                 >
                   <div className={`rounded-full w-16 h-16 flex items-center justify-center mb-3 group-hover:scale-105 transition-transform duration-300 ${
                     idx % 2 === 0 
-                      ? "bg-gradient-to-br from-blue-500 to-blue-600" 
-                      : "bg-gradient-to-br from-orange-500 to-orange-600"
+                      ? "bg-gradient-to-br from-brand-primary to-brand-primary-dark" 
+                      : "bg-gradient-to-br from-brand-secondary to-brand-secondary-dark"
                   }`}>
                     <span className="text-white text-2xl">
                       {industry.icon}
@@ -435,7 +435,7 @@ export default function BlogPage() {
         <section className="py-16 px-4 bg-gradient-to-b from-white to-gray-50 relative overflow-hidden">
           {/* Background Elements */}
           <div className="absolute inset-0">
-            <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-blue-50/30 via-orange-50/20 to-transparent"></div>
+            <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-sky-50/30 via-indigo-50/20 to-transparent"></div>
           </div>
 
           <div className="max-w-6xl mx-auto relative z-10">
@@ -446,7 +446,7 @@ export default function BlogPage() {
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
             >
-              Case Studies – <span className="bg-gradient-to-r from-blue-600 to-orange-500 bg-clip-text text-transparent">Global Impact</span> in Action
+              Case Studies – <span className="bg-gradient-to-r from-brand-primary-dark to-brand-secondary bg-clip-text text-transparent">Global Impact</span> in Action
             </motion.h2>
             <motion.h4 
               className="text-lg text-center mb-12 text-gray-700 font-medium"
@@ -495,13 +495,13 @@ export default function BlogPage() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.7, delay: 0.15 * idx, ease: 'easeOut' }}
-                  className="relative bg-white rounded-2xl shadow-lg p-6 flex flex-col h-full border border-blue-100/30 hover:border-orange-200/50 transition-all duration-300"
+                  className="relative bg-white rounded-2xl shadow-lg p-6 flex flex-col h-full border border-sky-100/30 hover:border-indigo-200/50 transition-all duration-300"
                 >
                   <div className="relative mb-4">
                     <img src={cs.img} alt={cs.title} className="h-40 w-full object-cover rounded-xl shadow-md" />
                     {cs.flag}
                   </div>
-                  <h3 className="font-bold text-xl text-blue-600 mb-2">{cs.title}</h3>
+                  <h3 className="font-bold text-xl text-brand-primary-dark mb-2">{cs.title}</h3>
                   <p className="text-gray-600 text-sm leading-relaxed">{cs.desc}</p>
                 </motion.div>
               ))}
@@ -515,7 +515,7 @@ export default function BlogPage() {
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
             >
-              Our Work Process – From <span className="bg-gradient-to-r from-blue-600 to-orange-500 bg-clip-text text-transparent">Idea to Impact</span>
+              Our Work Process – From <span className="bg-gradient-to-r from-brand-primary-dark to-brand-secondary bg-clip-text text-transparent">Idea to Impact</span>
             </motion.h3>
             
             <div className="flex flex-col md:flex-row items-center justify-between gap-8 mt-8">
@@ -556,8 +556,8 @@ export default function BlogPage() {
                   <div className="z-10 flex flex-col items-center">
                     <span className={`w-12 h-12 flex items-center justify-center rounded-full font-bold text-lg shadow mb-3 ${
                       idx % 2 === 0 
-                        ? "bg-gradient-to-br from-blue-500 to-blue-600 text-white" 
-                        : "bg-gradient-to-br from-orange-500 to-orange-600 text-white"
+                        ? "bg-gradient-to-br from-brand-primary to-brand-primary-dark text-white" 
+                        : "bg-gradient-to-br from-brand-secondary to-brand-secondary-dark text-white"
                     }`}>
                       {idx+1}
                     </span>

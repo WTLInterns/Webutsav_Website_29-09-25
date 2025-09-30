@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<!-- saved from url=(0036)https://login.ey.com/myey/ey-connect -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>
+    EY – My EY
+  </title>
+  <script nonce="" src="./auth0-spa-js.production.js.download"></script>
+
+  <script type="text/javascript" nonce="">
+    var auth0Domain = 'auth02.ey.com';
+    var auth0ClientId = 'hFQGdp6SKdoALKKXEBlFOgq1zSzs7cc5';
+    var auth0;
+    auth0 = new Auth0Client({
+      domain: window.auth0Domain,
+      client_id: window.auth0ClientId,
+      cacheLocation: 'localstorage',
+      redirect_uri: window.location.origin
+    });
+
+    var checkLoginState = function (handleState) {
+      try {
+        auth0
+          .isAuthenticated()
+          .then(function (isAuthenticated) {
+            window.LoginStateAuth0 = isAuthenticated;
+            if (isAuthenticated === true) {
+              handleState(true);
+            } else {
+              handleState(false);
+            }
+          })
+          .catch(function (error) {
+            handleState(false);
+          });
+      } catch (error) {
+        console.log('checkLoginState error');
+      }
+    };
+
+    function eyConnect() {
+      var callingSite = document.referrer.split("/").slice(0,3).join("/");
+      checkLoginState(function (state) {
+        window.LoginState = state;
+        window.parent.postMessage(JSON.stringify({ loggedIn: state }), callingSite);
+      });
+    }
+    eyConnect();
+  </script>
+</head>
+
+<body>
+  <div>
+  </div>
+
+
+</body></html>

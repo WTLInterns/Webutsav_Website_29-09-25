@@ -31,10 +31,10 @@ const Footer = () => {
 
   return (
     <footer className="relative bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white overflow-hidden">
-      {/* Orange Circle Background Elements */}
+      {/* Background Accents (tuned to blue/indigo) */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <motion.div
-          className="absolute top-20 right-20 w-40 h-40 bg-orange-500/10 rounded-full"
+          className="absolute top-20 right-20 w-40 h-40 bg-brand-primary/10 rounded-full"
           animate={{
             scale: [1, 1.3, 1],
             rotate: [0, 360]
@@ -42,7 +42,7 @@ const Footer = () => {
           transition={{ duration: 30, repeat: Infinity, ease: "linear" }}
         />
         <motion.div
-          className="absolute bottom-32 left-20 w-32 h-32 bg-orange-400/8 rounded-full"
+          className="absolute bottom-32 left-20 w-32 h-32 bg-indigo-400/8 rounded-full"
           animate={{
             y: [0, -30, 0],
             scale: [1, 0.7, 1]
@@ -50,7 +50,7 @@ const Footer = () => {
           transition={{ duration: 20, repeat: Infinity, ease: "easeInOut" }}
         />
         <motion.div
-          className="absolute top-1/2 left-1/3 w-24 h-24 bg-orange-600/6 rounded-full"
+          className="absolute top-1/2 left-1/3 w-24 h-24 bg-brand-primary-dark/6 rounded-full"
           animate={{
             x: [0, 40, 0],
             opacity: [0.06, 0.12, 0.06]
@@ -82,7 +82,7 @@ const Footer = () => {
 
               <p className="text-gray-300 text-sm leading-relaxed mb-6">
                 Webutsav is a results-driven{" "}
-                <span className="text-orange-400 font-semibold">digital marketing agency</span> that helps businesses grow through tailored SEO, PPC, and social media strategies. We focus on delivering measurable success by driving targeted traffic and boosting brand visibility.
+                <span className="text-sky-400 font-semibold">digital marketing agency</span> that helps businesses grow through tailored SEO, PPC, and social media strategies. We focus on delivering measurable success by driving targeted traffic and boosting brand visibility.
               </p>
 
               {/* Contact Info */}
@@ -92,12 +92,12 @@ const Footer = () => {
                   whileHover={{ x: 5 }}
                   transition={{ duration: 0.3 }}
                 >
-                  <div className="w-10 h-10 bg-gradient-to-br from-orange-500 to-orange-600 rounded-full flex items-center justify-center mr-3 group-hover:scale-110 transition-transform duration-300">
+                  <div className="w-10 h-10 bg-gradient-to-br from-sky-600 to-indigo-600 rounded-full flex items-center justify-center mr-3 group-hover:scale-110 transition-transform duration-300">
                     <MdEmail className="text-white text-sm" />
                   </div>
                   <a
                     href="mailto:info@webutsav.com"
-                    className="text-gray-300 hover:text-orange-400 transition-colors duration-300"
+                    className="text-gray-300 hover:text-sky-400 transition-colors duration-300"
                   >
                     info@webutsav.com
                   </a>
@@ -108,12 +108,12 @@ const Footer = () => {
                   whileHover={{ x: 5 }}
                   transition={{ duration: 0.3 }}
                 >
-                  <div className="w-10 h-10 bg-gradient-to-br from-orange-500 to-orange-600 rounded-full flex items-center justify-center mr-3 group-hover:scale-110 transition-transform duration-300">
+                  <div className="w-10 h-10 bg-gradient-to-br from-sky-600 to-indigo-600 rounded-full flex items-center justify-center mr-3 group-hover:scale-110 transition-transform duration-300">
                     <MdPhone className="text-white text-sm" />
                   </div>
                   <a
                     href="tel:+918766922792"
-                    className="text-gray-300 hover:text-orange-400 transition-colors duration-300"
+                    className="text-gray-300 hover:text-sky-400 transition-colors duration-300"
                   >
                     +91 8766922792
                   </a>
@@ -125,8 +125,8 @@ const Footer = () => {
             <motion.div variants={itemVariants}>
               <h3 className="text-xl font-bold mb-6 text-white relative">
                 Our{" "}
-                <span className="text-orange-400">Services</span>
-                <div className="absolute -bottom-2 left-0 w-12 h-0.5 bg-gradient-to-r from-orange-500 to-orange-600 rounded-full" />
+                <span className="text-sky-400">Services</span>
+                <div className="absolute -bottom-2 left-0 w-12 h-0.5 bg-gradient-to-r from-sky-600 to-indigo-600 rounded-full" />
               </h3>
               <ul className="space-y-3">
                 {[
@@ -148,10 +148,10 @@ const Footer = () => {
                   >
                     <Link
                       href={item.href}
-                      className="block text-gray-300 hover:text-orange-400 transition-all duration-300 text-sm py-1 group relative"
+                      className="block text-gray-300 hover:text-sky-400 transition-all duration-300 text-sm py-1 group relative"
                     >
                       <span className="relative z-10">{item.name}</span>
-                      <div className="absolute inset-0 bg-orange-500/10 rounded-md scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
+                      <div className="absolute inset-0 bg-brand-primary/10 rounded-md scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
                     </Link>
                   </motion.li>
                 ))}
@@ -162,8 +162,8 @@ const Footer = () => {
             <motion.div variants={itemVariants}>
               <h3 className="text-xl font-bold mb-6 text-white relative">
                 Quick{" "}
-                <span className="text-orange-400">Links</span>
-                <div className="absolute -bottom-2 left-0 w-12 h-0.5 bg-gradient-to-r from-orange-500 to-orange-600 rounded-full" />
+                <span className="text-sky-400">Links</span>
+                <div className="absolute -bottom-2 left-0 w-12 h-0.5 bg-gradient-to-r from-sky-600 to-indigo-600 rounded-full" />
               </h3>
               <ul className="space-y-3">
                 {[
@@ -180,10 +180,10 @@ const Footer = () => {
                   >
                     <Link
                       href={nav.href}
-                      className="block text-gray-300 hover:text-orange-400 transition-all duration-300 text-sm py-1 group relative"
+                      className="block text-gray-300 hover:text-sky-400 transition-all duration-300 text-sm py-1 group relative"
                     >
                       <span className="relative z-10">{nav.name}</span>
-                      <div className="absolute inset-0 bg-orange-500/10 rounded-md scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
+                      <div className="absolute inset-0 bg-brand-primary/10 rounded-md scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
                     </Link>
                   </motion.li>
                 ))}
@@ -191,7 +191,7 @@ const Footer = () => {
 
               {/* Social Media Links */}
               <div className="mt-8">
-                <h4 className="text-lg font-semibold mb-4 text-orange-400">Follow Us</h4>
+                <h4 className="text-lg font-semibold mb-4 text-sky-400">Follow Us</h4>
                 <div className="flex space-x-3">
                   {[
                     {
@@ -234,8 +234,8 @@ const Footer = () => {
             <motion.div variants={itemVariants}>
               <h3 className="text-xl font-bold mb-6 text-white relative">
                 Our{" "}
-                <span className="text-orange-400">Location</span>
-                <div className="absolute -bottom-2 left-0 w-12 h-0.5 bg-gradient-to-r from-orange-500 to-orange-600 rounded-full" />
+                <span className="text-sky-400">Location</span>
+                <div className="absolute -bottom-2 left-0 w-12 h-0.5 bg-gradient-to-r from-sky-600 to-indigo-600 rounded-full" />
               </h3>
 
               <motion.div
@@ -243,7 +243,7 @@ const Footer = () => {
                 whileHover={{ x: 5 }}
                 transition={{ duration: 0.3 }}
               >
-                <div className="w-10 h-10 bg-gradient-to-br from-orange-500 to-orange-600 rounded-full flex items-center justify-center mr-3 mt-1 group-hover:scale-110 transition-transform duration-300 flex-shrink-0">
+                <div className="w-10 h-10 bg-gradient-to-br from-sky-600 to-indigo-600 rounded-full flex items-center justify-center mr-3 mt-1 group-hover:scale-110 transition-transform duration-300 flex-shrink-0">
                   <MdLocationOn className="text-white text-sm" />
                 </div>
                 <p className="text-gray-300 text-sm leading-relaxed">
@@ -252,11 +252,11 @@ const Footer = () => {
               </motion.div>
 
               <motion.div
-                className="w-full h-48 rounded-xl overflow-hidden shadow-lg border border-orange-500/20 group"
+                className="relative w-full h-48 rounded-xl overflow-hidden shadow-lg border border-sky-500/20 group"
                 whileHover={{ scale: 1.02 }}
                 transition={{ duration: 0.3 }}
               >
-                <div className="absolute inset-0 bg-gradient-to-tr from-orange-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-xl" />
+                <div className="pointer-events-none absolute inset-0 bg-gradient-to-tr from-sky-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-xl z-0" />
                 <iframe
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3782.287409771789!2d73.94191347496397!3d18.561076882540295!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2c1386837ffd5%3A0xcba65bf9ace19de0!2sWTL%20Tourism%20PVT%20LTD!5e0!3m2!1sen!2sin!4v1740069526162!5m2!1sen!2sin"
                   width="100%"
@@ -265,7 +265,7 @@ const Footer = () => {
                   allowFullScreen=""
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
-                  className="rounded-xl"
+                  className="relative z-10 rounded-xl"
                 ></iframe>
               </motion.div>
             </motion.div>
@@ -273,61 +273,32 @@ const Footer = () => {
 
           {/* Bottom Section */}
           <motion.div
-            className="border-t border-gray-700 mt-12 pt-8"
+            className="border-t border-gray-700 mt-12 pt-6"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.5 }}
             viewport={{ once: true }}
           >
-            <div className="flex flex-col md:flex-row items-center justify-between">
-              <motion.p
-                className="text-gray-400 text-sm mb-4 md:mb-0"
-                whileHover={{ color: "#FFA500" }}
-              >
-                &copy; {new Date().getFullYear()}{" "}
-                <span className="text-orange-400 font-semibold">WebUtsav</span> | All rights reserved.
+            <div className="flex flex-col md:flex-row items-center justify-center text-center gap-3">
+              <motion.p className="text-gray-400 text-sm">
+                &copy; {new Date().getFullYear()} <span className="text-sky-400 font-semibold">WebUtsav</span> | All rights reserved. &nbsp;•&nbsp; Crafted with{' '}
+                <motion.span className="text-sky-400" animate={{ scale: [1, 1.2, 1] }} transition={{ duration: 2, repeat: Infinity }}>♥</motion.span>
+                {' '}by the Webutsav Team
               </motion.p>
-
-              <div className="flex space-x-6">
-                <motion.div whileHover={{ y: -2 }}>
-                  <Link
-                    href="/Privacy"
-                    className="text-gray-400 hover:text-orange-400 transition-colors duration-300 text-sm"
-                  >
-                    Privacy Policy
-                  </Link>
-                </motion.div>
-                <motion.div whileHover={{ y: -2 }}>
-                  <Link
-                    href="/"
-                    className="text-gray-400 hover:text-orange-400 transition-colors duration-300 text-sm"
-                  >
-                    Terms of Use
-                  </Link>
-                </motion.div>
-              </div>
             </div>
 
-            {/* Professional Badge */}
-            <motion.div
-              className="text-center mt-6 pt-6 border-t border-gray-800"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.7 }}
-              viewport={{ once: true }}
-            >
-              <p className="text-gray-500 text-xs">
-                Crafted with{" "}
-                <motion.span
-                  className="text-orange-400 mx-1"
-                  animate={{ scale: [1, 1.2, 1] }}
-                  transition={{ duration: 2, repeat: Infinity }}
-                >
-                  ♥
-                </motion.span>
-                by the Webutsav Team
-              </p>
-            </motion.div>
+            <div className="mt-4 flex items-center justify-center gap-6">
+              <motion.div whileHover={{ y: -2 }}>
+                <Link href="/Privacy" className="text-gray-400 hover:text-sky-400 transition-colors duration-300 text-sm">
+                  Privacy Policy
+                </Link>
+              </motion.div>
+              <motion.div whileHover={{ y: -2 }}>
+                <Link href="/" className="text-gray-400 hover:text-sky-400 transition-colors duration-300 text-sm">
+                  Terms of Use
+                </Link>
+              </motion.div>
+            </div>
           </motion.div>
         </motion.div>
       </div>

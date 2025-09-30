@@ -94,24 +94,24 @@ export default function ProductsPage() {
         transition={{ duration: 1 }}
       >
         {/* Brand Colors Gradient Background */}
-        <div className="absolute inset-0 bg-gradient-to-br from-blue-600 via-blue-500 to-orange-500"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-brand-primary-dark via-brand-primary-dark to-brand-secondary-dark"></div>
 
         {/* Transparent Overlay for Brand Consistency */}
-        <div className="absolute inset-0 bg-gradient-to-tr from-orange-500/30 via-transparent to-blue-600/20"></div>
+        <div className="absolute inset-0 bg-gradient-to-tr from-brand-primary/30 via-transparent to-brand-secondary-dark/20"></div>
 
         {/* Floating Brand Color Elements */}
         <motion.div
-          className="absolute top-10 right-10 w-64 h-64 bg-orange-400/20 rounded-full blur-3xl"
+          className="absolute top-10 right-10 w-64 h-64 bg-brand-primary/20 rounded-full blur-3xl"
           animate={{ y: [0, -20, 0], scale: [1, 1.1, 1] }}
           transition={{ duration: 8, repeat: Infinity }}
         />
         <motion.div
-          className="absolute bottom-10 left-10 w-48 h-48 bg-blue-300/25 rounded-full blur-2xl"
+          className="absolute bottom-10 left-10 w-48 h-48 bg-brand-secondary/25 rounded-full blur-2xl"
           animate={{ y: [0, 20, 0], scale: [1, 0.9, 1] }}
           transition={{ duration: 6, repeat: Infinity }}
         />
         <motion.div
-          className="absolute top-1/3 left-1/4 w-32 h-32 bg-orange-300/15 rounded-full blur-2xl"
+          className="absolute top-1/3 left-1/4 w-32 h-32 bg-brand-primary/15 rounded-full blur-2xl"
           animate={{ y: [0, -15, 0], x: [0, 15, 0] }}
           transition={{ duration: 9, repeat: Infinity }}
         />
@@ -168,9 +168,9 @@ export default function ProductsPage() {
             transition={{ duration: 0.8 }}
           >
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-              Our <span className="bg-gradient-to-r from-blue-600 to-orange-500 bg-clip-text text-transparent">Products</span>
+              Our <span className="bg-gradient-to-r from-brand-primary-dark to-brand-secondary bg-clip-text text-transparent">Products</span>
             </h2>
-            <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-orange-500 mx-auto rounded-full"></div>
+            <div className="w-24 h-1 bg-gradient-to-r from-brand-primary to-brand-secondary mx-auto rounded-full"></div>
             <p className="text-xl text-gray-600 mt-6 max-w-3xl mx-auto">
                Innovative solutions designed to transform your business operations and drive success.
             </p>
@@ -191,13 +191,13 @@ export default function ProductsPage() {
                   href={product.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="relative block professional-card p-8 rounded-2xl border border-blue-100/30 group-hover:border-orange-200/50 transition-all duration-300 h-full text-center group-hover:scale-105 group-hover:-translate-y-2"
+                  className="relative block professional-card p-8 rounded-2xl border border-sky-100/30 group-hover:border-indigo-200/50 transition-all duration-300 h-full text-center group-hover:scale-105 group-hover:-translate-y-2"
                   style={{ textDecoration: 'none' }}
                 >
                   {/* Product Category Badge */}
                   <div className={`inline-block px-3 py-1 rounded-full text-xs font-semibold mb-4 ${
                     idx % 2 === 0
-                      ? "bg-blue-100 text-blue-600"
+                      ? "bg-blue-100 text-brand-primary-dark"
                       : "bg-orange-100 text-orange-600"
                   }`}>
                     {product.category}
@@ -214,7 +214,7 @@ export default function ProductsPage() {
 
                   {/* Product Title */}
                   <h3 className={`text-2xl font-bold text-gray-900 mb-3 transition-colors duration-300 ${
-                    idx % 2 === 0 ? "group-hover:text-blue-600" : "group-hover:text-orange-600"
+                    idx % 2 === 0 ? "group-hover:text-brand-primary-dark" : "group-hover:text-brand-primary-dark"
                   }`}>
                     {product.title}
                   </h3>

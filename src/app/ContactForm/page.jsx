@@ -111,27 +111,27 @@ export default function ContactForm() {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8 }}
         >
-          <div className="professional-card p-8 rounded-2xl border border-blue-100/30">
+          <div className="professional-card p-8 rounded-2xl border border-sky-100/30">
             <h2 className="text-3xl font-bold mb-4">
-              <span className="bg-gradient-to-r from-blue-600 to-orange-500 bg-clip-text text-transparent">Connect with us</span>
+              <span className="bg-gradient-to-r from-brand-primary-dark to-brand-secondary bg-clip-text text-transparent">Connect with us</span>
             </h2>
-            <div className="w-16 h-1 bg-gradient-to-r from-blue-500 to-orange-500 rounded-full mb-6"></div>
+            <div className="w-16 h-1 bg-gradient-to-r from-brand-primary to-brand-secondary rounded-full mb-6"></div>
             <p className="text-gray-700 text-lg leading-relaxed mb-8">
               For all other enquiries, please complete this form and one of the team will be in touch.
             </p>
 
             {/* Contact Card */}
             <motion.div
-              className="group professional-card p-6 rounded-2xl border border-blue-100/30 hover:border-orange-200/50 transition-all duration-300 mb-6"
+              className="group professional-card p-6 rounded-2xl border border-sky-100/30 hover:border-indigo-200/50 transition-all duration-300 mb-6"
               whileHover={{ y: -5 }}
             >
               <div className="flex items-center space-x-4">
-                <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-blue-600 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                <div className="w-12 h-12 bg-gradient-to-br from-brand-primary to-brand-primary-dark rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                   <span className="text-white text-xl">📧</span>
                 </div>
                 <a
                   href="mailto:info@webutsav.com"
-                  className="text-blue-600 hover:text-blue-700 font-semibold text-lg transition-colors duration-300"
+                  className="text-brand-primary-dark hover:text-brand-primary-dark font-semibold text-lg transition-colors duration-300"
                 >
                   info@webutsav.com
                 </a>
@@ -140,7 +140,7 @@ export default function ContactForm() {
 
             {/* Map with About Us Styling */}
             <motion.div
-              className="professional-card rounded-2xl overflow-hidden border border-blue-100/30 h-64"
+              className="professional-card rounded-2xl overflow-hidden border border-sky-100/30 h-64"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
@@ -159,15 +159,15 @@ export default function ContactForm() {
 
         {/* Contact Form with About Us Styling */}
         <motion.div
-          className="professional-card p-8 rounded-2xl border border-blue-100/30"
+          className="professional-card p-8 rounded-2xl border border-sky-100/30"
           initial={{ opacity: 0, x: 50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
         >
           <h3 className="text-3xl font-bold mb-4">
-            <span className="bg-gradient-to-r from-blue-600 to-orange-500 bg-clip-text text-transparent">Send us a message</span>
+            <span className="bg-gradient-to-r from-brand-primary-dark to-brand-secondary bg-clip-text text-transparent">Send us a message</span>
           </h3>
-          <div className="w-16 h-1 bg-gradient-to-r from-blue-500 to-orange-500 rounded-full mb-8"></div>
+          <div className="w-16 h-1 bg-gradient-to-r from-brand-primary to-brand-secondary rounded-full mb-8"></div>
 
           <form ref={formRef} className="space-y-6" onSubmit={handleSubmit}>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -278,7 +278,7 @@ export default function ContactForm() {
             >
               <motion.button
                 type="submit"
-                className="w-full bg-gradient-to-r from-blue-500 to-orange-500 text-white font-bold py-4 px-8 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
+                className="w-full bg-gradient-to-r from-brand-primary to-brand-secondary text-white font-bold py-4 px-8 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
                 disabled={isSubmitting}
                 whileHover={{ scale: 1.02, y: -2 }}
                 whileTap={{ scale: 0.98 }}

@@ -54,24 +54,24 @@ export default function ContactPage() {
           transition={{ duration: 1 }}
         >
           {/* Brand Colors Gradient Background */}
-          <div className="absolute inset-0 bg-gradient-to-br from-blue-600 via-blue-500 to-orange-500"></div>
+          <div className="absolute inset-0 bg-gradient-to-br from-brand-primary-dark via-brand-primary-dark to-brand-secondary-dark"></div>
 
           {/* Transparent Overlay for Brand Consistency */}
-          <div className="absolute inset-0 bg-gradient-to-tr from-orange-500/30 via-transparent to-blue-600/20"></div>
+          <div className="absolute inset-0 bg-gradient-to-tr from-brand-primary/30 via-transparent to-brand-secondary-dark/20"></div>
 
           {/* Floating Brand Color Elements */}
           <motion.div
-            className="absolute top-10 right-10 w-64 h-64 bg-orange-400/20 rounded-full blur-3xl"
+            className="absolute top-10 right-10 w-64 h-64 bg-brand-primary/20 rounded-full blur-3xl"
             animate={{ y: [0, -20, 0], scale: [1, 1.1, 1] }}
             transition={{ duration: 8, repeat: Infinity }}
           />
           <motion.div
-            className="absolute bottom-10 left-10 w-48 h-48 bg-blue-300/25 rounded-full blur-2xl"
+            className="absolute bottom-10 left-10 w-48 h-48 bg-brand-secondary/25 rounded-full blur-2xl"
             animate={{ y: [0, 20, 0], scale: [1, 0.9, 1] }}
             transition={{ duration: 6, repeat: Infinity }}
           />
           <motion.div
-            className="absolute top-1/3 left-1/4 w-32 h-32 bg-orange-300/15 rounded-full blur-2xl"
+            className="absolute top-1/3 left-1/4 w-32 h-32 bg-brand-primary/15 rounded-full blur-2xl"
             animate={{ y: [0, -15, 0], x: [0, 15, 0] }}
             transition={{ duration: 9, repeat: Infinity }}
           />
@@ -128,9 +128,9 @@ export default function ContactPage() {
               transition={{ duration: 0.8 }}
             >
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-                Let's <span className="bg-gradient-to-r from-blue-600 to-orange-500 bg-clip-text text-transparent">Connect</span>
+                Let's <span className="bg-gradient-to-r from-brand-primary-dark to-brand-secondary bg-clip-text text-transparent">Connect</span>
               </h2>
-              <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-orange-500 mx-auto rounded-full"></div>
+              <div className="w-24 h-1 bg-gradient-to-r from-brand-primary to-brand-secondary mx-auto rounded-full"></div>
               <p className="text-xl text-gray-600 mt-6 max-w-3xl mx-auto">
                 Ready to transform your digital presence? Get in touch with our experts today.
               </p>

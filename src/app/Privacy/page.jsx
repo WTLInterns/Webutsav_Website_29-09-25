@@ -122,7 +122,7 @@ const PrivacyPolicy = () => {
               "To comply with legal obligations and regulatory requirements"
             ].map((item, index) => (
               <div key={index} className="flex items-start p-4 border border-gray-200 rounded-lg bg-white">
-                <span className="w-6 h-6 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center text-sm font-semibold mr-4 flex-shrink-0 mt-0.5">
+                <span className="w-6 h-6 bg-blue-100 text-brand-primary-dark rounded-full flex items-center justify-center text-sm font-semibold mr-4 flex-shrink-0 mt-0.5">
                   {index + 1}
                 </span>
                 <span className="text-gray-700">{item}</span>
@@ -157,7 +157,7 @@ const PrivacyPolicy = () => {
           <div className="bg-amber-50 border border-amber-200 p-6 rounded-lg">
             <div className="flex items-start">
               <div className="flex-shrink-0">
-                <svg className="w-5 h-5 text-amber-600 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                <svg className="w-5 h-5 text-brand-primary-dark mt-0.5" fill="currentColor" viewBox="0 0 20 20">
                   <path fillRule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clipRule="evenodd"/>
                 </svg>
               </div>
@@ -213,12 +213,12 @@ const PrivacyPolicy = () => {
       content: (
         <div className="bg-blue-50 border border-blue-200 rounded-lg p-8">
           <div className="text-center mb-6">
-            <svg className="w-16 h-16 text-blue-600 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg className="w-16 h-16 text-brand-primary-dark mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
             </svg>
             <h3 className="text-2xl font-bold text-blue-800 mb-4">Data Protection</h3>
           </div>
-          <p className="text-blue-700 text-center leading-relaxed">
+          <p className="text-brand-primary-dark text-center leading-relaxed">
             We implement appropriate technical and organizational security measures to protect your personal data against unauthorized access, alteration, disclosure, or destruction. Our security practices are regularly reviewed and updated.
           </p>
         </div>
@@ -292,7 +292,7 @@ const PrivacyPolicy = () => {
               </svg>
               <h4 className="text-xl font-semibold">Exercise Your Rights</h4>
             </div>
-            <p className="text-blue-100">
+            <p className="text-sky-100">
               To exercise any of these rights, please contact us at <strong className="text-white">info@webutsav.com</strong>. We will respond to your request within the timeframe required by applicable law.
             </p>
           </div>
@@ -305,7 +305,7 @@ const PrivacyPolicy = () => {
       content: (
         <div className="bg-amber-50 border border-amber-200 rounded-lg p-6">
           <div className="flex items-start">
-            <svg className="w-6 h-6 text-amber-600 mr-4 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg className="w-6 h-6 text-brand-primary-dark mr-4 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"/>
             </svg>
             <div>
@@ -370,7 +370,7 @@ const PrivacyPolicy = () => {
               <span className="ml-4 text-gray-600">Privacy Policy</span>
             </div>
             <nav className="flex items-center space-x-4 text-sm text-gray-600">
-              <a href="#" className="hover:text-blue-600 transition-colors">Home</a>
+              <a href="#" className="hover:text-brand-primary-dark transition-colors">Home</a>
               <span>•</span>
               <span className="text-gray-900">Privacy Policy</span>
             </nav>
@@ -391,7 +391,7 @@ const PrivacyPolicy = () => {
                     onClick={() => scrollToSection(index)}
                     className={`block w-full text-left px-3 py-2 text-sm rounded-md transition-colors ${
                       activeSection === index
-                        ? 'bg-blue-100 text-blue-700 font-medium'
+                        ? 'bg-blue-100 text-brand-primary-dark font-medium'
                         : 'text-gray-600 hover:text-gray-900 hover:bg-gray-100'
                     }`}
                   >
@@ -408,10 +408,10 @@ const PrivacyPolicy = () => {
               {/* Header */}
               <div className="border-b bg-gradient-to-r from-blue-600 to-blue-700 text-white p-8 rounded-t-lg">
                 <h1 className="text-4xl font-bold mb-2">Privacy Policy</h1>
-                <p className="text-blue-100 text-lg">
+                <p className="text-sky-100 text-lg">
                   Last reviewed: <strong>July 2025</strong>
                 </p>
-                <p className="text-blue-100 mt-2">
+                <p className="text-sky-100 mt-2">
                   Learn how WebUtsav collects, uses, and protects your personal information.
                 </p>
               </div>
@@ -446,28 +446,28 @@ const PrivacyPolicy = () => {
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                     <div className="bg-white rounded-lg p-6 border border-gray-200">
                       <div className="flex items-center mb-3">
-                        <svg className="w-5 h-5 text-blue-600 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                        <svg className="w-5 h-5 text-brand-primary-dark mr-3" fill="currentColor" viewBox="0 0 20 20">
                           <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/>
                           <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/>
                         </svg>
                         <h4 className="font-semibold text-gray-900">Email</h4>
                       </div>
-                      <p className="text-blue-600 font-medium">info@webutsav.com</p>
+                      <p className="text-brand-primary-dark font-medium">info@webutsav.com</p>
                     </div>
                     
                     <div className="bg-white rounded-lg p-6 border border-gray-200">
                       <div className="flex items-center mb-3">
-                        <svg className="w-5 h-5 text-blue-600 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                        <svg className="w-5 h-5 text-brand-primary-dark mr-3" fill="currentColor" viewBox="0 0 20 20">
                           <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/>
                         </svg>
                         <h4 className="font-semibold text-gray-900">Phone</h4>
                       </div>
-                      <p className="text-blue-600 font-medium">+91 87669 22792</p>
+                      <p className="text-brand-primary-dark font-medium">+91 87669 22792</p>
                     </div>
                     
                     <div className="bg-white rounded-lg p-6 border border-gray-200">
                       <div className="flex items-center mb-3">
-                        <svg className="w-5 h-5 text-blue-600 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                        <svg className="w-5 h-5 text-brand-primary-dark mr-3" fill="currentColor" viewBox="0 0 20 20">
                           <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd"/>
                         </svg>
                         <h4 className="font-semibold text-gray-900">Address</h4>

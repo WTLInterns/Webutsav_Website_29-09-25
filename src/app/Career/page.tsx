@@ -142,15 +142,15 @@ const CareerPage = () => {
       {/* Professional Hero Section with Brand Colors */}
       <section ref={heroRef} className="relative w-full h-[80vh] flex items-center justify-center overflow-hidden">
         {/* Brand Colors Gradient Background */}
-        <div className="absolute inset-0 bg-gradient-to-br from-blue-600 via-blue-500 to-orange-500"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-brand-primary-dark via-brand-primary-dark to-brand-secondary-dark"></div>
 
         {/* Transparent Overlay for Brand Consistency */}
-        <div className="absolute inset-0 bg-gradient-to-tr from-orange-500/30 via-transparent to-blue-600/20"></div>
+        <div className="absolute inset-0 bg-gradient-to-tr from-brand-primary/30 via-transparent to-brand-secondary-dark/20"></div>
 
         {/* Floating Brand Color Elements */}
-        <div className="absolute top-10 right-10 w-64 h-64 bg-orange-400/20 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-10 left-10 w-48 h-48 bg-blue-300/25 rounded-full blur-2xl animate-bounce"></div>
-        <div className="absolute top-1/3 left-1/4 w-32 h-32 bg-orange-300/15 rounded-full blur-2xl animate-ping"></div>
+        <div className="absolute top-10 right-10 w-64 h-64 bg-brand-primary/20 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-10 left-10 w-48 h-48 bg-brand-secondary/25 rounded-full blur-2xl animate-bounce"></div>
+        <div className="absolute top-1/3 left-1/4 w-32 h-32 bg-brand-primary/15 rounded-full blur-2xl animate-ping"></div>
 
         {/* Content */}
         <div className="relative z-10 text-center px-6 max-w-4xl mx-auto">
@@ -170,8 +170,8 @@ const CareerPage = () => {
               onClick={() => jobsRef.current?.scrollIntoView({ behavior: 'smooth' })}
             >
               <span className="flex items-center space-x-3">
-                <span className="bg-gradient-to-r from-blue-600 to-orange-500 bg-clip-text text-transparent">View Open Positions</span>
-                <span className="w-6 h-6 text-orange-500">→</span>
+                <span className="bg-gradient-to-r from-brand-primary-dark to-brand-secondary bg-clip-text text-transparent">View Open Positions</span>
+                <span className="w-6 h-6 text-sky-400">→</span>
               </span>
             </button>
             <button className="border-2 border-white/80 text-white hover:bg-white/10 backdrop-blur-sm px-8 py-4 rounded-full text-lg font-semibold transition-all duration-300 hover:scale-105">
@@ -186,7 +186,7 @@ const CareerPage = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             <div className="transform hover:scale-105 transition-all duration-300">
-              <div className="text-3xl md:text-4xl font-bold text-blue-600 mb-2">300+</div>
+              <div className="text-3xl md:text-4xl font-bold text-brand-primary-dark mb-2">300+</div>
               <div className="text-gray-600">Happy Clients</div>
             </div>
             <div className="transform hover:scale-105 transition-all duration-300">
@@ -237,7 +237,7 @@ const CareerPage = () => {
                   <p className="text-gray-600 text-sm mb-3">
                     {deptJobCount} open position{deptJobCount !== 1 ? 's' : ''}
                   </p>
-                  <button className="text-blue-600 font-semibold text-sm hover:text-blue-700 transition-colors">
+                  <button className="text-brand-primary-dark font-semibold text-sm hover:text-brand-primary-dark transition-colors">
                     View Jobs →
                   </button>
                 </div>
@@ -378,7 +378,7 @@ const CareerPage = () => {
           {/* Loading State */}
           {loading ? (
             <div className="flex justify-center items-center py-12">
-              <Loader className="animate-spin text-blue-600" size={48} />
+              <Loader className="animate-spin text-brand-primary-dark" size={48} />
               <span className="ml-3 text-gray-600">Loading jobs...</span>
             </div>
           ) : (
@@ -445,7 +445,7 @@ const CareerPage = () => {
 
                       <div className="flex flex-col sm:flex-row gap-3 lg:ml-6">
                         <button
-                          className="px-6 py-2 border border-blue-600 text-blue-600 rounded-lg hover:bg-blue-50 transition-colors"
+                          className="px-6 py-2 border border-blue-600 text-brand-primary-dark rounded-lg hover:bg-blue-50 transition-colors"
                           onClick={() => handleViewDetails(job.jobId)}
                         >
                           Learn More
@@ -493,7 +493,7 @@ const CareerPage = () => {
               
               {jobDetailsLoading ? (
                 <div className="flex justify-center items-center py-8">
-                  <Loader className="animate-spin text-blue-600" size={32} />
+                  <Loader className="animate-spin text-brand-primary-dark" size={32} />
                   <span className="ml-3 text-gray-600">Loading details...</span>
                 </div>
               ) : (
@@ -1040,15 +1040,15 @@ const SuccessModal = ({ jobInfo, onClose }) => {
           <h3 className="font-semibold text-gray-900 mb-2">What happens next:</h3>
           <ul className="space-y-2 text-sm text-gray-700">
             <li className="flex items-start gap-2">
-              <span className="text-blue-600 font-bold">•</span>
+              <span className="text-brand-primary-dark font-bold">•</span>
               <span>Our team will review your application within 2-3 business days</span>
             </li>
             <li className="flex items-start gap-2">
-              <span className="text-blue-600 font-bold">•</span>
+              <span className="text-brand-primary-dark font-bold">•</span>
               <span>If your profile matches our requirements, we'll contact you for the next steps</span>
             </li>
             <li className="flex items-start gap-2">
-              <span className="text-blue-600 font-bold">•</span>
+              <span className="text-brand-primary-dark font-bold">•</span>
               <span>You'll receive an email confirmation shortly at {jobInfo.email}</span>
             </li>
           </ul>

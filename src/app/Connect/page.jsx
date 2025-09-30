@@ -67,7 +67,7 @@ const InstagramCard = ({ image, index }) => {
       {/* Brand Colors Gradient Border */}
       <div className="absolute inset-0 bg-gradient-to-br from-blue-500 to-orange-500 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-sm"></div>
 
-      <div className="relative professional-card rounded-2xl overflow-hidden border border-blue-100/30 group-hover:border-orange-200/50 transition-all duration-300">
+      <div className="relative professional-card rounded-2xl overflow-hidden border border-sky-100/30 group-hover:border-indigo-200/50 transition-all duration-300">
         {/* Fully Responsive Image */}
         <div className="w-full h-48 sm:h-56 md:h-64 lg:h-72 relative">
           <Image
@@ -81,8 +81,8 @@ const InstagramCard = ({ image, index }) => {
           {/* Brand Color Overlay */}
           <div className={`absolute inset-0 opacity-0 group-hover:opacity-20 transition-opacity duration-300 ${
             index % 2 === 0
-              ? "bg-gradient-to-br from-blue-500 to-blue-600"
-              : "bg-gradient-to-br from-orange-500 to-orange-600"
+              ? "bg-gradient-to-br from-brand-primary to-brand-primary-dark"
+              : "bg-gradient-to-br from-brand-secondary to-brand-secondary-dark"
           }`}></div>
         </div>
 

@@ -63,11 +63,11 @@ export default function WhyChooseUs() {
   }
 
   return (
-    <section className="container mx-auto px-4 py-16 relative bg-gradient-to-br from-orange-50/30 via-white to-orange-100/20 overflow-hidden">
+    <section className="container mx-auto px-4 py-20 md:py-24 relative bg-gradient-to-b from-sky-50 via-indigo-50/60 to-white overflow-hidden">
       {/* Orange Circle Background Elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <motion.div
-          className="absolute top-20 right-10 w-40 h-40 bg-orange-200/15 rounded-full"
+          className="absolute top-20 right-10 w-40 h-40 bg-sky-200/20 rounded-full"
           animate={{
             scale: [1, 1.2, 1],
             rotate: [0, 180, 360]
@@ -75,7 +75,7 @@ export default function WhyChooseUs() {
           transition={{ duration: 25, repeat: Infinity, ease: "linear" }}
         />
         <motion.div
-          className="absolute bottom-20 left-10 w-32 h-32 bg-orange-300/10 rounded-full"
+          className="absolute bottom-20 left-10 w-32 h-32 bg-indigo-200/20 rounded-full"
           animate={{
             y: [0, -20, 0],
             scale: [1, 0.8, 1]
@@ -83,7 +83,7 @@ export default function WhyChooseUs() {
           transition={{ duration: 12, repeat: Infinity, ease: "easeInOut" }}
         />
         <motion.div
-          className="absolute top-1/2 left-1/4 w-24 h-24 bg-orange-400/10 rounded-full"
+          className="absolute top-1/2 left-1/4 w-24 h-24 bg-sky-400/10 rounded-full"
           animate={{
             x: [0, 30, 0],
             opacity: [0.1, 0.3, 0.1]
@@ -96,23 +96,14 @@ export default function WhyChooseUs() {
         <motion.div className="space-y-8" variants={containerVariants} initial="hidden" animate="visible">
           <div className="space-y-4">
             <motion.h2
-              className="text-4xl md:text-5xl font-bold tracking-tight text-gray-900"
+              className="text-4xl md:text-5xl font-extrabold tracking-tight text-gray-900"
               variants={itemVariants}
             >
-              Why Choose{" "}
-              <span className="gradient-text relative">
-              WebUtsav Globally?
-                <motion.div
-                  className="absolute -bottom-2 left-0 h-1 bg-gradient-to-r from-orange-500 to-orange-600 rounded-full"
-                  initial={{ width: 0 }}
-                  animate={{ width: "100%" }}
-                  transition={{ duration: 1, delay: 0.5 }}
-                />
-              </span>
+              Why Choose <span className="text-brand-primary-dark">WebUtsav Globally?</span>
             </motion.h2>
-            <motion.p className="text-lg text-gray-600 leading-relaxed" variants={itemVariants}>
+            <motion.p className="text-base md:text-lg text-gray-600 leading-relaxed" variants={itemVariants}>
             When you work with{" "}
-              <span className="text-orange-600 font-semibold">WebUtsav Pvt Ltd,</span> you don’t just get a service you get a partnership. Here’s why international businesses trust us
+              <span className="text-brand-primary-dark font-semibold">WebUtsav Pvt Ltd,</span> you don’t just get a service you get a partnership. Here’s why international businesses trust us
             </motion.p>
           </div>
 
@@ -127,14 +118,14 @@ export default function WhyChooseUs() {
               >
                 <div className="flex-shrink-0">
                   <motion.div
-                    className="w-14 h-14 rounded-full flex items-center justify-center bg-gradient-to-br from-orange-400 to-orange-600 shadow-lg group-hover:shadow-xl transition-shadow duration-300"
+                    className="w-14 h-14 rounded-full flex items-center justify-center bg-gradient-to-br from-sky-500 to-indigo-600 shadow-lg group-hover:shadow-xl transition-shadow duration-300"
                     whileHover={{ scale: 1.1, rotate: 5 }}
                   >
                     <feature.icon className="h-7 w-7 text-white" />
                   </motion.div>
                 </div>
                 <div className="space-y-2 flex-1">
-                  <h3 className="text-xl font-bold text-gray-900 group-hover:text-orange-600 transition-colors duration-300">
+                  <h3 className="text-xl font-bold text-gray-900 group-hover:text-brand-primary-dark transition-colors duration-300">
                     {feature.title}
                   </h3>
                   <p className="text-gray-600 leading-relaxed">{feature.description}</p>
@@ -164,7 +155,7 @@ export default function WhyChooseUs() {
               whileHover={{ y: -5, scale: 1.02 }}
               transition={{ duration: 0.3 }}
             >
-              <div className="w-16 h-16 bg-gradient-to-br from-orange-500 to-orange-600 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+              <div className="w-16 h-16 bg-gradient-to-br from-sky-500 to-indigo-600 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
                 <span className="text-white font-bold text-xl">98%</span>
               </div>
               <h4 className="text-lg font-bold text-gray-900 mb-2">Success Rate</h4>
@@ -177,7 +168,7 @@ export default function WhyChooseUs() {
               whileHover={{ y: -5, scale: 1.02 }}
               transition={{ duration: 0.3 }}
             >
-              <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+              <div className="w-16 h-16 bg-gradient-to-br from-sky-500 to-indigo-600 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
                 <span className="text-white font-bold text-xl">5+</span>
               </div>
               <h4 className="text-lg font-bold text-gray-900 mb-2">Years Experience</h4>
@@ -190,7 +181,7 @@ export default function WhyChooseUs() {
               whileHover={{ y: -5, scale: 1.02 }}
               transition={{ duration: 0.3 }}
             >
-              <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-green-600 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+              <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-600 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
                 <span className="text-white font-bold text-xl">50+</span>
               </div>
               <h4 className="text-lg font-bold text-gray-900 mb-2">Expert Team</h4>
@@ -203,7 +194,7 @@ export default function WhyChooseUs() {
               whileHover={{ y: -5, scale: 1.02 }}
               transition={{ duration: 0.3 }}
             >
-              <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+              <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-indigo-600 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
                 <span className="text-white font-bold text-xl">12+</span>
               </div>
               <h4 className="text-lg font-bold text-gray-900 mb-2">Awards Won</h4>
@@ -220,7 +211,7 @@ export default function WhyChooseUs() {
           >
             <Link href="/Contact">
               <motion.button
-                className="px-8 py-4 bg-gradient-to-r from-orange-500 to-orange-600 text-white font-semibold rounded-full shadow-lg hover:shadow-xl transition-all duration-300 group"
+                className="px-8 py-4 bg-gradient-to-r from-brand-primary-dark to-brand-secondary text-white font-semibold rounded-full shadow-lg hover:shadow-xl transition-all duration-300 group"
                 whileHover={{ scale: 1.05, y: -2 }}
                 whileTap={{ scale: 0.95 }}
               >

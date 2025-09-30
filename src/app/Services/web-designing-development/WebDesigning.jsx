@@ -226,19 +226,19 @@ export default function WebDesigningDevelopment() {
           transition={{ duration: 1 }}
         >
           {/* Brand Colors Gradient Background */}
-          <div className="absolute inset-0 bg-gradient-to-br from-blue-600 via-blue-500 to-orange-500"></div>
+          <div className="absolute inset-0 bg-gradient-to-br from-brand-primary-dark via-brand-primary-dark to-brand-secondary-dark"></div>
 
           {/* Transparent Overlay for Brand Consistency */}
-          <div className="absolute inset-0 bg-gradient-to-tr from-orange-500/30 via-transparent to-blue-600/20"></div>
+          <div className="absolute inset-0 bg-gradient-to-tr from-brand-primary/30 via-transparent to-brand-secondary-dark/20"></div>
 
           {/* Floating Brand Color Elements */}
           <motion.div
-            className="absolute top-10 right-10 w-64 h-64 bg-orange-400/20 rounded-full blur-3xl"
+            className="absolute top-10 right-10 w-64 h-64 bg-brand-primary/20 rounded-full blur-3xl"
             animate={{ y: [0, -20, 0], scale: [1, 1.1, 1] }}
             transition={{ duration: 8, repeat: Infinity }}
           />
           <motion.div
-            className="absolute bottom-10 left-10 w-48 h-48 bg-blue-300/25 rounded-full blur-2xl"
+            className="absolute bottom-10 left-10 w-48 h-48 bg-brand-secondary/25 rounded-full blur-2xl"
             animate={{ y: [0, 20, 0], scale: [1, 0.9, 1] }}
             transition={{ duration: 6, repeat: Infinity }}
           />
@@ -275,9 +275,9 @@ export default function WebDesigningDevelopment() {
         {/* Main Content Section */}
         <div className="flex flex-wrap p-6">
           {/* Sidebar with About Us Styling */}
-          <aside className="w-full md:w-1/5 professional-card p-6 shadow-lg rounded-2xl mb-6 md:mb-0 border border-blue-100/30">
+          <aside className="w-full md:w-1/5 professional-card p-6 shadow-lg rounded-2xl mb-6 md:mb-0 border border-sky-100/30">
             <h3 className="text-3xl font-bold mb-6">
-              <span className="bg-gradient-to-r from-blue-600 to-orange-500 bg-clip-text text-transparent">All Services</span>
+              <span className="bg-gradient-to-r from-brand-primary-dark to-brand-secondary bg-clip-text text-transparent">All Services</span>
             </h3>
             <ul className="space-y-4">
               {[
@@ -310,10 +310,10 @@ export default function WebDesigningDevelopment() {
                 <motion.li key={index} whileHover={{ x: 5 }}>
                   <Link
                     href={service.href}
-                    className="group flex items-center space-x-3 p-3 rounded-lg transition-all duration-300 hover:bg-orange-50 cursor-pointer border border-transparent hover:border-orange-200/50"
+                    className="group flex items-center space-x-3 p-3 rounded-lg transition-all duration-300 hover:bg-sky-50 cursor-pointer border border-transparent hover:border-indigo-200/50"
                   >
                     <span className={`transition-colors duration-300 ${
-                      index % 2 === 0 ? "text-blue-500 group-hover:text-blue-600" : "text-orange-500 group-hover:text-orange-600"
+                      index % 2 === 0 ? "text-blue-500 group-hover:text-brand-primary-dark" : "text-sky-400 group-hover:text-brand-primary-dark"
                     }`}>
                       {service.icon}
                     </span>
@@ -332,14 +332,14 @@ export default function WebDesigningDevelopment() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className="professional-card p-8 rounded-2xl border border-blue-100/30"
+              className="professional-card p-8 rounded-2xl border border-sky-100/30"
             >
               <h1 className="text-4xl font-bold mb-6">
-                <span className="bg-gradient-to-r from-blue-600 to-orange-500 bg-clip-text text-transparent">
+                <span className="bg-gradient-to-r from-brand-primary-dark to-brand-secondary bg-clip-text text-transparent">
                   WebUtsav Pvt Ltd – From Pune to the World: Your Global Technology Partner
                 </span>
               </h1>
-              <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-orange-500 rounded-full mb-6"></div>
+              <div className="w-24 h-1 bg-gradient-to-r from-brand-primary to-brand-secondary rounded-full mb-6"></div>
 
               <p className="text-gray-800 mt-6 text-lg leading-relaxed mb-4">Your website is your first impression—and in the digital space, first impressions last. We design modern, responsive, and conversion-focused websites that work flawlessly across devices and browsers.</p>
 
@@ -391,9 +391,9 @@ International Website Development Company</b></p>
               transition={{ duration: 0.8 }}
             >
               <h2 className="text-3xl md:text-3xl font-bold text-gray-900 mb-4">
-                Why Choose <span className="bg-gradient-to-r from-blue-600 to-orange-500 bg-clip-text text-transparent">Webutsav for Web Design & Development?</span>
+                Why Choose <span className="bg-gradient-to-r from-brand-primary-dark to-brand-secondary bg-clip-text text-transparent">Webutsav for Web Design & Development?</span>
               </h2>
-              <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-orange-500 mx-auto rounded-full"></div>
+              <div className="w-24 h-1 bg-gradient-to-r from-brand-primary to-brand-secondary mx-auto rounded-full"></div>
               {/* <p className="text-xl text-gray-600 mt-6 max-w-3xl mx-auto">
                 💡 We provide cutting-edge web solutions to help businesses grow effectively in the digital landscape.
               </p> */}
@@ -413,13 +413,13 @@ International Website Development Company</b></p>
                   {/* Brand Colors Gradient Border */}
                   <div className="absolute inset-0 bg-gradient-to-br from-blue-500 to-orange-500 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-sm"></div>
 
-                  <div className="relative bg-white p-8 rounded-2xl shadow-lg group-hover:shadow-2xl transition-all duration-300 border border-blue-100/30 group-hover:border-orange-200/50 text-center h-full">
+                  <div className="relative bg-white p-8 rounded-2xl shadow-lg group-hover:shadow-2xl transition-all duration-300 border border-sky-100/30 group-hover:border-indigo-200/50 text-center h-full">
                     {/* Icon with Alternating Brand Colors */}
                     <motion.div
                       className={`w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300 ${
                         index % 2 === 0
-                          ? "bg-gradient-to-br from-blue-500 to-blue-600"
-                          : "bg-gradient-to-br from-orange-500 to-orange-600"
+                          ? "bg-gradient-to-br from-brand-primary to-brand-primary-dark"
+                          : "bg-gradient-to-br from-brand-secondary to-brand-secondary-dark"
                       }`}
                       whileHover={{ rotate: 5 }}
                     >
@@ -428,7 +428,7 @@ International Website Development Company</b></p>
 
                     {/* Content */}
                     <h3 className={`text-xl font-bold text-gray-900 mb-3 transition-colors duration-300 ${
-                      index % 2 === 0 ? "group-hover:text-blue-600" : "group-hover:text-orange-600"
+                      index % 2 === 0 ? "group-hover:text-brand-primary-dark" : "group-hover:text-brand-primary-dark"
                     }`}>
                       {feature.title}
                     </h3>
@@ -443,13 +443,13 @@ International Website Development Company</b></p>
         </section>
 
         {/* Comprehensive Web Services with About Us Styling */}
-        <section className="w-full py-16 bg-gradient-to-br from-blue-600 via-blue-500 to-orange-500 text-white relative overflow-hidden">
+        <section className="w-full py-16 bg-gradient-to-br from-brand-primary-dark via-brand-primary-dark to-brand-secondary-dark text-white relative overflow-hidden">
           {/* Transparent Overlay for Brand Consistency */}
-          <div className="absolute inset-0 bg-gradient-to-tr from-orange-500/30 via-transparent to-blue-600/20"></div>
+          <div className="absolute inset-0 bg-gradient-to-tr from-brand-primary/30 via-transparent to-brand-secondary-dark/20"></div>
 
           {/* Floating Brand Color Elements */}
           <motion.div
-            className="absolute top-10 right-10 w-64 h-64 bg-orange-400/20 rounded-full blur-3xl"
+            className="absolute top-10 right-10 w-64 h-64 bg-brand-primary/20 rounded-full blur-3xl"
             animate={{ y: [0, -20, 0], scale: [1, 1.1, 1] }}
             transition={{ duration: 8, repeat: Infinity }}
           />
@@ -518,9 +518,9 @@ International Website Development Company</b></p>
               transition={{ duration: 0.8 }}
             >
               <h4 className="text-4xl md:text-4xl font-bold text-gray-900 mb-4">
-              Why Webutsav is Among the <span className="bg-gradient-to-r from-blue-600 to-orange-500 bg-clip-text text-transparent">Best Web Design & Development Companies in Pune & Mumbai?</span>
+              Why Webutsav is Among the <span className="bg-gradient-to-r from-brand-primary-dark to-brand-secondary bg-clip-text text-transparent">Best Web Design & Development Companies in Pune & Mumbai?</span>
               </h4>
-              <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-orange-500 mx-auto rounded-full"></div>
+              <div className="w-24 h-1 bg-gradient-to-r from-brand-primary to-brand-secondary mx-auto rounded-full"></div>
               <p className="text-xl text-gray-600 mt-6 max-w-4xl mx-auto leading-relaxed">
                 Webutsav stands out as one of the best web design & development companies in Pune, Mumbai, and India,
                 delivering high-quality, business-driven web solutions. Our approach focuses on innovation, user experience,
@@ -535,9 +535,9 @@ International Website Development Company</b></p>
               transition={{ duration: 0.8, delay: 0.2 }}
             >
               <h4 className="text-3xl font-bold text-gray-900 mb-4">
-                Our Expertise <span className="bg-gradient-to-r from-blue-600 to-orange-500 bg-clip-text text-transparent">in Web Development</span>
+                Our Expertise <span className="bg-gradient-to-r from-brand-primary-dark to-brand-secondary bg-clip-text text-transparent">in Web Development</span>
               </h4>
-              <div className="w-16 h-1 bg-gradient-to-r from-blue-500 to-orange-500 mx-auto rounded-full"></div>
+              <div className="w-16 h-1 bg-gradient-to-r from-brand-primary to-brand-secondary mx-auto rounded-full"></div>
             </motion.div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -554,7 +554,7 @@ International Website Development Company</b></p>
                     index % 2 === 0 ? "border-l-blue-500 hover:border-l-blue-600" : "border-l-orange-500 hover:border-l-orange-600"
                   }`}>
                     <h4 className={`text-xl font-bold mb-3 transition-colors duration-300 ${
-                      index % 2 === 0 ? "text-gray-900 group-hover:text-blue-600" : "text-gray-900 group-hover:text-orange-600"
+                      index % 2 === 0 ? "text-gray-900 group-hover:text-brand-primary-dark" : "text-gray-900 group-hover:text-brand-primary-dark"
                     }`}>
                       {item.title}
                     </h4>
@@ -585,9 +585,9 @@ International Website Development Company</b></p>
               transition={{ duration: 0.8 }}
             >
               <h4 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-                Technologies <span className="bg-gradient-to-r from-blue-600 to-orange-500 bg-clip-text text-transparent">We Use</span>
+                Technologies <span className="bg-gradient-to-r from-brand-primary-dark to-brand-secondary bg-clip-text text-transparent">We Use</span>
               </h4>
-              <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-orange-500 mx-auto rounded-full"></div>
+              <div className="w-24 h-1 bg-gradient-to-r from-brand-primary to-brand-secondary mx-auto rounded-full"></div>
               <p className="text-xl text-gray-600 mt-6 max-w-3xl mx-auto">
                 Our developers are skilled in the latest technologies to build modern, scalable, and future-ready websites.
               </p>
@@ -606,9 +606,9 @@ International Website Development Company</b></p>
                   {/* Brand Colors Gradient Border */}
                   <div className="absolute inset-0 bg-gradient-to-br from-blue-500 to-orange-500 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-sm"></div>
 
-                  <div className="relative professional-card p-6 rounded-2xl border border-blue-100/30 group-hover:border-orange-200/50 h-full">
+                  <div className="relative professional-card p-6 rounded-2xl border border-sky-100/30 group-hover:border-indigo-200/50 h-full">
                     <h4 className={`text-lg font-bold mb-4 transition-colors duration-300 ${
-                      index % 2 === 0 ? "text-gray-900 group-hover:text-blue-600" : "text-gray-900 group-hover:text-orange-600"
+                      index % 2 === 0 ? "text-gray-900 group-hover:text-brand-primary-dark" : "text-gray-900 group-hover:text-brand-primary-dark"
                     }`}>
                       {tech.category}
                     </h4>
@@ -641,9 +641,9 @@ International Website Development Company</b></p>
               transition={{ duration: 0.8 }}
             >
               <h4 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-              Industries We Serve with <span className="bg-gradient-to-r from-blue-600 to-orange-500 bg-clip-text text-transparent">Web Development Solutions in Pune, Mumbai & India</span>
+              Industries We Serve with <span className="bg-gradient-to-r from-brand-primary-dark to-brand-secondary bg-clip-text text-transparent">Web Development Solutions in Pune, Mumbai & India</span>
               </h4>
-              <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-orange-500 mx-auto rounded-full"></div>
+              <div className="w-24 h-1 bg-gradient-to-r from-brand-primary to-brand-secondary mx-auto rounded-full"></div>
               <p className="text-xl text-gray-600 mt-6 max-w-3xl mx-auto">
                 Webutsav caters to a diverse range of industries, providing tailored web development services to meet their unique business needs.
               </p>
@@ -662,19 +662,19 @@ International Website Development Company</b></p>
                     onClick={() => toggleFAQ(index)}
                     className={`flex justify-between items-center w-full text-left p-6 professional-card rounded-2xl border transition-all duration-300 ${
                       openIndex === index
-                        ? "border-orange-200/50 bg-orange-50/50"
-                        : "border-blue-100/30 hover:border-orange-200/50"
+                        ? "border-indigo-200/50 bg-orange-50/50"
+                        : "border-blue-100/30 hover:border-indigo-200/50"
                     }`}
                     whileHover={{ y: -2 }}
                   >
                     <span className={`text-xl font-bold transition-colors duration-300 ${
-                      index % 2 === 0 ? "text-gray-900 group-hover:text-blue-600" : "text-gray-900 group-hover:text-orange-600"
+                      index % 2 === 0 ? "text-gray-900 group-hover:text-brand-primary-dark" : "text-gray-900 group-hover:text-brand-primary-dark"
                     }`}>
                       {faq.question}
                     </span>
                     <motion.span
                       className={`transition-colors duration-300 ${
-                        index % 2 === 0 ? "text-blue-500" : "text-orange-500"
+                        index % 2 === 0 ? "text-blue-500" : "text-sky-400"
                       }`}
                       animate={{ rotate: openIndex === index ? 180 : 0 }}
                       transition={{ duration: 0.3 }}
@@ -688,7 +688,7 @@ International Website Development Company</b></p>
                       animate={{ opacity: 1, height: "auto" }}
                       exit={{ opacity: 0, height: 0 }}
                       transition={{ duration: 0.3 }}
-                      className="mt-4 p-6 bg-white/80 backdrop-blur-sm rounded-2xl border border-blue-100/30"
+                      className="mt-4 p-6 bg-white/80 backdrop-blur-sm rounded-2xl border border-sky-100/30"
                     >
                       <p className="text-gray-600 leading-relaxed">{faq.answer}</p>
                     </motion.div>
@@ -722,9 +722,9 @@ International Website Development Company</b></p>
               transition={{ duration: 0.8 }}
             >
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-              How We Develop <span className="bg-gradient-to-r from-blue-600 to-orange-500 bg-clip-text text-transparent">High-Performance Websites</span>
+              How We Develop <span className="bg-gradient-to-r from-brand-primary-dark to-brand-secondary bg-clip-text text-transparent">High-Performance Websites</span>
               </h2>
-              <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-orange-500 mx-auto rounded-full"></div>
+              <div className="w-24 h-1 bg-gradient-to-r from-brand-primary to-brand-secondary mx-auto rounded-full"></div>
               <p className="text-xl text-gray-600 mt-6 max-w-3xl mx-auto">
                 Our web development process is designed to deliver outstanding results through systematic approach.
               </p>
@@ -746,19 +746,19 @@ International Website Development Company</b></p>
                     <div className="absolute inset-0 bg-gradient-to-br from-blue-500 to-orange-500 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-sm"></div>
 
                     {/* Card Content */}
-                    <div className="relative bg-white p-8 rounded-2xl shadow-lg group-hover:shadow-2xl transition-all duration-300 border border-blue-100/30 group-hover:border-orange-200/50 text-center">
+                    <div className="relative bg-white p-8 rounded-2xl shadow-lg group-hover:shadow-2xl transition-all duration-300 border border-sky-100/30 group-hover:border-indigo-200/50 text-center">
                       {/* Step Number with Alternating Brand Colors */}
                       <div className={`w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300 ${
                         index % 2 === 0
-                          ? "bg-gradient-to-br from-blue-500 to-blue-600"
-                          : "bg-gradient-to-br from-orange-500 to-orange-600"
+                          ? "bg-gradient-to-br from-brand-primary to-brand-primary-dark"
+                          : "bg-gradient-to-br from-brand-secondary to-brand-secondary-dark"
                       }`}>
                         <span className="text-white font-bold text-xl">{`0${index + 1}`}</span>
                       </div>
 
                       {/* Content */}
                       <h4 className={`text-xl font-bold text-gray-900 mb-3 transition-colors duration-300 ${
-                        index % 2 === 0 ? "group-hover:text-blue-600" : "group-hover:text-orange-600"
+                        index % 2 === 0 ? "group-hover:text-brand-primary-dark" : "group-hover:text-brand-primary-dark"
                       }`}>
                         {step}
                       </h4>
@@ -779,13 +779,13 @@ International Website Development Company</b></p>
         </section>
 
         {/* CTA Section with About Us Styling */}
-        <section className="py-16 bg-gradient-to-br from-blue-600 via-blue-500 to-orange-500 text-white relative overflow-hidden">
+        <section className="py-16 bg-gradient-to-br from-brand-primary-dark via-brand-primary-dark to-brand-secondary-dark text-white relative overflow-hidden">
           {/* Transparent Overlay for Brand Consistency */}
-          <div className="absolute inset-0 bg-gradient-to-tr from-orange-500/30 via-transparent to-blue-600/20"></div>
+          <div className="absolute inset-0 bg-gradient-to-tr from-brand-primary/30 via-transparent to-brand-secondary-dark/20"></div>
 
           {/* Floating Brand Color Elements */}
           <motion.div
-            className="absolute top-10 right-10 w-64 h-64 bg-orange-400/20 rounded-full blur-3xl"
+            className="absolute top-10 right-10 w-64 h-64 bg-brand-primary/20 rounded-full blur-3xl"
             animate={{ y: [0, -20, 0], scale: [1, 1.1, 1] }}
             transition={{ duration: 8, repeat: Infinity }}
           />
@@ -821,9 +821,9 @@ International Website Development Company</b></p>
                 whileTap={{ scale: 0.95 }}
               >
                 <span className="flex items-center space-x-3">
-                  <span className="bg-gradient-to-r from-blue-600 to-orange-500 bg-clip-text text-transparent">Let's Build Your Website Today!</span>
+                  <span className="bg-gradient-to-r from-brand-primary-dark to-brand-secondary bg-clip-text text-transparent">Let's Build Your Website Today!</span>
                   <motion.svg
-                    className="w-6 h-6 text-orange-500"
+                    className="w-6 h-6 text-sky-400"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -866,15 +866,15 @@ International Website Development Company</b></p>
               transition={{ duration: 0.8 }}
             >
               <h2 className="text-3xl md:text-4xl font-bold text-center mb-8">
-                <span className="bg-gradient-to-r from-blue-600 to-orange-500 bg-clip-text text-transparent">Our International Services – Designed for Global Success</span>
+                <span className="bg-gradient-to-r from-brand-primary-dark to-brand-secondary bg-clip-text text-transparent">Our International Services – Designed for Global Success</span>
               </h2>
-              <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-orange-500 mx-auto rounded-full mb-8"></div>
+              <div className="w-24 h-1 bg-gradient-to-r from-brand-primary to-brand-secondary mx-auto rounded-full mb-8"></div>
             </motion.div>
 
             {/* UAE Web Design Subsection */}
             <div className="mb-10">
               <h3 className="text-xl md:text-2xl font-bold mb-3">
-                <span className="bg-gradient-to-r from-blue-600 to-orange-500 bg-clip-text text-transparent">Web Designing & Development in UAE</span>
+                <span className="bg-gradient-to-r from-brand-primary-dark to-brand-secondary bg-clip-text text-transparent">Web Designing & Development in UAE</span>
               </h3>
               <p className="text-gray-700 leading-relaxed mb-6">
                 Your website is your digital storefront, and it must impress, engage, and convert visitors. We design modern, mobile-friendly, and SEO-optimized websites that reflect your brand's personality while delivering exceptional performance.
@@ -882,19 +882,19 @@ International Website Development Company</b></p>
               <h4 className="text-lg font-semibold text-gray-800 mb-3">Our Web Development Expertise</h4>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-3 mb-6">
                 <div className="flex items-start gap-3">
-                  <span className="pt-1"><motion.span initial={{ scale: 0.8, opacity: 0 }} whileInView={{ scale: 1, opacity: 1 }} viewport={{ once: true }} transition={{ duration: 0.4 }}><svg xmlns='http://www.w3.org/2000/svg' className='text-orange-500' width='22' height='22' fill='none' stroke='currentColor' strokeWidth='2' strokeLinecap='round' strokeLinejoin='round'><polyline points='20 6 9 17 4 12'/></svg></motion.span></span>
+                  <span className="pt-1"><motion.span initial={{ scale: 0.8, opacity: 0 }} whileInView={{ scale: 1, opacity: 1 }} viewport={{ once: true }} transition={{ duration: 0.4 }}><svg xmlns='http://www.w3.org/2000/svg' className='text-sky-400' width='22' height='22' fill='none' stroke='currentColor' strokeWidth='2' strokeLinecap='round' strokeLinejoin='round'><polyline points='20 6 9 17 4 12'/></svg></motion.span></span>
                   <span className="text-gray-700">Custom website design with engaging UI/UX</span>
                 </div>
                 <div className="flex items-start gap-3">
-                  <span className="pt-1"><motion.span initial={{ scale: 0.8, opacity: 0 }} whileInView={{ scale: 1, opacity: 1 }} viewport={{ once: true }} transition={{ duration: 0.5 }}><svg xmlns='http://www.w3.org/2000/svg' className='text-orange-500' width='22' height='22' fill='none' stroke='currentColor' strokeWidth='2' strokeLinecap='round' strokeLinejoin='round'><polyline points='20 6 9 17 4 12'/></svg></motion.span></span>
+                  <span className="pt-1"><motion.span initial={{ scale: 0.8, opacity: 0 }} whileInView={{ scale: 1, opacity: 1 }} viewport={{ once: true }} transition={{ duration: 0.5 }}><svg xmlns='http://www.w3.org/2000/svg' className='text-sky-400' width='22' height='22' fill='none' stroke='currentColor' strokeWidth='2' strokeLinecap='round' strokeLinejoin='round'><polyline points='20 6 9 17 4 12'/></svg></motion.span></span>
                   <span className="text-gray-700">Responsive layouts for seamless mobile experience</span>
                 </div>
                 <div className="flex items-start gap-3">
-                  <span className="pt-1"><motion.span initial={{ scale: 0.8, opacity: 0 }} whileInView={{ scale: 1, opacity: 1 }} viewport={{ once: true }} transition={{ duration: 0.6 }}><svg xmlns='http://www.w3.org/2000/svg' className='text-orange-500' width='22' height='22' fill='none' stroke='currentColor' strokeWidth='2' strokeLinecap='round' strokeLinejoin='round'><polyline points='20 6 9 17 4 12'/></svg></motion.span></span>
+                  <span className="pt-1"><motion.span initial={{ scale: 0.8, opacity: 0 }} whileInView={{ scale: 1, opacity: 1 }} viewport={{ once: true }} transition={{ duration: 0.6 }}><svg xmlns='http://www.w3.org/2000/svg' className='text-sky-400' width='22' height='22' fill='none' stroke='currentColor' strokeWidth='2' strokeLinecap='round' strokeLinejoin='round'><polyline points='20 6 9 17 4 12'/></svg></motion.span></span>
                   <span className="text-gray-700">SEO-friendly coding for higher search rankings</span>
                 </div>
                 <div className="flex items-start gap-3">
-                  <span className="pt-1"><motion.span initial={{ scale: 0.8, opacity: 0 }} whileInView={{ scale: 1, opacity: 1 }} viewport={{ once: true }} transition={{ duration: 0.7 }}><svg xmlns='http://www.w3.org/2000/svg' className='text-orange-500' width='22' height='22' fill='none' stroke='currentColor' strokeWidth='2' strokeLinecap='round' strokeLinejoin='round'><polyline points='20 6 9 17 4 12'/></svg></motion.span></span>
+                  <span className="pt-1"><motion.span initial={{ scale: 0.8, opacity: 0 }} whileInView={{ scale: 1, opacity: 1 }} viewport={{ once: true }} transition={{ duration: 0.7 }}><svg xmlns='http://www.w3.org/2000/svg' className='text-sky-400' width='22' height='22' fill='none' stroke='currentColor' strokeWidth='2' strokeLinecap='round' strokeLinejoin='round'><polyline points='20 6 9 17 4 12'/></svg></motion.span></span>
                   <span className="text-gray-700">Scalable architecture for future growth</span>
                 </div>
               </div>

@@ -30,8 +30,8 @@ const ProductImage = ({ src, alt, title, category, index }) => {
     return (
       <div className={`w-24 h-24 mb-6 relative flex items-center justify-center mx-auto rounded-2xl overflow-hidden group-hover:scale-110 transition-transform duration-300 ${
         index % 2 === 0 
-          ? "bg-gradient-to-br from-blue-500 to-blue-600" 
-          : "bg-gradient-to-br from-orange-500 to-orange-600"
+          ? "bg-gradient-to-br from-brand-primary to-brand-primary-dark" 
+          : "bg-gradient-to-br from-sky-500 to-indigo-600"
       }`}>
         <span className="text-white font-bold text-xl">
           {getInitials(title)}
@@ -45,8 +45,8 @@ const ProductImage = ({ src, alt, title, category, index }) => {
       {isLoading && (
         <div className={`absolute inset-0 flex items-center justify-center ${
           index % 2 === 0 
-            ? "bg-gradient-to-br from-blue-500 to-blue-600" 
-            : "bg-gradient-to-br from-orange-500 to-orange-600"
+            ? "bg-gradient-to-br from-brand-primary to-brand-primary-dark" 
+            : "bg-gradient-to-br from-sky-500 to-indigo-600"
         }`}>
           <span className="text-white font-bold text-xl">
             {getInitials(title)}

@@ -8,6 +8,7 @@ import About from "../components/About/page.jsx"
 import Services from "../components/Services/page.jsx"
 import WhyChooseUs from "../components/Why_Choose_Us/Why_Choose_Us"
 import PartnerBrands from "../components/Partner_Brands/page.jsx"
+import MobileShowcase from "../components/MobileShowcase/MobileShowcase"
 
 // Page transition variants
 const pageVariants = {
@@ -80,6 +81,11 @@ export default function HomeClient() {
       
       <motion.div variants={sectionVariants} className="section-animate">
         <Services />
+      </motion.div>
+
+      {/* Mobile App Screens Showcase is now its own section so you can comment About independently */}
+      <motion.div variants={sectionVariants} className="section-animate">
+        <MobileShowcase />
       </motion.div>
       
       <motion.div variants={sectionVariants} className="section-animate">

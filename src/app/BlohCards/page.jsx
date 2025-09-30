@@ -59,7 +59,7 @@ export default function HomePage() {
           {/* Brand Colors Gradient Border */}
           <div className="absolute inset-0 bg-gradient-to-br from-blue-500 to-orange-500 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-sm"></div>
 
-          <div className="relative professional-card rounded-2xl overflow-hidden border border-blue-100/30 group-hover:border-orange-200/50 transition-all duration-300">
+          <div className="relative professional-card rounded-2xl overflow-hidden border border-sky-100/30 group-hover:border-indigo-200/50 transition-all duration-300">
             <div className="relative w-full h-48 sm:h-56 md:h-64 overflow-hidden">
               <Image
                 id={`image-${index}`}
@@ -73,14 +73,14 @@ export default function HomePage() {
               {/* Overlay with Brand Colors */}
               <div className={`absolute inset-0 opacity-0 group-hover:opacity-20 transition-opacity duration-300 ${
                 index % 2 === 0
-                  ? "bg-gradient-to-br from-blue-500 to-blue-600"
-                  : "bg-gradient-to-br from-orange-500 to-orange-600"
+                  ? "bg-gradient-to-br from-brand-primary to-brand-primary-dark"
+                  : "bg-gradient-to-br from-brand-secondary to-brand-secondary-dark"
               }`}></div>
             </div>
 
             <div className="p-6">
               <h3 className={`text-xl font-bold text-gray-800 mb-3 transition-colors duration-300 ${
-                index % 2 === 0 ? "group-hover:text-blue-600" : "group-hover:text-orange-600"
+                index % 2 === 0 ? "group-hover:text-brand-primary-dark" : "group-hover:text-brand-primary-dark"
               }`}>
                 {article.title}
               </h3>
@@ -92,7 +92,7 @@ export default function HomePage() {
                 href="#"
                 className={`inline-flex items-center font-semibold transition-colors duration-300 ${
                   index % 2 === 0
-                    ? "text-blue-600 hover:text-blue-700"
+                    ? "text-brand-primary-dark hover:text-brand-primary-dark"
                     : "text-orange-600 hover:text-orange-700"
                 }`}
                 whileHover={{ x: 5 }}

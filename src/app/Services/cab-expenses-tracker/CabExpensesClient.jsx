@@ -102,19 +102,19 @@ export default function CabExpenseTracker() {
           transition={{ duration: 1 }}
         >
           {/* Brand Colors Gradient Background */}
-          <div className="absolute inset-0 bg-gradient-to-br from-blue-600 via-blue-500 to-orange-500"></div>
+          <div className="absolute inset-0 bg-gradient-to-br from-brand-primary-dark via-brand-primary-dark to-brand-secondary-dark"></div>
 
           {/* Transparent Overlay for Brand Consistency */}
-          <div className="absolute inset-0 bg-gradient-to-tr from-orange-500/30 via-transparent to-blue-600/20"></div>
+          <div className="absolute inset-0 bg-gradient-to-tr from-brand-primary/30 via-transparent to-brand-secondary-dark/20"></div>
 
           {/* Floating Brand Color Elements */}
           <motion.div
-            className="absolute top-10 right-10 w-64 h-64 bg-orange-400/20 rounded-full blur-3xl"
+            className="absolute top-10 right-10 w-64 h-64 bg-brand-primary/20 rounded-full blur-3xl"
             animate={{ y: [0, -20, 0], scale: [1, 1.1, 1] }}
             transition={{ duration: 8, repeat: Infinity }}
           />
           <motion.div
-            className="absolute bottom-10 left-10 w-48 h-48 bg-blue-300/25 rounded-full blur-2xl"
+            className="absolute bottom-10 left-10 w-48 h-48 bg-brand-secondary/25 rounded-full blur-2xl"
             animate={{ y: [0, 20, 0], scale: [1, 0.9, 1] }}
             transition={{ duration: 6, repeat: Infinity }}
           />
@@ -151,9 +151,9 @@ export default function CabExpenseTracker() {
         {/* Layout structure - sidebar with adjacent content */}
         <div className="flex flex-col md:flex-row">
           {/* Sidebar with About Us Styling */}
-          <aside className="w-full md:w-72 professional-card shadow-lg rounded-2xl p-6 mb-6 md:mr-6 self-start border border-blue-100/30">
+          <aside className="w-full md:w-72 professional-card shadow-lg rounded-2xl p-6 mb-6 md:mr-6 self-start border border-sky-100/30">
             <h3 className="text-3xl font-bold mb-8">
-              <span className="bg-gradient-to-r from-blue-600 to-orange-500 bg-clip-text text-transparent">All Services</span>
+              <span className="bg-gradient-to-r from-brand-primary-dark to-brand-secondary bg-clip-text text-transparent">All Services</span>
             </h3>
             <ul className="space-y-6">
               {sidebarServices.map((service, index) => (
@@ -167,10 +167,10 @@ export default function CabExpenseTracker() {
                 >
                   <Link
                     href={service.href}
-                    className="group flex items-start space-x-4 p-3 rounded-lg transition-all duration-300 hover:bg-orange-50 w-full border border-transparent hover:border-orange-200/50"
+                    className="group flex items-start space-x-4 p-3 rounded-lg transition-all duration-300 hover:bg-sky-50 w-full border border-transparent hover:border-indigo-200/50"
                   >
                     <span className={`text-2xl mt-1 transition-colors duration-300 ${
-                      index % 2 === 0 ? "text-blue-500 group-hover:text-blue-600" : "text-orange-500 group-hover:text-orange-600"
+                      index % 2 === 0 ? "text-blue-500 group-hover:text-brand-primary-dark" : "text-sky-400 group-hover:text-brand-primary-dark"
                     }`}>
                       {service.icon}
                     </span>
@@ -193,9 +193,9 @@ export default function CabExpenseTracker() {
             >
               <div className="p-8 bg-white rounded-lg shadow-xl border-l-8 border-amber-500 mb-12">
                 <div className="flex flex-col lg:flex-row items-start lg:items-center space-y-4 lg:space-y-0 lg:space-x-3 mb-6">
-                  <FaCar className="text-4xl text-amber-600" />
+                  <FaCar className="text-4xl text-brand-primary-dark" />
                   <h1 className="text-4xl font-bold mb-6">
-                <span className="bg-gradient-to-r from-blue-600 to-orange-500 bg-clip-text text-transparent">
+                <span className="bg-gradient-to-r from-brand-primary-dark to-brand-secondary bg-clip-text text-transparent">
                   Cab Expense Tracker Software – Automate Fleet Expense Management
                 </span>
               </h1>
@@ -250,10 +250,10 @@ export default function CabExpenseTracker() {
                 </h2>
               </div>
               <p className="text-gray-600 text-xl mt-4">
-                <span className="text-blue-600">✓</span> The Cab Expense Tracker Software is a specially designed tool that helps cab drivers and travel agencies track and manage their expenses effectively. This software allows users to log all their daily expenses, including fuel costs, maintenance, tolls, repairs, and more, all in one place. By offering an intuitive, easy-to-use interface, Cab Expense Tracker Software in India makes managing business expenses hassle-free, efficient, and fully automated.
+                <span className="text-brand-primary-dark">✓</span> The Cab Expense Tracker Software is a specially designed tool that helps cab drivers and travel agencies track and manage their expenses effectively. This software allows users to log all their daily expenses, including fuel costs, maintenance, tolls, repairs, and more, all in one place. By offering an intuitive, easy-to-use interface, Cab Expense Tracker Software in India makes managing business expenses hassle-free, efficient, and fully automated.
               </p>
               <p className="text-gray-600 text-xl mt-4">
-                <span className="text-blue-600">✓</span> One of the most essential features of our software is its cloud-based storage and real-time synchronization, ensuring that all your data is secure and easily accessible across devices. No matter where you are, your financial data is always at your fingertips.
+                <span className="text-brand-primary-dark">✓</span> One of the most essential features of our software is its cloud-based storage and real-time synchronization, ensuring that all your data is secure and easily accessible across devices. No matter where you are, your financial data is always at your fingertips.
               </p>
             </motion.div>
           </motion.div>
@@ -721,7 +721,7 @@ export default function CabExpenseTracker() {
                     whileHover={{ rotate: 15, scale: 1.1 }}
                     transition={{ duration: 0.3 }}
                   >
-                    <UserCheck className="text-3xl text-orange-500" />
+                    <UserCheck className="text-3xl text-sky-400" />
                   </motion.div>
                 </div>
                 <h4 className="text-3xl font-bold text-gray-800">
@@ -901,7 +901,7 @@ export default function CabExpenseTracker() {
                     whileHover={{ rotate: 15, scale: 1.1 }}
                     transition={{ duration: 0.3 }}
                   >
-                    <CheckCircle className="text-3xl text-blue-600" />
+                    <CheckCircle className="text-3xl text-brand-primary-dark" />
                   </motion.div>
                 </div>
                 <h4 className="text-3xl font-bold text-gray-800">
@@ -1056,7 +1056,7 @@ export default function CabExpenseTracker() {
             viewport={{ once: true }}
             className=""
           >
-            <div className="bg-gradient-to-r from-amber-500 to-amber-600 shadow-2xl overflow-hidden">
+            <div className="bg-gradient-to-r from-brand-primary to-brand-secondary shadow-2xl overflow-hidden">
               <div className="p-8 md:p-16 text-center">
                 <motion.div
                   initial={{ scale: 0.9, opacity: 0 }}
@@ -1073,7 +1073,7 @@ export default function CabExpenseTracker() {
                 <motion.button
                   whileHover={{ scale: 1.05, backgroundColor: '#ffffff', color: '#f59e0b' }}
                   whileTap={{ scale: 0.95 }}
-                  className="bg-white text-amber-600 px-8 py-4 rounded-full font-bold text-xl shadow-lg transition-all duration-300 focus:outline-none"
+                  className="bg-white text-brand-primary-dark px-8 py-4 rounded-full font-bold text-xl shadow-lg transition-all duration-300 focus:outline-none"
                 >
                   Get Started Today!
                 </motion.button>
@@ -1092,26 +1092,26 @@ export default function CabExpenseTracker() {
             className="bg-gray-50 py-12 px-4"
           >
             <div className="max-w-6xl mx-auto">
-              <h2 className="text-2xl md:text-3xl font-bold text-center text-amber-600 mb-8">Cab Expense Tracker Software – Simplify Fleet Management</h2>
+              <h2 className="text-2xl md:text-3xl font-bold text-center text-brand-primary-dark mb-8">Cab Expense Tracker Software – Simplify Fleet Management</h2>
               <p className="text-gray-700 leading-relaxed mb-6 text-center">
                 Managing vehicle expenses can be a headache—our Cab Expense Tracker Software automates it.
               </p>
               <h4 className="text-lg font-semibold text-gray-800 mb-3">Key Features:</h4>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-3 mb-6">
                 <div className="flex items-start gap-3">
-                  <span className="pt-1"><motion.span initial={{ scale: 0.8, opacity: 0 }} whileInView={{ scale: 1, opacity: 1 }} viewport={{ once: true }} transition={{ duration: 0.4 }}><svg xmlns='http://www.w3.org/2000/svg' className='text-amber-500' width='22' height='22' fill='none' stroke='currentColor' strokeWidth='2' strokeLinecap='round' strokeLinejoin='round'><polyline points='20 6 9 17 4 12'/></svg></motion.span></span>
+                  <span className="pt-1"><motion.span initial={{ scale: 0.8, opacity: 0 }} whileInView={{ scale: 1, opacity: 1 }} viewport={{ once: true }} transition={{ duration: 0.4 }}><svg xmlns='http://www.w3.org/2000/svg' className='text-brand-primary-dark' width='22' height='22' fill='none' stroke='currentColor' strokeWidth='2' strokeLinecap='round' strokeLinejoin='round'><polyline points='20 6 9 17 4 12'/></svg></motion.span></span>
                   <span className="text-gray-700">Real-time expense tracking</span>
                 </div>
                 <div className="flex items-start gap-3">
-                  <span className="pt-1"><motion.span initial={{ scale: 0.8, opacity: 0 }} whileInView={{ scale: 1, opacity: 1 }} viewport={{ once: true }} transition={{ duration: 0.5 }}><svg xmlns='http://www.w3.org/2000/svg' className='text-amber-500' width='22' height='22' fill='none' stroke='currentColor' strokeWidth='2' strokeLinecap='round' strokeLinejoin='round'><polyline points='20 6 9 17 4 12'/></svg></motion.span></span>
+                  <span className="pt-1"><motion.span initial={{ scale: 0.8, opacity: 0 }} whileInView={{ scale: 1, opacity: 1 }} viewport={{ once: true }} transition={{ duration: 0.5 }}><svg xmlns='http://www.w3.org/2000/svg' className='text-brand-primary-dark' width='22' height='22' fill='none' stroke='currentColor' strokeWidth='2' strokeLinecap='round' strokeLinejoin='round'><polyline points='20 6 9 17 4 12'/></svg></motion.span></span>
                   <span className="text-gray-700">Multi-vehicle support</span>
                 </div>
                 <div className="flex items-start gap-3">
-                  <span className="pt-1"><motion.span initial={{ scale: 0.8, opacity: 0 }} whileInView={{ scale: 1, opacity: 1 }} viewport={{ once: true }} transition={{ duration: 0.6 }}><svg xmlns='http://www.w3.org/2000/svg' className='text-amber-500' width='22' height='22' fill='none' stroke='currentColor' strokeWidth='2' strokeLinecap='round' strokeLinejoin='round'><polyline points='20 6 9 17 4 12'/></svg></motion.span></span>
+                  <span className="pt-1"><motion.span initial={{ scale: 0.8, opacity: 0 }} whileInView={{ scale: 1, opacity: 1 }} viewport={{ once: true }} transition={{ duration: 0.6 }}><svg xmlns='http://www.w3.org/2000/svg' className='text-brand-primary-dark' width='22' height='22' fill='none' stroke='currentColor' strokeWidth='2' strokeLinecap='round' strokeLinejoin='round'><polyline points='20 6 9 17 4 12'/></svg></motion.span></span>
                   <span className="text-gray-700">Detailed expense analytics</span>
                 </div>
                 <div className="flex items-start gap-3">
-                  <span className="pt-1"><motion.span initial={{ scale: 0.8, opacity: 0 }} whileInView={{ scale: 1, opacity: 1 }} viewport={{ once: true }} transition={{ duration: 0.7 }}><svg xmlns='http://www.w3.org/2000/svg' className='text-amber-500' width='22' height='22' fill='none' stroke='currentColor' strokeWidth='2' strokeLinecap='round' strokeLinejoin='round'><polyline points='20 6 9 17 4 12'/></svg></motion.span></span>
+                  <span className="pt-1"><motion.span initial={{ scale: 0.8, opacity: 0 }} whileInView={{ scale: 1, opacity: 1 }} viewport={{ once: true }} transition={{ duration: 0.7 }}><svg xmlns='http://www.w3.org/2000/svg' className='text-brand-primary-dark' width='22' height='22' fill='none' stroke='currentColor' strokeWidth='2' strokeLinecap='round' strokeLinejoin='round'><polyline points='20 6 9 17 4 12'/></svg></motion.span></span>
                   <span className="text-gray-700">User-friendly dashboard</span>
                 </div>
               </div>

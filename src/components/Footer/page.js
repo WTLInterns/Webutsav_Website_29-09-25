@@ -18,24 +18,24 @@ const Footer = () => {
               className="transition-transform duration-300 transform hover:scale-110"
             />
           </Link>
-          <p className="mt-4 text-sm text-gray-700 transition-transform duration-300 transform hover:scale-105 hover:text-blue-700">
+          <p className="mt-4 text-sm text-gray-700 transition-transform duration-300 transform hover:scale-105 hover:text-brand-primary-dark">
           Webutsav is a results-driven digital marketing agency that helps businesses grow through tailored SEO, PPC, and social media strategies. We focus on delivering measurable success by driving targeted traffic and boosting brand visibility.
           </p>
           <div className="flex flex-col mt-4">
-          <div className="flex items-center transition-transform duration-300 transform hover:scale-110 hover:text-blue-600">
+          <div className="flex items-center transition-transform duration-300 transform hover:scale-110 hover:text-brand-primary-dark">
             <MdEmail className="mr-2 text-gray-800 transition-all duration-300 hover:scale-110" />
             <a
               href="mailto:info@webutsav.com"
-              className="text-blue-600 hover:underline transition-all duration-300 transform hover:scale-110 hover:text-blue-800"
+              className="text-brand-primary-dark hover:underline transition-all duration-300 transform hover:scale-110 hover:text-blue-800"
             >
               info@webutsav.com
             </a>
           </div>
-          <div className="flex items-center mt-2 transition-transform duration-300 transform hover:scale-110 hover:text-blue-600">
+          <div className="flex items-center mt-2 transition-transform duration-300 transform hover:scale-110 hover:text-brand-primary-dark">
             <MdPhone className="mr-2 text-gray-800 transition-all duration-300 hover:scale-110" />
             <a
               href="tel:+91 8766922792"
-              className="text-blue-600 hover:underline transition-all duration-300 transform hover:scale-110 hover:text-blue-800"
+              className="text-brand-primary-dark hover:underline transition-all duration-300 transform hover:scale-110 hover:text-blue-800"
             >
               +91 8766922792
             </a>
@@ -124,13 +124,13 @@ const Footer = () => {
         <div className="flex space-x-4 mt-2 md:mt-0">
           <Link
             href="/Privacy"
-            className="hover:underline hover:text-blue-600 transition-all duration-300 transform hover:scale-110"
+            className="hover:underline hover:text-brand-primary-dark transition-all duration-300 transform hover:scale-110"
           >
             Privacy Policy
           </Link>
           <Link
             href="/terms-of-use"
-            className="hover:underline hover:text-blue-600 transition-all duration-300 transform hover:scale-110"
+            className="hover:underline hover:text-brand-primary-dark transition-all duration-300 transform hover:scale-110"
           >
             Terms of Use
           </Link>

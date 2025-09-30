@@ -9,10 +9,12 @@ import { Button } from "../../components/ui/button"
 
 const Navbar = () => {
   const [isServicesOpen, setIsServicesOpen] = useState(false)
+  const [isCountryOpen, setIsCountryOpen] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
   const [isScrolled, setIsScrolled] = useState(false)
   const [isInquiryOpen, setIsInquiryOpen] = useState(false)
   const servicesRef = useRef(null)
+  const countryRef = useRef(null)
 
   useEffect(() => {
     const handleScroll = () => {
@@ -27,6 +29,9 @@ const Navbar = () => {
       if (servicesRef.current && !servicesRef.current.contains(event.target)) {
         setIsServicesOpen(false)
       }
+      if (countryRef.current && !countryRef.current.contains(event.target)) {
+        setIsCountryOpen(false)
+      }
     }
     document.addEventListener("mousedown", handleClickOutside)
     return () => document.removeEventListener("mousedown", handleClickOutside)
@@ -35,21 +40,24 @@ const Navbar = () => {
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen)
     setIsServicesOpen(false)
+    setIsCountryOpen(false)
   }
 
   const closeMobileMenu = () => {
     setIsMobileMenuOpen(false)
     setIsServicesOpen(false)
+    setIsCountryOpen(false)
   }
-
   return (
     <>
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? "bg-white shadow-md" : "bg-transparent"
+        isScrolled
+          ? 'bg-gradient-to-b from-[#C7DAFF] to-[#A7C4FF] backdrop-blur-sm border-b border-[#AFC6FF] shadow-sm'
+          : 'bg-transparent'
       }`}
     >
-      <div className="container mx-auto px-4">
+  <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <Link href="/" className="flex items-center">
@@ -59,9 +67,10 @@ const Navbar = () => {
               width={350} 
               height={250} 
               className="h-24 w-auto transform transition-transform duration-300 hover:scale-105" 
+              priority
+              sizes="(max-width: 768px) 180px, 350px"
             />
           </Link>
-
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
             <NavLink href="/" isScrolled={isScrolled}>
@@ -73,14 +82,22 @@ const Navbar = () => {
             <div className="relative" ref={servicesRef}>
               <button
                 onClick={() => setIsServicesOpen(!isServicesOpen)}
-                className={`${
-                  isScrolled ? "text-gray-800" : "text-white"
-                } hover:text-amber-500 transition-colors flex items-center group`}
+                className={`${isScrolled ? 'text-gray-900' : 'text-white'} hover:text-indigo-600 transition-colors flex items-center group`}
               >
                 Services
                 <ChevronDown className={`w-4 h-4 ml-1 transition-transform duration-200 ${isServicesOpen ? "rotate-180" : ""}`} />
               </button>
               <AnimatePresence>{isServicesOpen && <ServicesDropdown />}</AnimatePresence>
+            </div>
+            <div className="relative" ref={countryRef}>
+              <button
+                onClick={() => setIsCountryOpen(!isCountryOpen)}
+                className={`${isScrolled ? 'text-gray-900' : 'text-white'} hover:text-indigo-600 transition-colors flex items-center group`}
+              >
+                Country
+                <ChevronDown className={`w-4 h-4 ml-1 transition-transform duration-200 ${isCountryOpen ? "rotate-180" : ""}`} />
+              </button>
+              <AnimatePresence>{isCountryOpen && <CountryDropdown />}</AnimatePresence>
             </div>
             <NavLink href="/Blog" isScrolled={isScrolled}>
               Blog
@@ -97,12 +114,10 @@ const Navbar = () => {
             </NavLink>
             <button
               onClick={() => setIsInquiryOpen(true)}
-              className={`${
-                isScrolled ? "text-gray-800" : "text-white"
-              } hover:text-amber-500 transition-colors duration-200 relative group`}
+              className={`${isScrolled ? 'text-gray-900' : 'text-white'} hover:text-indigo-600 transition-colors duration-200 relative group`}
             >
               Inquiry
-              <span className="absolute left-0 bottom-0 w-full h-0.5 bg-amber-500 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
+              <span className={`absolute left-0 bottom-0 w-full h-0.5 bg-sky-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300`}></span>
             </button>
           </div>
 
@@ -110,8 +125,8 @@ const Navbar = () => {
           {/* <Link
             href="/login"
             className={`hidden md:inline-block ${
-              isScrolled ? "bg-amber-400 text-white" : "bg-white text-amber-400"
-            } hover:bg-amber-500 hover:text-white px-6 py-2 rounded-md transition-colors duration-300 transform hover:scale-105`}
+              isScrolled ? "bg-amber-400 text-white" : "bg-white text-brand-primary"
+            } hover:bg-brand-primary-dark hover:text-white px-6 py-2 rounded-md transition-colors duration-300 transform hover:scale-105`}
           >
             Client Login
           </Link> */}
@@ -144,7 +159,7 @@ const Navbar = () => {
                 </MobileNavLink>
                 <div>
                   <button
-                    className="w-full text-left px-3 py-2 text-base font-medium text-gray-800 hover:text-amber-500 hover:bg-gray-50 rounded-md transition-colors duration-200 flex items-center justify-between"
+                    className="w-full text-left px-3 py-2 text-base font-medium text-gray-800 hover:bg-gray-100 hover:text-indigo-600"
                     onClick={() => setIsServicesOpen(!isServicesOpen)}
                   >
                     Services
@@ -154,6 +169,20 @@ const Navbar = () => {
                   </button>
                   <AnimatePresence>
                     {isServicesOpen && <MobileServicesDropdown closeMobileMenu={closeMobileMenu} />}
+                  </AnimatePresence>
+                </div>
+                <div>
+                  <button
+                    className="w-full text-left px-3 py-2 text-base font-medium text-gray-800 hover:bg-gray-100 hover:text-indigo-600"
+                    onClick={() => setIsCountryOpen(!isCountryOpen)}
+                  >
+                    Country
+                    <ChevronDown
+                      className={`w-4 h-4 transition-transform duration-200 ${isCountryOpen ? "rotate-180" : ""}`}
+                    />
+                  </button>
+                  <AnimatePresence>
+                    {isCountryOpen && <MobileCountryDropdown closeMobileMenu={closeMobileMenu} />}
                   </AnimatePresence>
                 </div>
                 <MobileNavLink href="/Blog" onClick={closeMobileMenu}>
@@ -179,7 +208,7 @@ const Navbar = () => {
                 </button>
                 {/* <Link
                   href="/login"
-                  className="block px-3 py-2 text-base font-medium text-white bg-amber-400 hover:bg-amber-500 rounded-md transition-colors duration-300 transform hover:scale-105"
+                  className="block px-3 py-2 text-base font-medium text-white bg-amber-400 hover:bg-brand-primary-dark rounded-md transition-colors duration-300 transform hover:scale-105"
                   onClick={closeMobileMenu}
                 >
                   Client Login
@@ -208,18 +237,18 @@ const NavLink = ({ href, children, isScrolled }) => (
   <Link
     href={href}
     className={`${
-      isScrolled ? "text-gray-800" : "text-white"
-    } hover:text-amber-500 transition-colors duration-200 relative group`}
+      isScrolled ? 'text-gray-900' : 'text-white'
+    } hover:text-indigo-600 transition-colors duration-200 relative group`}
   >
     {children}
-    <span className="absolute left-0 bottom-0 w-full h-0.5 bg-amber-500 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
+    <span className={`absolute left-0 bottom-0 w-full h-0.5 ${isScrolled ? 'bg-sky-700' : 'bg-sky-600'} transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300`}></span>
   </Link>
 )
 
 const MobileNavLink = ({ href, children, onClick }) => (
   <Link
     href={href}
-    className="block px-3 py-2 text-base font-medium text-gray-800 hover:text-amber-500 hover:bg-gray-50 rounded-md transition-colors duration-200"
+    className="block px-3 py-2 text-base font-medium text-gray-800 hover:text-indigo-600 hover:bg-gray-50 rounded-md transition-colors duration-200"
     onClick={onClick}
   >
     {children}
@@ -250,6 +279,64 @@ const ServicesDropdown = () => (
     </div>
   </motion.div>
 )
+
+const MobileCountryDropdown = ({ closeMobileMenu }) => {
+  const countries = [
+    'USA', 'UK', 'Canada', 'Australia', 'UAE', 'Singapore', 'Germany', 'Netherlands', 'South Africa', 'New Zealand'
+  ]
+  return (
+    <motion.div
+      initial={{ opacity: 0, height: 0 }}
+      animate={{ opacity: 1, height: "auto" }}
+      exit={{ opacity: 0, height: 0 }}
+      transition={{ duration: 0.2 }}
+      className="pl-4 overflow-hidden"
+    >
+      <div className="px-3 pb-2 text-xs uppercase tracking-wide text-gray-500">Our services are available in these countries</div>
+      <div className="border-t border-gray-200 my-2 mx-4"></div>
+      <div className="max-h-72 overflow-auto">
+        {countries.map((c) => {
+          const slug = c.toLowerCase().replace(/\s+/g, '-');
+          return (
+            <Link key={c} href={`/country/${slug}`} onClick={closeMobileMenu} className="block px-3 py-2 text-base text-gray-800 hover:bg-gray-100 hover:text-indigo-600">
+              {c}
+            </Link>
+          )
+        })}
+      </div>
+    </motion.div>
+  )
+}
+
+const CountryDropdown = () => {
+  const countries = [
+    'USA', 'UK', 'Canada', 'Australia', 'UAE', 'Singapore', 'Germany', 'Netherlands', 'South Africa', 'New Zealand'
+  ]
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: -10 }}
+      animate={{ opacity: 1, y: 0 }}
+      exit={{ opacity: 0, y: -10 }}
+      transition={{ duration: 0.2 }}
+      className="absolute left-0 mt-2 w-72 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 overflow-hidden"
+    >
+      <div className="py-2" role="menu" aria-orientation="vertical" aria-labelledby="country-menu">
+        <div className="px-4 pb-2 text-xs uppercase tracking-wide text-gray-500">Our services are available in these countries</div>
+        <div className="border-t border-gray-100" />
+        <div className="max-h-72 overflow-auto py-1">
+          {countries.map((c) => {
+            const slug = c.toLowerCase().replace(/\s+/g, '-');
+            return (
+              <Link key={c} href={`/country/${slug}`} className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-indigo-600">
+                {c}
+              </Link>
+            )
+          })}
+        </div>
+      </div>
+    </motion.div>
+  )
+}
 
 const MobileServicesDropdown = ({ closeMobileMenu }) => (
   <motion.div
@@ -293,7 +380,7 @@ const MobileServicesDropdown = ({ closeMobileMenu }) => (
 const DropdownLink = ({ href, children }) => (
   <Link
     href={href}
-    className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-amber-500 transition-colors duration-200"
+    className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-indigo-600 transition-colors duration-200"
   >
     {children}
   </Link>
@@ -385,7 +472,7 @@ const InquiryModal = ({ isOpen, onClose }) => {
         className="bg-white rounded-2xl shadow-2xl max-w-lg w-full max-h-[90vh] overflow-y-auto border border-gray-100"
         onClick={(e) => e.stopPropagation()}
       >
-        <div className="bg-gradient-to-r from-amber-500 to-amber-600 p-6 rounded-t-2xl">
+        <div className="bg-gradient-to-r from-sky-500 to-indigo-600 p-6 rounded-t-2xl">
           <div className="flex justify-between items-center">
             <div className="flex items-center space-x-3">
               <div className="bg-white bg-opacity-20 p-2 rounded-full">
@@ -400,14 +487,14 @@ const InquiryModal = ({ isOpen, onClose }) => {
               <X className="w-6 h-6" />
             </button>
           </div>
-          <p className="text-amber-100 mt-2">Get in touch with us for your business needs</p>
+          <p className="text-sky-100 mt-2">Get in touch with us for your business needs</p>
         </div>
 
         <form onSubmit={handleSubmit} className="p-6 space-y-6">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div>
               <label className="block text-sm font-semibold text-gray-700 mb-2">
-                <User className="w-4 h-4 inline mr-2 text-amber-600" />
+                <User className="w-4 h-4 inline mr-2 text-sky-600" />
                 Full Name *
               </label>
               <input
@@ -416,14 +503,14 @@ const InquiryModal = ({ isOpen, onClose }) => {
                 value={formData.name}
                 onChange={handleInputChange}
                 required
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-amber-500 transition-all duration-200 bg-gray-50 focus:bg-white"
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-sky-500 focus:border-sky-500 transition-all duration-200 bg-gray-50 focus:bg-white"
                 placeholder="Enter your full name"
               />
             </div>
 
             <div>
               <label className="block text-sm font-semibold text-gray-700 mb-2">
-                <Mail className="w-4 h-4 inline mr-2 text-amber-600" />
+                <Mail className="w-4 h-4 inline mr-2 text-sky-600" />
                 Email Address *
               </label>
               <input
@@ -432,7 +519,7 @@ const InquiryModal = ({ isOpen, onClose }) => {
                 value={formData.email}
                 onChange={handleInputChange}
                 required
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-amber-500 transition-all duration-200 bg-gray-50 focus:bg-white"
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-sky-500 focus:border-sky-500 transition-all duration-200 bg-gray-50 focus:bg-white"
                 placeholder="Enter your email address"
               />
             </div>
@@ -441,7 +528,7 @@ const InquiryModal = ({ isOpen, onClose }) => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div>
               <label className="block text-sm font-semibold text-gray-700 mb-2">
-                <Phone className="w-4 h-4 inline mr-2 text-amber-600" />
+                <Phone className="w-4 h-4 inline mr-2 text-sky-600" />
                 Phone Number *
               </label>
               <input
@@ -450,14 +537,14 @@ const InquiryModal = ({ isOpen, onClose }) => {
                 value={formData.phoneNumber}
                 onChange={handleInputChange}
                 required
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-amber-500 transition-all duration-200 bg-gray-50 focus:bg-white"
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-brand-primary focus:border-amber-500 transition-all duration-200 bg-gray-50 focus:bg-white"
                 placeholder="Enter your phone number"
               />
             </div>
 
             <div>
               <label className="block text-sm font-semibold text-gray-700 mb-2">
-                <Globe className="w-4 h-4 inline mr-2 text-amber-600" />
+                <Globe className="w-4 h-4 inline mr-2 text-sky-600" />
                 Country *
               </label>
               <select
@@ -465,7 +552,7 @@ const InquiryModal = ({ isOpen, onClose }) => {
                 value={formData.country}
                 onChange={handleInputChange}
                 required
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-amber-500 transition-all duration-200 bg-gray-50 focus:bg-white appearance-none cursor-pointer"
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-sky-500 focus:border-sky-500 transition-all duration-200 bg-gray-50 focus:bg-white appearance-none cursor-pointer"
               >
                 <option value="">Select your country</option>
                 {countries.map((country) => (
@@ -479,7 +566,7 @@ const InquiryModal = ({ isOpen, onClose }) => {
 
           <div>
             <label className="block text-sm font-semibold text-gray-700 mb-2">
-              <MessageSquare className="w-4 h-4 inline mr-2 text-amber-600" />
+              <MessageSquare className="w-4 h-4 inline mr-2 text-sky-600" />
               Message *
             </label>
             <textarea
@@ -488,7 +575,7 @@ const InquiryModal = ({ isOpen, onClose }) => {
               onChange={handleInputChange}
               required
               rows={4}
-              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-amber-500 transition-all duration-200 bg-gray-50 focus:bg-white resize-none"
+              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-sky-500 focus:border-sky-500 transition-all duration-200 bg-gray-50 focus:bg-white resize-none"
               placeholder="Tell us about your requirements..."
             />
           </div>
@@ -514,14 +601,14 @@ const InquiryModal = ({ isOpen, onClose }) => {
             <button
               type="button"
               onClick={onClose}
-              className="px-6 py-3 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-amber-500 focus:ring-offset-2 transition-all duration-200 font-semibold"
+              className="px-6 py-3 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-sky-500 focus:ring-offset-2 transition-all duration-200 font-semibold"
             >
               Cancel
             </button>
             <button
               type="submit"
               disabled={isSubmitting}
-              className="flex-1 bg-gradient-to-r from-amber-500 to-amber-600 text-white py-3 px-6 rounded-lg hover:from-amber-600 hover:to-amber-700 focus:outline-none focus:ring-2 focus:ring-amber-500 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-200 font-semibold shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
+              className="flex-1 bg-gradient-to-r from-sky-500 to-indigo-600 text-white py-3 px-6 rounded-lg hover:from-sky-600 hover:to-indigo-700 focus:outline-none focus:ring-2 focus:ring-sky-500 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-200 font-semibold shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
             >
               {isSubmitting ? (
                 <div className="flex items-center justify-center">

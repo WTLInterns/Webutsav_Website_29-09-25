@@ -224,19 +224,19 @@ export default function EcommerceWebsiteDesigning() {
           transition={{ duration: 1 }}
         >
           {/* Brand Colors Gradient Background */}
-          <div className="absolute inset-0 bg-gradient-to-br from-blue-600 via-blue-500 to-orange-500"></div>
+          <div className="absolute inset-0 bg-gradient-to-br from-brand-primary-dark via-brand-primary-dark to-brand-secondary-dark"></div>
 
           {/* Transparent Overlay for Brand Consistency */}
-          <div className="absolute inset-0 bg-gradient-to-tr from-orange-500/30 via-transparent to-blue-600/20"></div>
+          <div className="absolute inset-0 bg-gradient-to-tr from-brand-primary/30 via-transparent to-brand-secondary-dark/20"></div>
 
           {/* Floating Brand Color Elements */}
           <motion.div
-            className="absolute top-10 right-10 w-64 h-64 bg-orange-400/20 rounded-full blur-3xl"
+            className="absolute top-10 right-10 w-64 h-64 bg-brand-primary/20 rounded-full blur-3xl"
             animate={{ y: [0, -20, 0], scale: [1, 1.1, 1] }}
             transition={{ duration: 8, repeat: Infinity }}
           />
           <motion.div
-            className="absolute bottom-10 left-10 w-48 h-48 bg-blue-300/25 rounded-full blur-2xl"
+            className="absolute bottom-10 left-10 w-48 h-48 bg-brand-secondary/25 rounded-full blur-2xl"
             animate={{ y: [0, 20, 0], scale: [1, 0.9, 1] }}
             transition={{ duration: 6, repeat: Infinity }}
           />
@@ -273,9 +273,9 @@ export default function EcommerceWebsiteDesigning() {
         {/* Main Content Section */}
         <div className="flex flex-wrap p-6">
           {/* Sidebar with About Us Styling */}
-          <aside className="w-full md:w-1/5 professional-card p-6 shadow-lg rounded-2xl mb-6 md:mb-0 border border-blue-100/30">
+          <aside className="w-full md:w-1/5 professional-card p-6 shadow-lg rounded-2xl mb-6 md:mb-0 border border-sky-100/30">
             <h3 className="text-3xl font-bold mb-6">
-              <span className="bg-gradient-to-r from-blue-600 to-orange-500 bg-clip-text text-transparent">All Services</span>
+              <span className="bg-gradient-to-r from-brand-primary-dark to-brand-secondary bg-clip-text text-transparent">All Services</span>
             </h3>
             <ul className="space-y-4">
               {[
@@ -308,10 +308,10 @@ export default function EcommerceWebsiteDesigning() {
                 <motion.li key={index} whileHover={{ x: 5 }}>
                   <Link
                     href={service.href}
-                    className="group flex items-center space-x-3 p-3 rounded-lg transition-all duration-300 hover:bg-orange-50 cursor-pointer border border-transparent hover:border-orange-200/50"
+                    className="group flex items-center space-x-3 p-3 rounded-lg transition-all duration-300 hover:bg-sky-50 cursor-pointer border border-transparent hover:border-indigo-200/50"
                   >
                     <span className={`transition-colors duration-300 ${
-                      index % 2 === 0 ? "text-blue-500 group-hover:text-blue-600" : "text-orange-500 group-hover:text-orange-600"
+                      index % 2 === 0 ? "text-blue-500 group-hover:text-brand-primary-dark" : "text-sky-400 group-hover:text-brand-primary-dark"
                     }`}>
                       {service.icon}
                     </span>
@@ -330,14 +330,14 @@ export default function EcommerceWebsiteDesigning() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className="professional-card p-8 rounded-2xl border border-blue-100/30"
+              className="professional-card p-8 rounded-2xl border border-sky-100/30"
             >
               <h1 className="text-4xl font-bold mb-6">
-                <span className="bg-gradient-to-r from-blue-600 to-orange-500 bg-clip-text text-transparent">
+                <span className="bg-gradient-to-r from-brand-primary-dark to-brand-secondary bg-clip-text text-transparent">
                   Ecommerce Website Designing Company in Pune
                 </span>
               </h1>
-              <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-orange-500 rounded-full mb-6"></div>
+              <div className="w-24 h-1 bg-gradient-to-r from-brand-primary to-brand-secondary rounded-full mb-6"></div>
 
               <p className="text-gray-600 mt-6 text-lg leading-relaxed mb-4">
               For global e-commerce brands, we create feature-rich online stores that attract customers, simplify checkout, and maximize sales.
@@ -368,13 +368,13 @@ Experts in USA
 
         <section className="w-full py-12 md:py-24 bg-gray-50">
         <div className="container px-4 md:px-6 mx-auto">
-        <span className="bg-gradient-to-r from-blue-600 to-orange-500 bg-clip-text text-3xl font-bold text-transparent">
+        <span className="bg-gradient-to-r from-brand-primary-dark to-brand-secondary bg-clip-text text-3xl font-bold text-transparent">
         Why Choose Webutsav for Ecommerce Website Development in Pune, Mumbai & India?
                 </span>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
               <div key={index} className="flex flex-col items-center text-center">
-                <feature.icon className="w-12 h-12 mb-4 text-blue-600" />
+                <feature.icon className="w-12 h-12 mb-4 text-brand-primary-dark" />
                 <h4 className="text-xl font-semibold mb-2">{feature.title}</h4>
                 <p className="text-gray-600">{feature.description}</p>
               </div>
@@ -395,7 +395,7 @@ Experts in USA
                   </span>
                   <h4 className="text-lg font-semibold group-hover:text-blue-300 transition-colors">{service.title}</h4>
                 </div>
-                <p className="text-sm text-blue-100 ml-8 border-l border-blue-700 pl-3 py-1 group-hover:border-blue-500 transition-colors">
+                <p className="text-sm text-sky-100 ml-8 border-l border-blue-700 pl-3 py-1 group-hover:border-blue-500 transition-colors">
                   {service.description}
                 </p>
               </div>
@@ -516,7 +516,7 @@ Experts in USA
                   <div
                     className={`w-20 h-20 mx-auto mb-4 rounded-full flex items-center justify-center text-3xl font-bold ${
                       index === 0
-                        ? "bg-blue-200 text-blue-600"
+                        ? "bg-blue-200 text-brand-primary-dark"
                         : index === 1
                           ? "bg-green-200 text-green-600"
                           : index === 2
@@ -548,7 +548,7 @@ Experts in USA
             )}
           </div>
         </div>
-        <div className="bg-gradient-to-r from-amber-500 to-amber-600 py-16 px-4 text-center">
+        <div className="bg-gradient-to-r from-brand-primary to-brand-secondary py-16 px-4 text-center">
           <motion.h2
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
@@ -563,7 +563,7 @@ Experts in USA
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="bg-white text-amber-600 px-8 py-4 rounded-full font-bold text-xl shadow-lg hover:bg-gray-100 transition-all duration-300 focus:outline-none"
+            className="bg-white text-brand-primary-dark px-8 py-4 rounded-full font-bold text-xl shadow-lg hover:bg-gray-100 transition-all duration-300 focus:outline-none"
           >
             Start Your eCommerce Journey Today!
           </motion.button>
@@ -579,26 +579,26 @@ Experts in USA
         className="bg-gray-50 py-12 px-4 mt-12"
       >
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-2xl md:text-3xl font-bold text-center text-amber-600 mb-8">E-commerce Website Development – Sell Without Borders</h2>
+          <h2 className="text-2xl md:text-3xl font-bold text-center text-brand-primary-dark mb-8">E-commerce Website Development – Sell Without Borders</h2>
           <p className="text-gray-900 leading-relaxed mb-6 text-center">
             The world shops online—and your e-commerce platform should be ready to handle global customers. Our custom e-commerce development services enable you to sell products 24/7, anywhere in the world.
           </p>
           <h4 className="text-lg font-semibold text-gray-800 mb-3">E-commerce Features We Offer</h4>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-3 mb-6">
             <div className="flex items-start gap-3">
-              <span className="pt-1"><motion.span initial={{ scale: 0.8, opacity: 0 }} whileInView={{ scale: 1, opacity: 1 }} viewport={{ once: true }} transition={{ duration: 0.4 }}><svg xmlns='http://www.w3.org/2000/svg' className='text-amber-500' width='22' height='22' fill='none' stroke='currentColor' strokeWidth='2' strokeLinecap='round' strokeLinejoin='round'><polyline points='20 6 9 17 4 12'/></svg></motion.span></span>
+              <span className="pt-1"><motion.span initial={{ scale: 0.8, opacity: 0 }} whileInView={{ scale: 1, opacity: 1 }} viewport={{ once: true }} transition={{ duration: 0.4 }}><svg xmlns='http://www.w3.org/2000/svg' className='text-brand-primary-dark' width='22' height='22' fill='none' stroke='currentColor' strokeWidth='2' strokeLinecap='round' strokeLinejoin='round'><polyline points='20 6 9 17 4 12'/></svg></motion.span></span>
               <span className="text-gray-700">Multi-currency & multi-language support</span>
             </div>
             <div className="flex items-start gap-3">
-              <span className="pt-1"><motion.span initial={{ scale: 0.8, opacity: 0 }} whileInView={{ scale: 1, opacity: 1 }} viewport={{ once: true }} transition={{ duration: 0.5 }}><svg xmlns='http://www.w3.org/2000/svg' className='text-amber-500' width='22' height='22' fill='none' stroke='currentColor' strokeWidth='2' strokeLinecap='round' strokeLinejoin='round'><polyline points='20 6 9 17 4 12'/></svg></motion.span></span>
+              <span className="pt-1"><motion.span initial={{ scale: 0.8, opacity: 0 }} whileInView={{ scale: 1, opacity: 1 }} viewport={{ once: true }} transition={{ duration: 0.5 }}><svg xmlns='http://www.w3.org/2000/svg' className='text-brand-primary-dark' width='22' height='22' fill='none' stroke='currentColor' strokeWidth='2' strokeLinecap='round' strokeLinejoin='round'><polyline points='20 6 9 17 4 12'/></svg></motion.span></span>
               <span className="text-gray-700">Secure payment gateway integration</span>
             </div>
             <div className="flex items-start gap-3">
-              <span className="pt-1"><motion.span initial={{ scale: 0.8, opacity: 0 }} whileInView={{ scale: 1, opacity: 1 }} viewport={{ once: true }} transition={{ duration: 0.6 }}><svg xmlns='http://www.w3.org/2000/svg' className='text-amber-500' width='22' height='22' fill='none' stroke='currentColor' strokeWidth='2' strokeLinecap='round' strokeLinejoin='round'><polyline points='20 6 9 17 4 12'/></svg></motion.span></span>
+              <span className="pt-1"><motion.span initial={{ scale: 0.8, opacity: 0 }} whileInView={{ scale: 1, opacity: 1 }} viewport={{ once: true }} transition={{ duration: 0.6 }}><svg xmlns='http://www.w3.org/2000/svg' className='text-brand-primary-dark' width='22' height='22' fill='none' stroke='currentColor' strokeWidth='2' strokeLinecap='round' strokeLinejoin='round'><polyline points='20 6 9 17 4 12'/></svg></motion.span></span>
               <span className="text-gray-700">Easy inventory & order management</span>
             </div>
             <div className="flex items-start gap-3">
-              <span className="pt-1"><motion.span initial={{ scale: 0.8, opacity: 0 }} whileInView={{ scale: 1, opacity: 1 }} viewport={{ once: true }} transition={{ duration: 0.7 }}><svg xmlns='http://www.w3.org/2000/svg' className='text-amber-500' width='22' height='22' fill='none' stroke='currentColor' strokeWidth='2' strokeLinecap='round' strokeLinejoin='round'><polyline points='20 6 9 17 4 12'/></svg></motion.span></span>
+              <span className="pt-1"><motion.span initial={{ scale: 0.8, opacity: 0 }} whileInView={{ scale: 1, opacity: 1 }} viewport={{ once: true }} transition={{ duration: 0.7 }}><svg xmlns='http://www.w3.org/2000/svg' className='text-brand-primary-dark' width='22' height='22' fill='none' stroke='currentColor' strokeWidth='2' strokeLinecap='round' strokeLinejoin='round'><polyline points='20 6 9 17 4 12'/></svg></motion.span></span>
               <span className="text-gray-700">Conversion-focused product pages</span>
             </div>
           </div>

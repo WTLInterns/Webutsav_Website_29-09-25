@@ -14,7 +14,7 @@ export default function PrivacyPolicy() {
 
       <div className="pt-20 pb-10 bg-black">
         <div className="max-w-4xl mx-auto p-8 bg-white shadow-lg rounded-lg text-black">
-          <h1 className="text-4xl font-extrabold mb-6 text-center text-blue-600">Privacy Policy of Webutsav</h1>
+          <h1 className="text-4xl font-extrabold mb-6 text-center text-brand-primary-dark">Privacy Policy of Webutsav</h1>
           <p className="text-gray-500 text-center mb-4">Effective Date: 22/02/2025</p>
 
           <section className="mt-6 border-b pb-4">

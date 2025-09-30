@@ -326,7 +326,7 @@
 //         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 //           {features.map((feature, index) => (
 //             <div key={index} className="flex flex-col items-center text-center">
-//               <feature.icon className="w-12 h-12 mb-4 text-blue-600" />
+//               <feature.icon className="w-12 h-12 mb-4 text-brand-primary-dark" />
 //               <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
 //               <p className="text-gray-600">{feature.description}</p>
 //             </div>
@@ -350,7 +350,7 @@
 //                 </span>
 //                 <h4 className="text-lg font-semibold group-hover:text-blue-300 transition-colors">{service.title}</h4>
 //               </div>
-//               <p className="text-sm text-blue-100 ml-8 border-l border-blue-700 pl-3 py-1 group-hover:border-blue-500 transition-colors">
+//               <p className="text-sm text-sky-100 ml-8 border-l border-blue-700 pl-3 py-1 group-hover:border-blue-500 transition-colors">
 //                 {service.description}
 //               </p>
 //             </div>
@@ -494,7 +494,7 @@
 //                 <div
 //                   className={`w-20 h-20 mx-auto mb-4 rounded-full flex items-center justify-center text-3xl font-bold ${
 //                     index === 0
-//                       ? "bg-blue-200 text-blue-600"
+//                       ? "bg-blue-200 text-brand-primary-dark"
 //                       : index === 1
 //                         ? "bg-green-200 text-green-600"
 //                         : index === 2
@@ -520,7 +520,7 @@
 //           )}
 //         </div>
 //       </div>
-//       <div className="bg-gradient-to-r from-amber-500 to-amber-600 py-16 px-4 text-center">
+//       <div className="bg-gradient-to-r from-brand-primary to-brand-secondary py-16 px-4 text-center">
 //         <motion.h2
 //           initial={{ opacity: 0, scale: 0.8 }}
 //           animate={{ opacity: 1, scale: 1 }}
@@ -535,7 +535,7 @@
 //         <motion.button
 //           whileHover={{ scale: 1.05 }}
 //           whileTap={{ scale: 0.95 }}
-//           className="bg-white text-amber-600 px-8 py-4 rounded-full font-bold text-xl shadow-lg hover:bg-gray-100 transition-all duration-300 focus:outline-none"
+//           className="bg-white text-brand-primary-dark px-8 py-4 rounded-full font-bold text-xl shadow-lg hover:bg-gray-100 transition-all duration-300 focus:outline-none"
 //         >
 //           🚀 Want to Grow Your Business with Local SEO ? 🚀
 //         </motion.button>
@@ -763,19 +763,19 @@ export default function LocalSEO() {
           transition={{ duration: 1 }}
         >
           {/* Brand Colors Gradient Background */}
-          <div className="absolute inset-0 bg-gradient-to-br from-blue-600 via-blue-500 to-orange-500"></div>
+          <div className="absolute inset-0 bg-gradient-to-br from-brand-primary-dark via-brand-primary-dark to-brand-secondary-dark"></div>
 
           {/* Transparent Overlay for Brand Consistency */}
-          <div className="absolute inset-0 bg-gradient-to-tr from-orange-500/30 via-transparent to-blue-600/20"></div>
+          <div className="absolute inset-0 bg-gradient-to-tr from-brand-primary/30 via-transparent to-brand-secondary-dark/20"></div>
 
           {/* Floating Brand Color Elements */}
           <motion.div
-            className="absolute top-10 right-10 w-64 h-64 bg-orange-400/20 rounded-full blur-3xl"
+            className="absolute top-10 right-10 w-64 h-64 bg-brand-primary/20 rounded-full blur-3xl"
             animate={{ y: [0, -20, 0], scale: [1, 1.1, 1] }}
             transition={{ duration: 8, repeat: Infinity }}
           />
           <motion.div
-            className="absolute bottom-10 left-10 w-48 h-48 bg-blue-300/25 rounded-full blur-2xl"
+            className="absolute bottom-10 left-10 w-48 h-48 bg-brand-secondary/25 rounded-full blur-2xl"
             animate={{ y: [0, 20, 0], scale: [1, 0.9, 1] }}
             transition={{ duration: 6, repeat: Infinity }}
           />
@@ -874,7 +874,7 @@ export default function LocalSEO() {
           {/* Content */}
           <div className="w-full md:w-3/5 max-w-8xl mx-auto py-12">
             <h1 className="text-4xl font-bold mb-6">
-                <span className="bg-gradient-to-r from-blue-600 to-orange-500 bg-clip-text text-transparent">
+                <span className="bg-gradient-to-r from-brand-primary-dark to-brand-secondary bg-clip-text text-transparent">
                  Geo-Specific SEO – Rank Locally, Sell Globally
                 </span>
               </h1>
@@ -911,7 +911,7 @@ export default function LocalSEO() {
                     </span>
                     <h4 className="text-lg font-semibold group-hover:text-blue-300 transition-colors">{service.title}</h4>
                   </div>
-                  <p className="text-sm text-blue-100 ml-8 border-l border-blue-700 pl-3 py-1 group-hover:border-blue-500 transition-colors">
+                  <p className="text-sm text-sky-100 ml-8 border-l border-blue-700 pl-3 py-1 group-hover:border-blue-500 transition-colors">
                     {service.description}
                   </p>
                 </div>
@@ -1004,7 +1004,7 @@ export default function LocalSEO() {
                   <div
                     className={`w-20 h-20 mx-auto mb-4 rounded-full flex items-center justify-center text-3xl font-bold ${
                       index === 0
-                        ? "bg-blue-200 text-blue-600"
+                        ? "bg-blue-200 text-brand-primary-dark"
                         : index === 1
                           ? "bg-green-200 text-green-600"
                           : index === 2
@@ -1032,7 +1032,7 @@ export default function LocalSEO() {
 
           
         </div>
-        <div className="bg-gradient-to-r from-amber-500 to-amber-600 py-16 px-4 text-center">
+        <div className="bg-gradient-to-r from-brand-primary to-brand-secondary py-16 px-4 text-center">
           <motion.h2
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
@@ -1047,7 +1047,7 @@ export default function LocalSEO() {
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="bg-white text-amber-600 px-8 py-4 rounded-full font-bold text-xl shadow-lg hover:bg-gray-100 transition-all duration-300 focus:outline-none"
+            className="bg-white text-brand-primary-dark px-8 py-4 rounded-full font-bold text-xl shadow-lg hover:bg-gray-100 transition-all duration-300 focus:outline-none"
           >
             🚀 Want to Grow Your Business with Local SEO ? 🚀
           </motion.button>
@@ -1062,26 +1062,26 @@ export default function LocalSEO() {
         className="bg-gray-50 py-12 px-4 "
       >
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-2xl md:text-3xl font-bold text-center text-amber-600 mb-8">Local SEO / Geo-Specific SEO – Dominate Your Market</h2>
+          <h2 className="text-2xl md:text-3xl font-bold text-center text-brand-primary-dark mb-8">Local SEO / Geo-Specific SEO – Dominate Your Market</h2>
           <p className="text-gray-800 leading-relaxed mb-6 text-center">
             If you want your business to show up for local searches in Dubai, Abu Dhabi, or Sharjah, our Geo-specific SEO strategies ensure you stand out.
           </p>
           <h4 className="text-lg font-semibold text-gray-800 mb-3">What We Do:</h4>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-3 mb-6">
             <div className="flex items-start gap-3">
-              <span className="pt-1"><motion.span initial={{ scale: 0.8, opacity: 0 }} whileInView={{ scale: 1, opacity: 1 }} viewport={{ once: true }} transition={{ duration: 0.4 }}><svg xmlns='http://www.w3.org/2000/svg' className='text-amber-500' width='22' height='22' fill='none' stroke='currentColor' strokeWidth='2' strokeLinecap='round' strokeLinejoin='round'><polyline points='20 6 9 17 4 12'/></svg></motion.span></span>
+              <span className="pt-1"><motion.span initial={{ scale: 0.8, opacity: 0 }} whileInView={{ scale: 1, opacity: 1 }} viewport={{ once: true }} transition={{ duration: 0.4 }}><svg xmlns='http://www.w3.org/2000/svg' className='text-brand-primary-dark' width='22' height='22' fill='none' stroke='currentColor' strokeWidth='2' strokeLinecap='round' strokeLinejoin='round'><polyline points='20 6 9 17 4 12'/></svg></motion.span></span>
               <span className="text-gray-700">Google Business Profile optimization</span>
             </div>
             <div className="flex items-start gap-3">
-              <span className="pt-1"><motion.span initial={{ scale: 0.8, opacity: 0 }} whileInView={{ scale: 1, opacity: 1 }} viewport={{ once: true }} transition={{ duration: 0.5 }}><svg xmlns='http://www.w3.org/2000/svg' className='text-amber-500' width='22' height='22' fill='none' stroke='currentColor' strokeWidth='2' strokeLinecap='round' strokeLinejoin='round'><polyline points='20 6 9 17 4 12'/></svg></motion.span></span>
+              <span className="pt-1"><motion.span initial={{ scale: 0.8, opacity: 0 }} whileInView={{ scale: 1, opacity: 1 }} viewport={{ once: true }} transition={{ duration: 0.5 }}><svg xmlns='http://www.w3.org/2000/svg' className='text-brand-primary-dark' width='22' height='22' fill='none' stroke='currentColor' strokeWidth='2' strokeLinecap='round' strokeLinejoin='round'><polyline points='20 6 9 17 4 12'/></svg></motion.span></span>
               <span className="text-gray-700">Local directory listings</span>
             </div>
             <div className="flex items-start gap-3">
-              <span className="pt-1"><motion.span initial={{ scale: 0.8, opacity: 0 }} whileInView={{ scale: 1, opacity: 1 }} viewport={{ once: true }} transition={{ duration: 0.6 }}><svg xmlns='http://www.w3.org/2000/svg' className='text-amber-500' width='22' height='22' fill='none' stroke='currentColor' strokeWidth='2' strokeLinecap='round' strokeLinejoin='round'><polyline points='20 6 9 17 4 12'/></svg></motion.span></span>
+              <span className="pt-1"><motion.span initial={{ scale: 0.8, opacity: 0 }} whileInView={{ scale: 1, opacity: 1 }} viewport={{ once: true }} transition={{ duration: 0.6 }}><svg xmlns='http://www.w3.org/2000/svg' className='text-brand-primary-dark' width='22' height='22' fill='none' stroke='currentColor' strokeWidth='2' strokeLinecap='round' strokeLinejoin='round'><polyline points='20 6 9 17 4 12'/></svg></motion.span></span>
               <span className="text-gray-700">Review & reputation management</span>
             </div>
             <div className="flex items-start gap-3">
-              <span className="pt-1"><motion.span initial={{ scale: 0.8, opacity: 0 }} whileInView={{ scale: 1, opacity: 1 }} viewport={{ once: true }} transition={{ duration: 0.7 }}><svg xmlns='http://www.w3.org/2000/svg' className='text-amber-500' width='22' height='22' fill='none' stroke='currentColor' strokeWidth='2' strokeLinecap='round' strokeLinejoin='round'><polyline points='20 6 9 17 4 12'/></svg></motion.span></span>
+              <span className="pt-1"><motion.span initial={{ scale: 0.8, opacity: 0 }} whileInView={{ scale: 1, opacity: 1 }} viewport={{ once: true }} transition={{ duration: 0.7 }}><svg xmlns='http://www.w3.org/2000/svg' className='text-brand-primary-dark' width='22' height='22' fill='none' stroke='currentColor' strokeWidth='2' strokeLinecap='round' strokeLinejoin='round'><polyline points='20 6 9 17 4 12'/></svg></motion.span></span>
               <span className="text-gray-700">Region-specific content marketing</span>
             </div>
           </div>
