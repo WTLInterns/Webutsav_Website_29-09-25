@@ -187,12 +187,6 @@ export default function CountryPage({ params }) {
             <div className="content-surface rounded-2xl bg-white shadow-lg p-6 md:p-10">
               <article className="country-usa prose max-w-none text-gray-700 prose-headings:text-brand-primary-dark prose-headings:font-bold prose-p:leading-relaxed prose-ul:list-disc prose-ul:pl-6 prose-li:marker:text-brand-primary-dark prose-a:text-brand-primary-dark prose-strong:text-gray-900 prose-h2:text-3xl md:prose-h2:text-4xl prose-h3:text-2xl md:prose-h3:text-3xl">
                 {/* Visible content exactly as provided (no text changes) */}
-                <h2>Meta Title:</h2>
-                <p>Best IT Services Company in USA | WebUtsav Pvt Ltd</p>
-
-                <h2>Meta Description:</h2>
-                <p>WebUtsav Pvt Ltd – A leading global IT company offering App Development, Web Development, Software Development, and Digital Marketing services in USA. Trusted by 100+ clients worldwide.</p>
-
                 <h2>Introduction: Transforming the USA IT & Digital Ecosystem</h2>
                 <p>The United States has always been at the forefront of digital innovation, from Silicon Valley startups to global tech giants redefining industries. Businesses in the USA are now facing a new era where digital-first strategies are no longer optional—they are essential. With the rapid growth of mobile apps, cloud-based solutions, SaaS platforms, and data-driven marketing, enterprises of all sizes need reliable IT partners who can design, build, and scale digital solutions that meet global standards.</p>
                 <p>This is where WebUtsav Pvt Ltd steps in. With a proven track record of 100+ websites delivered globally, 30+ web applications, and 20+ customized software solutions, we are now expanding our expertise to the USA market. Our mission is to empower businesses in the USA with cutting-edge App Development, Web Development, Software Development, and Digital Marketing services that help them grow faster, smarter, and more sustainably.</p>
@@ -446,12 +440,6 @@ export default function CountryPage({ params }) {
             <div className="content-surface rounded-2xl bg-white shadow-lg p-6 md:p-10">
               <article className="country-new-zealand prose max-w-none text-gray-700 prose-headings:text-brand-primary-dark prose-headings:font-bold prose-p:leading-relaxed prose-ul:list-disc prose-ul:pl-6 prose-li:marker:text-brand-primary-dark prose-a:text-brand-primary-dark prose-strong:text-gray-900 prose-h2:text-3xl md:prose-h2:text-4xl prose-h3:text-2xl md:prose-h3:text-3xl">
                 {/* Visible content exactly as provided (no text changes) */}
-                <h2>Meta Title: </h2>
-                <p>Best IT Services Company in New Zealand | WebUtsav Pvt Ltd</p>
-
-                <h2>Meta Description:</h2>
-                <p>WebUtsav Pvt Ltd – A global IT leader delivering App Development, Web Development, Software Development, and Digital Marketing services in New Zealand. Trusted by 100+ clients across industries.</p>
-
                 <h2>WebUtsav Pvt Ltd – Leading IT &amp; Digital Services Company in New Zealand</h2>
                 <h3>Introduction: New Zealand’s Rise as a Digital Powerhouse &amp; Why WebUtsav is Entering This Market</h3>
                 <p>New Zealand has rapidly established itself as one of the most digitally progressive nations in the Asia-Pacific region. Known for its innovation-driven economy, thriving startup ecosystem, and supportive government policies, the country has become a prime destination for businesses embracing technology.</p>
@@ -946,12 +934,6 @@ export default function CountryPage({ params }) {
             <div className="content-surface rounded-2xl bg-white shadow-lg p-6 md:p-10">
               <article className="country-netherlands prose max-w-none text-gray-700 prose-headings:text-brand-primary-dark prose-headings:font-bold prose-p:leading-relaxed prose-ul:list-disc prose-ul:pl-6 prose-li:marker:text-brand-primary-dark prose-a:text-brand-primary-dark prose-strong:text-gray-900 prose-h2:text-3xl md:prose-h2:text-4xl prose-h3:text-2xl md:prose-h3:text-3xl">
                 {/* Visible content exactly as provided (no text changes) */}
-                <h2>Meta Title:</h2>
-                <p>Best IT Services Company in Netherlands | WebUtsav Pvt Ltd</p>
-
-                <h2>Meta Description:</h2>
-                <p>WebUtsav Pvt Ltd – A global IT leader delivering App Development, Web Development, Software Development, and Digital Marketing services in Netherlands. Trusted by 100+ clients across industries.</p>
-
                 <h2>WebUtsav Pvt Ltd – Leading IT &amp; Digital Services Company in Netherlands</h2>
                 <h3>Introduction: Netherlands as Europe’s Digital Hub &amp; Why WebUtsav is Expanding Here</h3>
                 <p>The Netherlands is one of Europe’s fastest-growing technology hubs, recognized for its innovation-driven economy, thriving startup ecosystem, and advanced digital infrastructure. Amsterdam is widely known as the “Silicon Valley of Europe,” hosting hundreds of tech startups, while cities like Rotterdam, Eindhoven, and Utrecht are building strong reputations for fintech, logistics tech, and smart city innovations.</p>
@@ -1207,12 +1189,6 @@ export default function CountryPage({ params }) {
             <div className="content-surface rounded-2xl bg-white shadow-lg p-6 md:p-10">
               <article className="country-sa prose max-w-none text-gray-700 prose-headings:text-brand-primary-dark prose-headings:font-bold prose-p:leading-relaxed prose-ul:list-disc prose-ul:pl-6 prose-li:marker:text-brand-primary-dark prose-a:text-brand-primary-dark prose-strong:text-gray-900 prose-h2:text-3xl md:prose-h2:text-4xl prose-h3:text-2xl md:prose-h3:text-3xl">
                 {/* Visible content exactly as provided (no text changes) */}
-                <h2>Meta Title:</h2>
-                <p>Best IT Services Company in South Africa | WebUtsav Pvt Ltd</p>
-
-                <h2>Meta Description:</h2>
-                <p>WebUtsav Pvt Ltd – A global leader in IT solutions offering App Development, Web Development, Software Development, and Digital Marketing services in South Africa. Trusted by 100+ clients worldwide.</p>
-
                 <h2>WebUtsav Pvt Ltd – Leading IT &amp; Digital Services Company in South Africa</h2>
                 <h3>Introduction: South Africa as Africa’s Digital Hub &amp; Why WebUtsav is Expanding Here</h3>
                 <p>South Africa is emerging as one of Africa’s most vibrant digital economies, combining a growing startup ecosystem, government-backed digital adoption programs, and increasing internet penetration. Cities like Cape Town, Johannesburg, and Durban are home to innovative startups and enterprises leading change in fintech, e-commerce, healthcare, tourism, and real estate tech.</p>
@@ -1467,7 +1443,7 @@ export default function CountryPage({ params }) {
             <div className="content-surface rounded-2xl bg-white shadow-lg p-6 md:p-10">
               <article className="country-singapore prose max-w-none text-gray-700 prose-headings:text-brand-primary-dark prose-headings:font-bold prose-p:leading-relaxed prose-ul:list-disc prose-ul:pl-6 prose-li:marker:text-brand-primary-dark prose-a:text-brand-primary-dark prose-strong:text-gray-900 prose-h2:text-3xl md:prose-h2:text-4xl prose-h3:text-2xl md:prose-h3:text-3xl">
                 {/* Visible content exactly as provided (no text changes) */}
-                <h2>WebUtsav Pvt Ltd – Leading IT &amp; Digital Services Company in Singapore</h2>
+                <h2>WebUtsav Pvt Ltd – Leading IT & Digital Services Company in USA</h2>
 
                 <h2>Introduction: Singapore as Asia’s Smart Nation &amp; Why WebUtsav is Expanding Here</h2>
                 <p>Singapore is not just a financial powerhouse—it is Asia’s Smart Nation, where digital innovation and technology adoption are part of everyday life. Ranked consistently among the top digital economies globally, Singapore has positioned itself as a hub for fintech, healthcare tech, e-commerce, real estate tech, and tourism innovation.</p>
@@ -1723,12 +1699,6 @@ export default function CountryPage({ params }) {
             <div className="content-surface rounded-2xl bg-white shadow-lg p-6 md:p-10">
               <article className="country-usa prose max-w-none text-gray-700 prose-headings:text-brand-primary-dark prose-headings:font-bold prose-p:leading-relaxed prose-ul:list-disc prose-ul:pl-6 prose-li:marker:text-brand-primary-dark prose-a:text-brand-primary-dark prose-strong:text-gray-900 prose-h2:text-3xl md:prose-h2:text-4xl prose-h3:text-2xl md:prose-h3:text-3xl">
                 {/* Visible content exactly as provided (no text changes) */}
-                <h2>Meta Title:</h2>
-                <p>Best IT Services Company in UAE | WebUtsav Pvt Ltd</p>
-
-                <h2>Meta Description:</h2>
-                <p>WebUtsav Pvt Ltd – A global IT leader delivering App Development, Web Development, Software Development, and Digital Marketing services in UAE. Trusted by 100+ clients across industries.</p>
-
                 <h2>WebUtsav Pvt Ltd – Leading IT & Digital Services Company in UAE</h2>
                 <h3>Introduction: UAE’s Rise as a Global Tech Hub & Why WebUtsav is Expanding Here</h3>
                 <p>The United Arab Emirates (UAE) has rapidly evolved from an oil-driven economy to a global leader in technology, digital transformation, and innovation. With Dubai positioned as the “City of the Future” and Abu Dhabi emerging as a hub for AI, fintech, and smart industries, the UAE offers one of the most promising landscapes for IT services.</p>
@@ -2203,12 +2173,6 @@ export default function CountryPage({ params }) {
             <div className="content-surface rounded-2xl bg-white shadow-lg p-6 md:p-10">
               <article className="country-usa prose max-w-none text-gray-700 prose-headings:text-brand-primary-dark prose-headings:font-bold prose-p:leading-relaxed prose-ul:list-disc prose-ul:pl-6 prose-li:marker:text-brand-primary-dark prose-a:text-brand-primary-dark prose-strong:text-gray-900 prose-h2:text-3xl md:prose-h2:text-4xl prose-h3:text-2xl md:prose-h3:text-3xl">
                 {/* Visible content exactly as provided (no text changes) */}
-                <h2>Meta Title:</h2>
-                <p>Best IT Services Company in UK | WebUtsav Pvt Ltd</p>
-
-                <h2>Meta Description:</h2>
-                <p>WebUtsav Pvt Ltd is a global IT leader offering App Development, Web Development, Software Development, and Digital Marketing services in UK. Trusted by 100+ clients worldwide.</p>
-
                 <h2>Introduction: The UK’s Digital Economy & Why WebUtsav is Expanding Here</h2>
                 <p>The United Kingdom has long been one of the world’s most influential technology hubs, home to London’s Fintech ecosystem, Cambridge’s innovation clusters, and Manchester’s growing digital scene. With the UK government investing heavily in digital transformation and the private sector embracing advanced IT solutions, the market is ripe for businesses to leverage world-class IT services.</p>
                 <p>The UK’s digital economy contributes over £150 billion annually and continues to grow with the rise of cloud computing, mobile apps, SaaS solutions, and AI-powered platforms. From startups in Shoreditch to global enterprises in Canary Wharf, businesses in the UK need technology partners who can deliver reliable, scalable, and future-ready digital solutions.</p>
