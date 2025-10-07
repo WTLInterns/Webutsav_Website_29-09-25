@@ -6,36 +6,144 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-@layer base {
-  
-  :root { --brand-primary: #0ea5e9; --brand-primary-dark: #0284c7; --brand-secondary: #6366f1; --brand-secondary-dark: #4f46e5; }
-  .dark {
-    --background: 0 0% 3.9%;
-    --foreground: 0 0% 98%;
-    --card: 0 0% 3.9%;
-    --card-foreground: 0 0% 98%;
-    --popover: 0 0% 3.9%;
-    --popover-foreground: 0 0% 98%;
-    --primary: 0 0% 98%;
-    --primary-foreground: 0 0% 9%;
-    --secondary: 0 0% 14.9%;
-    --secondary-foreground: 0 0% 98%;
-    --muted: 0 0% 14.9%;
-    --muted-foreground: 0 0% 63.9%;
-    --accent: 0 0% 14.9%;
-    --accent-foreground: 0 0% 98%;
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 0 0% 98%;
-    --border: 0 0% 14.9%;
-    --input: 0 0% 14.9%;
-    --ring: 0 0% 83.1%;
-    --chart-1: 220 70% 50%;
-    --chart-2: 160 60% 45%;
-    --chart-3: 30 80% 55%;
-    --chart-4: 280 65% 60%;
-    --chart-5: 340 75% 55%;
+/* Country USA page visual polish (boxes, cards, icons) */
+@layer components {
+  /* Content surface polish to match Services cards */
+  .content-surface {
+    position: relative;
+  }
+  .content-surface::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--brand-primary), var(--brand-secondary));
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+  }
+  .country-usa :where(h2):not(:where([class~="not-prose"] *)) {
+    @apply relative;
+  }
+  .country-usa :where(h2):not(:where([class~="not-prose"] *))::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    width: 88px;
+    height: 4px;
+    background: linear-gradient(90deg, var(--brand-primary), var(--brand-secondary));
+    border-radius: 9999px;
+  }
+
+  .country-usa :where(h3):not(:where([class~="not-prose"] *)) {
+    @apply bg-sky-50/70 border-l-4 border-brand-primary-dark rounded-r-md px-3 py-2;
+  }
+  .country-usa :where(h3):not(:where([class~="not-prose"] *))::before {
+    content: "";
+    display: inline-block;
+    width: 10px; height: 10px;
+    margin-right: 8px;
+    border-radius: 9999px;
+    background: linear-gradient(135deg, var(--brand-primary), var(--brand-secondary));
+    box-shadow: 0 0 0 3px rgba(2,132,199,0.15);
+    vertical-align: middle;
+  }
+
+  .country-usa :where(ul):not(:where([class~="not-prose"] *)) {
+    @apply my-6 bg-slate-50 rounded-xl p-5 md:p-6 shadow-sm;
+    list-style: none;
+  }
+  .country-usa :where(li):not(:where([class~="not-prose"] *)) {
+    @apply relative pl-7;
+  }
+  .country-usa :where(li):not(:where([class~="not-prose"] *))::before {
+    content: "";
+    position: absolute;
+    left: 0; top: 0.5rem;
+    width: 14px; height: 14px;
+    background: radial-gradient(circle at 30% 30%, #fff 0 35%, var(--brand-primary-dark) 36% 100%);
+    border-radius: 9999px;
+    box-shadow: 0 0 0 2px rgba(2,132,199,0.15);
+  }
+
+  /* Highlight meta blocks visually without changing text */
+  .country-usa :where(h2 + p):not(:where([class~="not-prose"] *)) {
+    @apply bg-white border border-sky-100 rounded-xl px-4 py-3 shadow-sm;
+  }
+
+  /* Box the immediate content under subheadings (h3) elegantly */
+  .country-usa :where(h3 + p):not(:where([class~="not-prose"] *)),
+  .country-usa :where(h3 + ul):not(:where([class~="not-prose"] *)) {
+    @apply bg-white border border-gray-100 rounded-xl p-4 md:p-5 shadow-sm mt-3;
+  }
+  /* Slightly different background for lists immediately after h3 */
+  .country-usa :where(h3 + ul):not(:where([class~="not-prose"] *)) {
+    @apply bg-slate-50;
+  }
+
+  /* Gently group pairs like FAQ items: h3 + p blocks */
+  .country-usa :where(h2):not(:where([class~="not-prose"] *)) ~ :where(h3 + p):not(:where([class~="not-prose"] *)) {
+    @apply mt-4;
+  }
+
+  /* Add spacious rhythm around large sections */
+  .country-usa :where(h2):not(:where([class~="not-prose"] *)) {
+    @apply pt-4;
+  }
+
+  /* Slight paragraph spacing for better rhythm site-wide */
+  .country-usa :where(p):not(:where([class~="not-prose"] *)) {
+    @apply my-4;
   }
 }
+
+/* Prose brand theming for consistent typography */
+@layer components {
+  .prose {
+    @apply max-w-none text-gray-700;
+  }
+  .prose :where(h2):not(:where([class~="not-prose"] *)) {
+    @apply text-brand-primary-dark font-bold mt-10 mb-4 md:mt-12 md:mb-6;
+  }
+  .prose :where(h3):not(:where([class~="not-prose"] *)) {
+    @apply text-brand-primary-dark font-semibold mt-8 mb-3 md:mt-10 md:mb-4;
+  }
+  .prose :where(p):not(:where([class~="not-prose"] *)) {
+    @apply leading-relaxed;
+  }
+  .prose :where(ul):not(:where([class~="not-prose"] *)) {
+    @apply list-disc pl-6 my-4 space-y-2;
+  }
+  .prose :where(ol):not(:where([class~="not-prose"] *)) {
+    @apply list-decimal pl-6 my-4 space-y-2;
+  }
+  .prose :where(li):not(:where([class~="not-prose"] *))::marker {
+    color: theme('colors.brand.primary-dark');
+  }
+  .prose :where(a):not(:where([class~="not-prose"] *)) {
+    @apply text-brand-primary-dark underline underline-offset-4 decoration-brand-secondary/30 hover:text-brand-secondary hover:decoration-brand-secondary transition-colors duration-200;
+  }
+  .prose :where(hr):not(:where([class~="not-prose"] *)) {
+    @apply my-8 border-t border-gray-200;
+  }
+  .prose :where(blockquote):not(:where([class~="not-prose"] *)) {
+    @apply border-l-4 border-brand-secondary/40 pl-4 italic text-gray-800 bg-slate-50/60 py-2 rounded-r;
+  }
+  .prose :where(pre):not(:where([class~="not-prose"] *)) {
+    @apply bg-gray-900 text-white rounded-xl p-6 overflow-x-auto;
+  }
+  .prose :where(code):not(:where([class~="not-prose"] *)) {
+    @apply bg-slate-100 text-gray-900 px-1.5 py-0.5 rounded;
+  }
+  .prose :where(table):not(:where([class~="not-prose"] *)) {
+    @apply w-full border-collapse text-sm md:text-base;
+  }
+  .prose :where(th, td):not(:where([class~="not-prose"] *)) {
+    @apply border border-gray-200 px-3 py-2;
+  }
+}
+
+/* Removed erroneous duplicated base variables block and placeholder */
 
 @layer base {
   * {

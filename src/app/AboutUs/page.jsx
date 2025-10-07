@@ -10,7 +10,7 @@ export const metadata = {
   authors: [{ name: "WebUtsav" }],
   robots: "index, follow",
   alternates: {
-    canonical: "https://webutsav.com/aboutus",
+    canonical: "https://webutsav.com/aboutus",  
   },
 };
 

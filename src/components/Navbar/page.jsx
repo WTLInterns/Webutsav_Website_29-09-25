@@ -3,6 +3,7 @@
 import Link from "next/link"
 import Image from "next/image"
 import { useState, useEffect, useRef } from "react"
+import { usePathname } from "next/navigation"
 import { ChevronDown, Menu, X, Mail, Phone, User, Globe, MessageSquare } from "lucide-react"
 import { motion, AnimatePresence } from "framer-motion"
 import { Button } from "../../components/ui/button"
@@ -13,16 +14,19 @@ const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
   const [isScrolled, setIsScrolled] = useState(false)
   const [isInquiryOpen, setIsInquiryOpen] = useState(false)
+  const pathname = usePathname()
   const servicesRef = useRef(null)
   const countryRef = useRef(null)
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 10)
+      setIsScrolled(window.scrollY > 10 || (pathname && pathname.startsWith('/country/')))
     }
+    // Set initial state based on route (for /country/* default to scrolled style)
+    setIsScrolled((window.scrollY > 10) || (pathname && pathname.startsWith('/country/')))
     window.addEventListener("scroll", handleScroll)
     return () => window.removeEventListener("scroll", handleScroll)
-  }, [])
+  }, [pathname])
 
   useEffect(() => {
     const handleClickOutside = (event) => {
@@ -282,8 +286,21 @@ const ServicesDropdown = () => (
 
 const MobileCountryDropdown = ({ closeMobileMenu }) => {
   const countries = [
-    'USA', 'UK', 'Canada', 'Australia', 'UAE', 'Singapore', 'Germany', 'Netherlands', 'South Africa', 'New Zealand'
+    'USA', 'UK', 'Canada', 'UAE', 'Singapore', 'Germany', 'Netherlands', 'SA', 'New Zealand'
   ]
+  // ISO 3166-1 alpha-2 codes for FlagCDN
+  const isoMap = {
+    'USA': 'us',
+    'UK': 'gb',
+    'Canada': 'ca',
+    
+    'UAE': 'ae',
+    'Singapore': 'sg',
+    'Germany': 'de',
+    'Netherlands': 'nl',
+    'SA': 'za', // South Africa
+    'New Zealand': 'nz'
+  }
   return (
     <motion.div
       initial={{ opacity: 0, height: 0 }}
@@ -297,9 +314,24 @@ const MobileCountryDropdown = ({ closeMobileMenu }) => {
       <div className="max-h-72 overflow-auto">
         {countries.map((c) => {
           const slug = c.toLowerCase().replace(/\s+/g, '-');
+          const code = isoMap[c];
           return (
             <Link key={c} href={`/country/${slug}`} onClick={closeMobileMenu} className="block px-3 py-2 text-base text-gray-800 hover:bg-gray-100 hover:text-indigo-600">
-              {c}
+              <span className="inline-flex items-center">
+                {code ? (
+                  <img
+                    src={`https://flagcdn.com/24x18/${code}.png`}
+                    alt={`${c} flag`}
+                    width={24}
+                    height={18}
+                    className="inline-block mr-2 rounded-sm border border-gray-200"
+                    loading="lazy"
+                  />
+                ) : (
+                  <span className="mr-2">🏳️</span>
+                )}
+                <span>{c}</span>
+              </span>
             </Link>
           )
         })}
@@ -310,8 +342,19 @@ const MobileCountryDropdown = ({ closeMobileMenu }) => {
 
 const CountryDropdown = () => {
   const countries = [
-    'USA', 'UK', 'Canada', 'Australia', 'UAE', 'Singapore', 'Germany', 'Netherlands', 'South Africa', 'New Zealand'
+    'USA', 'UK', 'Canada', 'UAE', 'Singapore', 'Germany', 'Netherlands', 'SA', 'New Zealand'
   ]
+  const isoMap = {
+    'USA': 'us',
+    'UK': 'gb',
+    'Canada': 'ca',
+    'UAE': 'ae',
+    'Singapore': 'sg',
+    'Germany': 'de',
+    'Netherlands': 'nl',
+    'SA': 'za',
+    'New Zealand': 'nz'
+  }
   return (
     <motion.div
       initial={{ opacity: 0, y: -10 }}
@@ -326,9 +369,24 @@ const CountryDropdown = () => {
         <div className="max-h-72 overflow-auto py-1">
           {countries.map((c) => {
             const slug = c.toLowerCase().replace(/\s+/g, '-');
+            const code = isoMap[c];
             return (
               <Link key={c} href={`/country/${slug}`} className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-indigo-600">
-                {c}
+                <span className="inline-flex items-center">
+                  {code ? (
+                    <img
+                      src={`https://flagcdn.com/20x15/${code}.png`}
+                      alt={`${c} flag`}
+                      width={20}
+                      height={15}
+                      className="inline-block mr-2 rounded-sm border border-gray-200"
+                      loading="lazy"
+                    />
+                  ) : (
+                    <span className="mr-2">🏳️</span>
+                  )}
+                  <span>{c}</span>
+                </span>
               </Link>
             )
           })}
@@ -396,7 +454,7 @@ const InquiryModal = ({ isOpen, onClose }) => {
   })
 
   const countries = [
-    'Afghanistan', 'Albania', 'Algeria', 'Argentina', 'Armenia', 'Australia',
+    'Afghanistan', 'Albania', 'Algeria', 'Argentina', 'Armenia',
     'Austria', 'Azerbaijan', 'Bahrain', 'Bangladesh', 'Belarus', 'Belgium',
     'Bolivia', 'Bosnia and Herzegovina', 'Brazil', 'Bulgaria', 'Cambodia',
     'Canada', 'Chile', 'China', 'Colombia', 'Croatia', 'Czech Republic',
@@ -405,7 +463,7 @@ const InquiryModal = ({ isOpen, onClose }) => {
     'Iran', 'Iraq', 'Ireland', 'Israel', 'Italy', 'Japan', 'Jordan',
     'Kazakhstan', 'Kenya', 'Kuwait', 'Latvia', 'Lebanon', 'Lithuania',
     'Luxembourg', 'Malaysia', 'Mexico', 'Morocco', 'Netherlands', 'New Zealand',
-    'Nigeria', 'Norway', 'Pakistan', 'Peru', 'Philippines', 'Poland',
+    'Nigeria', 'Norway', 'Peru', 'Philippines', 'Poland',
     'Portugal', 'Qatar', 'Romania', 'Russia', 'Saudi Arabia', 'Singapore',
     'Slovakia', 'Slovenia', 'South Africa', 'South Korea', 'Spain', 'Sri Lanka',
     'Sweden', 'Switzerland', 'Thailand', 'Turkey', 'Ukraine', 'United Arab Emirates',
