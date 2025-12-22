@@ -109,7 +109,7 @@ const Hero = () => {
       </Head> */}
 
       <div className="relative h-screen overflow-hidden">
-        {/* Optimized Background Image using Next.js Image (WebP) */}
+        {/* Optimized Background Image using Next.js Image */}
         <motion.div
           className="absolute inset-0"
           initial={{ scale: 1.1, opacity: 0 }}
@@ -117,7 +117,7 @@ const Hero = () => {
           transition={{ duration: 2, ease: "easeOut" }}
         >
           <Image
-            src="/images/Home11.webp"
+            src="/images/Home11.jpg"
             alt="WebUtsav hero background"
             width={1920}
             height={850}

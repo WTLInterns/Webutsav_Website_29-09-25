@@ -80,7 +80,7 @@ const Navbar = () => {
             <NavLink href="/" isScrolled={isScrolled}>
               Home
             </NavLink>
-            <NavLink href="/aboutus" isScrolled={isScrolled}>
+            <NavLink href="/AboutUs" isScrolled={isScrolled}>
               About Us
             </NavLink>
             <div className="relative" ref={servicesRef}>
@@ -103,17 +103,17 @@ const Navbar = () => {
               </button>
               <AnimatePresence>{isCountryOpen && <CountryDropdown />}</AnimatePresence>
             </div>
-            <NavLink href="/blog" isScrolled={isScrolled}>
+            <NavLink href="/Blog" isScrolled={isScrolled}>
               Blog
             </NavLink>
-            <NavLink href="/contact" isScrolled={isScrolled}>
+            <NavLink href="/Contact" isScrolled={isScrolled}>
               Contact Us
             </NavLink>
             {/* Products menu item - navigates to /products */}
             <NavLink href="/products" isScrolled={isScrolled}>
               Products
             </NavLink>
-            <NavLink href="/career" isScrolled={isScrolled}>
+            <NavLink href="/Career" isScrolled={isScrolled}>
               Careers
             </NavLink>
             <button
@@ -158,7 +158,7 @@ const Navbar = () => {
                 <MobileNavLink href="/" onClick={closeMobileMenu}>
                   Home
                 </MobileNavLink>
-                <MobileNavLink href="/aboutus" onClick={closeMobileMenu}>
+                <MobileNavLink href="/AboutUs" onClick={closeMobileMenu}>
                   About Us
                 </MobileNavLink>
                 <div>
@@ -189,16 +189,16 @@ const Navbar = () => {
                     {isCountryOpen && <MobileCountryDropdown closeMobileMenu={closeMobileMenu} />}
                   </AnimatePresence>
                 </div>
-                <MobileNavLink href="/blog" onClick={closeMobileMenu}>
+                <MobileNavLink href="/Blog" onClick={closeMobileMenu}>
                   Blog
                 </MobileNavLink>
-                <MobileNavLink href="/contact" onClick={closeMobileMenu}>
+                <MobileNavLink href="/Contact" onClick={closeMobileMenu}>
                   Contact
                 </MobileNavLink>
                 <MobileNavLink href="/products" onClick={closeMobileMenu}>
                   Products
                 </MobileNavLink>
-                <MobileNavLink href="/career" onClick={closeMobileMenu}>
+                <MobileNavLink href="/Career" onClick={closeMobileMenu}>
                   Careers
                 </MobileNavLink>
                 <button
@@ -239,7 +239,7 @@ const Navbar = () => {
 
 const NavLink = ({ href, children, isScrolled }) => (
   <Link
-    href={href.toLowerCase()}
+    href={href}
     className={`${
       isScrolled ? 'text-gray-900' : 'text-white'
     } hover:text-indigo-600 transition-colors duration-200 relative group`}
@@ -251,7 +251,7 @@ const NavLink = ({ href, children, isScrolled }) => (
 
 const MobileNavLink = ({ href, children, onClick }) => (
   <Link
-    href={href.toLowerCase()}
+    href={href}
     className="block px-3 py-2 text-base font-medium text-gray-800 hover:text-indigo-600 hover:bg-gray-50 rounded-md transition-colors duration-200"
     onClick={onClick}
   >
@@ -282,9 +282,9 @@ const ServicesDropdown = () => {
       className="absolute left-0 mt-2 w-64 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 overflow-hidden"
     >
       <div className="py-1" role="menu" aria-orientation="vertical" aria-labelledby="options-menu">
-        <DropdownLink href="/services/web-designing-development">Web Designing & Development</DropdownLink>
-        <DropdownLink href="/services/ecommerce-website-designing">Ecommerce Website Designing</DropdownLink>
-        <DropdownLink href="/services/google-adwords">Google Adwords</DropdownLink>
+        <DropdownLink href="/Services/web-designing-development">Web Designing & Development</DropdownLink>
+        <DropdownLink href="/Services/ecommerce-website-designing">Ecommerce Website Designing</DropdownLink>
+        <DropdownLink href="/Services/google-adwords">Google Adwords</DropdownLink>
         
         {/* Digital Marketing Dropdown */}
         <div className="relative" ref={digitalMarketingRef}>
@@ -305,13 +305,13 @@ const ServicesDropdown = () => {
                 transition={{ duration: 0.2 }}
                 className="bg-gray-50 border-t border-gray-200"
               >
-                <DropdownLink href="/services/search-engine-optimisation" className="pl-8 text-xs text-blue-600 hover:text-blue-700">
+                <DropdownLink href="/Services/search-engine-optimisation" className="pl-8 text-xs text-blue-600 hover:text-blue-700">
                   Search Engine Optimization
                 </DropdownLink>
-                <DropdownLink href="/services/local-seo" className="pl-8 text-xs text-blue-600 hover:text-blue-700">
+                <DropdownLink href="/Services/local-seo" className="pl-8 text-xs text-blue-600 hover:text-blue-700">
                   Local SEO
                 </DropdownLink>
-                <DropdownLink href="/services/social-media-marketing" className="pl-8 text-xs text-blue-600 hover:text-blue-700">
+                <DropdownLink href="/Services/social-media-marketing" className="pl-8 text-xs text-blue-600 hover:text-blue-700">
                   Social Media Marketing
                 </DropdownLink>
               </motion.div>
@@ -319,8 +319,8 @@ const ServicesDropdown = () => {
           </AnimatePresence>
         </div>
         
-        <DropdownLink href="/services/mobile-application">Mobile Application Development</DropdownLink>
-        <DropdownLink href="/services/cab-expenses-tracker">Cab Expenses Tracker</DropdownLink>
+        <DropdownLink href="/Services/mobile-application">Mobile Application Development</DropdownLink>
+        <DropdownLink href="/Services/cab-expenses-tracker">Cab Expenses Tracker</DropdownLink>
       </div>
     </motion.div>
   )
@@ -447,32 +447,32 @@ const MobileServicesDropdown = ({ closeMobileMenu }) => (
     transition={{ duration: 0.2 }}
     className="pl-4 overflow-hidden"
   >
-    <MobileNavLink href="/services" onClick={closeMobileMenu}>
+    <MobileNavLink href="/Services" onClick={closeMobileMenu}>
       <span className="font-semibold text-orange-600">All Services Overview</span>
     </MobileNavLink>
     <div className="border-t border-gray-200 my-2 mx-4"></div>
-    <MobileNavLink href="/services/web-designing-development" onClick={closeMobileMenu}>
+    <MobileNavLink href="/Services/web-designing-development" onClick={closeMobileMenu}>
       Web Designing & Development
     </MobileNavLink>
-    <MobileNavLink href="/services/ecommerce-website-designing" onClick={closeMobileMenu}>
+    <MobileNavLink href="/Services/ecommerce-website-designing" onClick={closeMobileMenu}>
       Ecommerce Website Designing
     </MobileNavLink>
-    <MobileNavLink href="/services/google-adwords" onClick={closeMobileMenu}>
+    <MobileNavLink href="/Services/google-adwords" onClick={closeMobileMenu}>
       Google Adwords
     </MobileNavLink>
-    <MobileNavLink href="/services/search-engine-optimisation" onClick={closeMobileMenu}>
+    <MobileNavLink href="/Services/search-engine-optimisation" onClick={closeMobileMenu}>
       Search Engine Optimization
     </MobileNavLink>
-    <MobileNavLink href="/services/local-seo" onClick={closeMobileMenu}>
+    <MobileNavLink href="/Services/local-seo" onClick={closeMobileMenu}>
       Local SEO
     </MobileNavLink>
-    <MobileNavLink href="/services/social-media-marketing" onClick={closeMobileMenu}>
+    <MobileNavLink href="/Services/social-media-marketing" onClick={closeMobileMenu}>
       Social Media Marketing
     </MobileNavLink>
-    <MobileNavLink href="/services/mobile-application" onClick={closeMobileMenu}>
+    <MobileNavLink href="/Services/mobile-application" onClick={closeMobileMenu}>
       Mobile Application Development
     </MobileNavLink>
-    <MobileNavLink href="/services/cab-expenses-tracker" onClick={closeMobileMenu}>
+    <MobileNavLink href="/Services/cab-expenses-tracker" onClick={closeMobileMenu}>
       Cab Expenses Tracker
     </MobileNavLink>
   </motion.div>
@@ -480,7 +480,7 @@ const MobileServicesDropdown = ({ closeMobileMenu }) => (
 
 const DropdownLink = ({ href, children }) => (
   <Link
-    href={href.toLowerCase()}
+    href={href}
     className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-indigo-600 transition-colors duration-200"
   >
     {children}

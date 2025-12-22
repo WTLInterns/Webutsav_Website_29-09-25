@@ -34,6 +34,9 @@ const redirects = [
 ];
 
 const nextConfig = {
+  images: {
+    qualities: [80],
+  },
   async headers() {
     return [
       {
