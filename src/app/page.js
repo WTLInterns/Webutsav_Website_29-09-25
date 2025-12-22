@@ -2,7 +2,7 @@
 import HomeClient from "./HomeClient.jsx"
 
 export const metadata = {
-  title: "WebUtsav | Digital Marketing & Web Development Agency",
+  title: "WebUtsav | Digital Marketing, Web & Mobile App Development",
   description:
     "WebUtsav is your trusted digital partner offering SEO, website design, social media marketing, and mobile app development services across India.",
   keywords:

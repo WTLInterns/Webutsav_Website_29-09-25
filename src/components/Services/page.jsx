@@ -27,11 +27,6 @@ const ServicesTimeline = () => {
     }
   }
 
-  // Explicit mapping for 'Why Choose Our Services?' images.
-  // Place these files in /public/images/ with the exact names below.
-  // Card order (page 1): service1.jpeg, service2.jpeg, service3.jpeg
-  // Card order (page 2): service4.jpeg, service5.jpeg, service6.jpeg
-  // Optional extras if you add more: service7.jpeg, service8.jpeg
   const featuresData = [
     { icon: "🎯", title: "Expert Team", desc: "Skilled professionals with years of industry experience", image: "/images/service1.jpeg" },
     { icon: "⚡", title: "Fast Delivery", desc: "Quick turnaround times without compromising quality", image: "/images/service2.jpeg" },
@@ -154,14 +149,14 @@ const ServicesTimeline = () => {
         />
 
         <div className="relative z-10 max-w-4xl mx-auto px-6 text-center">
-          <motion.h1
+          <motion.h2
             initial={{ opacity: 0, y: -30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight text-gray-900 mb-6"
           >
             Our Professional <span className="text-brand-primary-dark">Services</span>
-          </motion.h1>
+          </motion.h2>
 
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -282,7 +277,7 @@ const ServicesTimeline = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.3 }}
           >
-            <Link href="/Contact">
+            <Link href="/contact">
               <motion.div
                 className="inline-flex items-center space-x-4 bg-gradient-to-r from-brand-primary-dark to-brand-secondary text-white px-8 md:px-10 py-4 md:py-5 rounded-full shadow-xl hover:shadow-2xl transition-all duration-300 cursor-pointer group"
                 whileHover={{ scale: 1.05, y: -2 }}
@@ -407,10 +402,6 @@ const ServicesTimeline = () => {
                     <div className="p-5 text-center">
                       <h3 className="text-lg md:text-xl font-bold text-gray-900 mb-2">{feature.title}</h3>
                       <p className="text-gray-600 leading-relaxed">{feature.desc}</p>
-                      {/* TEMP: filename guide for content upload */}
-                      {SHOW_FEATURE_IMAGE_LABELS && (
-                        <div className="mt-2 text-xs text-gray-400">Image: {feature.image.split('/').pop()}</div>
-                      )}
                     </div>
                   </div>
                 </div>
@@ -419,6 +410,7 @@ const ServicesTimeline = () => {
           </div>
         </div>
       </section>
+
       {/* Our Successful Web Application Projects - Desktop Showcase (mirrors MobileShowcase animation) */}
       <DesktopShowcase
         images={["/Comp11.png","/Comp12.png","/Comp13.png","/Comp14.png"]}
@@ -429,4 +421,3 @@ const ServicesTimeline = () => {
 }
 
 export default ServicesTimeline
-

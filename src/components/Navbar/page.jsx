@@ -80,7 +80,7 @@ const Navbar = () => {
             <NavLink href="/" isScrolled={isScrolled}>
               Home
             </NavLink>
-            <NavLink href="/AboutUs" isScrolled={isScrolled}>
+            <NavLink href="/aboutus" isScrolled={isScrolled}>
               About Us
             </NavLink>
             <div className="relative" ref={servicesRef}>
@@ -103,17 +103,17 @@ const Navbar = () => {
               </button>
               <AnimatePresence>{isCountryOpen && <CountryDropdown />}</AnimatePresence>
             </div>
-            <NavLink href="/Blog" isScrolled={isScrolled}>
+            <NavLink href="/blog" isScrolled={isScrolled}>
               Blog
             </NavLink>
-            <NavLink href="/Contact" isScrolled={isScrolled}>
+            <NavLink href="/contact" isScrolled={isScrolled}>
               Contact Us
             </NavLink>
             {/* Products menu item - navigates to /products */}
             <NavLink href="/products" isScrolled={isScrolled}>
               Products
             </NavLink>
-            <NavLink href="/Career" isScrolled={isScrolled}>
+            <NavLink href="/career" isScrolled={isScrolled}>
               Careers
             </NavLink>
             <button
@@ -158,7 +158,7 @@ const Navbar = () => {
                 <MobileNavLink href="/" onClick={closeMobileMenu}>
                   Home
                 </MobileNavLink>
-                <MobileNavLink href="/AboutUs" onClick={closeMobileMenu}>
+                <MobileNavLink href="/aboutus" onClick={closeMobileMenu}>
                   About Us
                 </MobileNavLink>
                 <div>
@@ -189,16 +189,16 @@ const Navbar = () => {
                     {isCountryOpen && <MobileCountryDropdown closeMobileMenu={closeMobileMenu} />}
                   </AnimatePresence>
                 </div>
-                <MobileNavLink href="/Blog" onClick={closeMobileMenu}>
+                <MobileNavLink href="/blog" onClick={closeMobileMenu}>
                   Blog
                 </MobileNavLink>
-                <MobileNavLink href="/Contact" onClick={closeMobileMenu}>
+                <MobileNavLink href="/contact" onClick={closeMobileMenu}>
                   Contact
                 </MobileNavLink>
                 <MobileNavLink href="/products" onClick={closeMobileMenu}>
                   Products
                 </MobileNavLink>
-                <MobileNavLink href="/Career" onClick={closeMobileMenu}>
+                <MobileNavLink href="/career" onClick={closeMobileMenu}>
                   Careers
                 </MobileNavLink>
                 <button
@@ -239,7 +239,7 @@ const Navbar = () => {
 
 const NavLink = ({ href, children, isScrolled }) => (
   <Link
-    href={href}
+    href={href.toLowerCase()}
     className={`${
       isScrolled ? 'text-gray-900' : 'text-white'
     } hover:text-indigo-600 transition-colors duration-200 relative group`}
@@ -251,7 +251,7 @@ const NavLink = ({ href, children, isScrolled }) => (
 
 const MobileNavLink = ({ href, children, onClick }) => (
   <Link
-    href={href}
+    href={href.toLowerCase()}
     className="block px-3 py-2 text-base font-medium text-gray-800 hover:text-indigo-600 hover:bg-gray-50 rounded-md transition-colors duration-200"
     onClick={onClick}
   >
@@ -259,41 +259,83 @@ const MobileNavLink = ({ href, children, onClick }) => (
   </Link>
 )
 
-const ServicesDropdown = () => (
-  <motion.div
-    initial={{ opacity: 0, y: -10 }}
-    animate={{ opacity: 1, y: 0 }}
-    exit={{ opacity: 0, y: -10 }}
-    transition={{ duration: 0.2 }}
-    className="absolute left-0 mt-2 w-64 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 overflow-hidden"
-  >
-    <div className="py-1" role="menu" aria-orientation="vertical" aria-labelledby="options-menu">
-{/*       <DropdownLink href="/Services"> */}
-{/*         <span className="font-semibold text-orange-600">All Services Overview</span> */}
-{/*       </DropdownLink> */}
-      <div className="border-t border-gray-100 my-1"></div>
-      <DropdownLink href="/Services/web-designing-development">Web Designing & Development</DropdownLink>
-      <DropdownLink href="/Services/ecommerce-website-designing">Ecommerce Website Designing</DropdownLink>
-      <DropdownLink href="/Services/google-adwords">Google Adwords</DropdownLink>
-      <DropdownLink href="/Services/search-engine-optimisation">Search Engine Optimization</DropdownLink>
-      <DropdownLink href="/Services/local-seo">Local SEO</DropdownLink>
-      <DropdownLink href="/Services/social-media-marketing">Social Media Marketing</DropdownLink>
-      <DropdownLink href="/Services/mobile-application">Mobile Application Development</DropdownLink>
-      <DropdownLink href="/Services/cab-expenses-tracker">Cab Expenses Tracker</DropdownLink>
-    </div>
-  </motion.div>
-)
+const ServicesDropdown = () => {
+  const [isDigitalMarketingOpen, setIsDigitalMarketingOpen] = useState(false)
+  const digitalMarketingRef = useRef(null)
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (digitalMarketingRef.current && !digitalMarketingRef.current.contains(event.target)) {
+        setIsDigitalMarketingOpen(false)
+      }
+    }
+    document.addEventListener("mousedown", handleClickOutside)
+    return () => document.removeEventListener("mousedown", handleClickOutside)
+  }, [])
+
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: -10 }}
+      animate={{ opacity: 1, y: 0 }}
+      exit={{ opacity: 0, y: -10 }}
+      transition={{ duration: 0.2 }}
+      className="absolute left-0 mt-2 w-64 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 overflow-hidden"
+    >
+      <div className="py-1" role="menu" aria-orientation="vertical" aria-labelledby="options-menu">
+        <DropdownLink href="/services/web-designing-development">Web Designing & Development</DropdownLink>
+        <DropdownLink href="/services/ecommerce-website-designing">Ecommerce Website Designing</DropdownLink>
+        <DropdownLink href="/services/google-adwords">Google Adwords</DropdownLink>
+        
+        {/* Digital Marketing Dropdown */}
+        <div className="relative" ref={digitalMarketingRef}>
+          <button
+            onClick={() => setIsDigitalMarketingOpen(!isDigitalMarketingOpen)}
+            className="w-full px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-indigo-600 transition-colors duration-200 flex items-center justify-between"
+          >
+            <span>Digital Marketing</span>
+            <ChevronDown className={`w-3 h-3 transition-transform duration-200 ${isDigitalMarketingOpen ? "rotate-180" : ""}`} />
+          </button>
+          
+          <AnimatePresence>
+            {isDigitalMarketingOpen && (
+              <motion.div
+                initial={{ opacity: 0, height: 0 }}
+                animate={{ opacity: 1, height: "auto" }}
+                exit={{ opacity: 0, height: 0 }}
+                transition={{ duration: 0.2 }}
+                className="bg-gray-50 border-t border-gray-200"
+              >
+                <DropdownLink href="/services/search-engine-optimisation" className="pl-8 text-xs text-blue-600 hover:text-blue-700">
+                  Search Engine Optimization
+                </DropdownLink>
+                <DropdownLink href="/services/local-seo" className="pl-8 text-xs text-blue-600 hover:text-blue-700">
+                  Local SEO
+                </DropdownLink>
+                <DropdownLink href="/services/social-media-marketing" className="pl-8 text-xs text-blue-600 hover:text-blue-700">
+                  Social Media Marketing
+                </DropdownLink>
+              </motion.div>
+            )}
+          </AnimatePresence>
+        </div>
+        
+        <DropdownLink href="/services/mobile-application">Mobile Application Development</DropdownLink>
+        <DropdownLink href="/services/cab-expenses-tracker">Cab Expenses Tracker</DropdownLink>
+      </div>
+    </motion.div>
+  )
+}
 
 const MobileCountryDropdown = ({ closeMobileMenu }) => {
   const countries = [
-    'USA', 'UK', 'Canada', 'UAE', 'Singapore', 'Germany', 'Netherlands', 'SA', 'New Zealand'
+    'India', 'USA', 'UK', 'Canada', 'UAE', 'Singapore', 'Germany', 'Netherlands', 'SA', 'New Zealand'
   ]
   // ISO 3166-1 alpha-2 codes for FlagCDN
   const isoMap = {
+    'India': 'in',
     'USA': 'us',
     'UK': 'gb',
     'Canada': 'ca',
-    
     'UAE': 'ae',
     'Singapore': 'sg',
     'Germany': 'de',
@@ -342,9 +384,10 @@ const MobileCountryDropdown = ({ closeMobileMenu }) => {
 
 const CountryDropdown = () => {
   const countries = [
-    'USA', 'UK', 'Canada', 'UAE', 'Singapore', 'Germany', 'Netherlands', 'SA', 'New Zealand'
+    'India', 'USA', 'UK', 'Canada', 'UAE', 'Singapore', 'Germany', 'Netherlands', 'SA', 'New Zealand'
   ]
   const isoMap = {
+    'India': 'in',
     'USA': 'us',
     'UK': 'gb',
     'Canada': 'ca',
@@ -404,32 +447,32 @@ const MobileServicesDropdown = ({ closeMobileMenu }) => (
     transition={{ duration: 0.2 }}
     className="pl-4 overflow-hidden"
   >
-    <MobileNavLink href="/Services" onClick={closeMobileMenu}>
+    <MobileNavLink href="/services" onClick={closeMobileMenu}>
       <span className="font-semibold text-orange-600">All Services Overview</span>
     </MobileNavLink>
     <div className="border-t border-gray-200 my-2 mx-4"></div>
-    <MobileNavLink href="/Services/web-designing-development" onClick={closeMobileMenu}>
+    <MobileNavLink href="/services/web-designing-development" onClick={closeMobileMenu}>
       Web Designing & Development
     </MobileNavLink>
-    <MobileNavLink href="/Services//ecommerce-website-designing" onClick={closeMobileMenu}>
+    <MobileNavLink href="/services/ecommerce-website-designing" onClick={closeMobileMenu}>
       Ecommerce Website Designing
     </MobileNavLink>
-    <MobileNavLink href="/Services/google-adwords" onClick={closeMobileMenu}>
+    <MobileNavLink href="/services/google-adwords" onClick={closeMobileMenu}>
       Google Adwords
     </MobileNavLink>
-    <MobileNavLink href="/Services/search-engine-optimisation" onClick={closeMobileMenu}>
+    <MobileNavLink href="/services/search-engine-optimisation" onClick={closeMobileMenu}>
       Search Engine Optimization
     </MobileNavLink>
-    <MobileNavLink href="/Services/local-seo" onClick={closeMobileMenu}>
+    <MobileNavLink href="/services/local-seo" onClick={closeMobileMenu}>
       Local SEO
     </MobileNavLink>
-    <MobileNavLink href="/Services/social-media-marketing" onClick={closeMobileMenu}>
+    <MobileNavLink href="/services/social-media-marketing" onClick={closeMobileMenu}>
       Social Media Marketing
     </MobileNavLink>
-    <MobileNavLink href="/Services/mobile-application" onClick={closeMobileMenu}>
+    <MobileNavLink href="/services/mobile-application" onClick={closeMobileMenu}>
       Mobile Application Development
     </MobileNavLink>
-    <MobileNavLink href="/Services/cab-expenses-tracker" onClick={closeMobileMenu}>
+    <MobileNavLink href="/services/cab-expenses-tracker" onClick={closeMobileMenu}>
       Cab Expenses Tracker
     </MobileNavLink>
   </motion.div>
@@ -437,7 +480,7 @@ const MobileServicesDropdown = ({ closeMobileMenu }) => (
 
 const DropdownLink = ({ href, children }) => (
   <Link
-    href={href}
+    href={href.toLowerCase()}
     className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-indigo-600 transition-colors duration-200"
   >
     {children}
@@ -582,6 +625,7 @@ const InquiryModal = ({ isOpen, onClose }) => {
               />
             </div>
           </div>
+
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div>
               <label className="block text-sm font-semibold text-gray-700 mb-2">
