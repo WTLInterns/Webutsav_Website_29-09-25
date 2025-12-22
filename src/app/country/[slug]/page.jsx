@@ -434,7 +434,6 @@ export default function CountryPage({ params }) {
             </h1>
           </div>
         </section>
-
         <section className="py-12 md:py-16 bg-white">
           <div className="max-w-7xl mx-auto px-6">
             <div className="content-surface rounded-2xl bg-white shadow-lg p-6 md:p-10">
