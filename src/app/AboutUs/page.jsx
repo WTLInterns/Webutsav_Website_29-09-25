@@ -1,8 +1,7 @@
 import AboutUs from "./AboutUsClient";
-
 // app/aboutus/page.jsx
 export const metadata = {
-  title: "About Us | WebUtsav - Digital Excellence with Purpose",
+  title: "About WebUtsav | Leading IT, Web & Digital Solutions Company",
   description:
     "Learn about WebUtsav's journey, values, and team. We are passionate about empowering businesses with innovative digital marketing and web development solutions.",
   keywords:
@@ -12,7 +11,22 @@ export const metadata = {
   alternates: {
     canonical: "https://webutsav.com/aboutus",  
   },
+  openGraph: {
+    title: "About WebUtsav | Leading IT, Web & Digital Solutions Company",
+    description:
+      "Learn about WebUtsav's journey, values, and team. We are passionate about empowering businesses with innovative digital marketing and web development solutions.",
+    images: [{ url: "/images/og-default.webp", width: 1200, height: 630, alt: "About WebUtsav" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "About WebUtsav | Leading IT, Web & Digital Solutions Company",
+    description:
+      "Learn about WebUtsav's journey, values, and team. We are passionate about empowering businesses with innovative digital marketing and web development solutions.",
+    images: ["/images/og-default.webp"],
+  },
 };
+
+
 
 export default function AboutUsPage() {
   return (

@@ -168,14 +168,7 @@ export default function AboutUs() {
 
   return (
     <>
-      <Head>
-        <title>About Us | WebUtsav - Digital Excellence with Purpose</title>
-        <meta name="description" content="Learn about WebUtsav's journey, values, and team. We are passionate about empowering businesses with innovative digital marketing and web development solutions." />
-        <link rel="canonical" href="https://webutsav.com/aboutus" />
-        <meta name="author" content="WebUtsav" />
-        <meta name="keywords" content="about WebUtsav, digital marketing agency India, web development company, our mission, our team, marketing experts, WebUtsav story" />
-        <meta name="robots" content="index, follow" />
-      </Head>
+     
     
       <div className="overflow-hidden">
         {/* Professional Hero Section with Brand Colors */}
@@ -1044,12 +1037,7 @@ function TeamTabs() {
       role: "Digital Marketing Executive",
       image: "/Team/ankita2.jpeg",
     },
-    {
-      name: "Purva Bavale",
-      role: "Digital Marketing Executive",
-      image: "/Team/purva.jpeg",
-    },
-    
+
     {
       name: "Ankita Wankhade",
       role: "Digital Marketing Executive",
@@ -1164,3 +1152,9 @@ function TeamTabs() {
     </div>
   )
 }
+
+
+
+
+
+
