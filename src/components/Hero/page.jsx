@@ -255,8 +255,6 @@
 
 // export default Hero
 
-
-
 "use client"
 
 import { useState, useCallback, useEffect } from "react"

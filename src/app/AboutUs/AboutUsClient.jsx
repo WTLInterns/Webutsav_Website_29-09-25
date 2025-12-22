@@ -1164,10 +1164,3 @@ function TeamTabs() {
     </div>
   )
 }
-
-
-
-
-
-
-

@@ -14,8 +14,6 @@ export const metadata = {
   },
 };
 
-
-
 export default function AboutUsPage() {
   return (
     <div>

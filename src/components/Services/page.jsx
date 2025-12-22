@@ -419,7 +419,6 @@ const ServicesTimeline = () => {
           </div>
         </div>
       </section>
-
       {/* Our Successful Web Application Projects - Desktop Showcase (mirrors MobileShowcase animation) */}
       <DesktopShowcase
         images={["/Comp11.png","/Comp12.png","/Comp13.png","/Comp14.png"]}
