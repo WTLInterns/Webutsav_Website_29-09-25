@@ -258,7 +258,7 @@ export default function AboutUs() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.8 }}
             >
-              <Link href="/contact" passHref>
+              <Link href="/Contact" passHref>
                 <motion.button
                   className="px-8 py-4 bg-white/95 backdrop-blur-sm text-brand-primary-dark font-bold text-lg rounded-full shadow-xl hover:shadow-2xl transition-all duration-300 group border border-indigo-200/50"
                   whileHover={{ scale: 1.05, y: -2 }}
@@ -1066,11 +1066,7 @@ function TeamTabs() {
       role: "Full Stack Developer(Java)",
       image: "/Team/gautam.jpeg",
     },
-    {
-      name: "Abhishek Pattekari",
-      role: "Full Stack Developer",
-      image: "/Team/abhishek.jpeg",
-    },
+  
     {
       name: "Arbaj Shaikh",
       role: "Full Stack Developer(Java)",
