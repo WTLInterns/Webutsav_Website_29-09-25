@@ -258,7 +258,7 @@ const Footer = () => {
               >
                 <div className="pointer-events-none absolute inset-0 bg-gradient-to-tr from-sky-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-xl z-0" />
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3782.287409771789!2d73.94191347496397!3d18.561076882540295!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2c1386837ffd5%3A0xcba65bf9ace19de0!2sWTL%20Tourism%20PVT%20LTD!5e0!3m2!1sen!2sin!4v1740069526162!5m2!1sen!2sin"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3782.287409771789!2d73.956568!3d18.5613761!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2b441e6a265eba4b%3A0x525fc006b79f456c!2sWebUtsav%20Pvt%20Ltd!5e0!3m2!1sen!2sin!4v1740069526162!5m2!1sen!2sin"
                   width="100%"
                   height="100%"
                   style={{ border: 0 }}

@@ -146,6 +146,22 @@ export async function generateMetadata({ params }) {
       },
     };
   }
+  if (slug === "india") {
+    return {
+      title: "Digital Marketing & Web Development Company in India | WebUtsav",
+      description:
+        "WebUtsav - A leading digital marketing and web development company in India. We help Indian businesses grow online with custom websites, mobile apps, and digital marketing services.",
+      openGraph: {
+        title: "Digital Marketing & Web Development Company in India | WebUtsav",
+        description:
+          "WebUtsav - A leading digital marketing and web development company in India. We help Indian businesses grow online with custom websites, mobile apps, and digital marketing services.",
+        type: "website",
+      },
+      alternates: {
+        canonical: "/country/india",
+      },
+    };
+  }
   return {
     title: "Country | WebUtsav",
     description: "Our services are available in these countries. Country-specific content will be added soon.",
@@ -1674,16 +1690,102 @@ export default function CountryPage({ params }) {
     );
   }
 
-  if (slug === "uae") {
+  if (slug === "india") {
     return (
       <main className="min-h-[70vh] w-full bg-white">
-        {/* Hero (Services-style) */}
         <section className="relative py-16 md:py-20 overflow-hidden bg-gradient-to-b from-sky-50 via-indigo-50/60 to-white">
-          {/* Decorative background shapes for premium feel */}
           <div className="absolute inset-0 pointer-events-none">
             <div className="absolute top-10 right-10 w-56 h-56 bg-brand-primary/20 rounded-full blur-3xl animate-float" />
             <div className="absolute bottom-12 left-12 w-44 h-44 bg-brand-secondary/25 rounded-full blur-2xl animate-float" />
-            <div className="absolute top-1/3 left-1/4 w-24 h-24 border border-white/60 rounded-full opacity-70 animate-float" />
+            <div className="absolute bottom-1/4 right-1/4 w-28 h-28 border-2 border-white/50 rounded-full opacity-60 animate-float" />
+          </div>
+          <div className="relative z-10 max-w-4xl mx-auto px-6 text-center">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight text-brand-primary-dark mb-4 mt-16">
+              WebUtsav – Digital Marketing & Web Development Company in India
+            </h1>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Supporting Indian Businesses in Their Digital Growth
+            </p>
+          </div>
+        </section>
+
+        <section className="py-12 md:py-16 bg-white">
+          <div className="max-w-7xl mx-auto px-6">
+            <div className="content-surface rounded-2xl bg-white shadow-lg p-6 md:p-10">
+              <article className="prose max-w-none text-gray-700 prose-headings:text-brand-primary-dark prose-headings:font-bold prose-p:leading-relaxed prose-ul:list-disc prose-ul:pl-6 prose-li:marker:text-brand-primary-dark prose-a:text-brand-primary-dark prose-strong:text-gray-900 prose-h2:text-3xl md:prose-h2:text-4xl prose-h3:text-2xl md:prose-h3:text-3xl">
+                <p>India is one of the world's fastest-growing digital economies. In today's competitive environment, businesses need more than just an online presence—they need a reliable digital marketing agency and a strong technology partner who understands real business challenges.</p>
+                <p>WebUtsav works closely with Indian businesses to deliver practical digital solutions that drive measurable, long-term growth. Our approach focuses on clarity, performance, and results—without unnecessary complexity or unrealistic promises.</p>
+                <p>As a trusted digital marketing agency and software development company in India, we help brands build visibility, generate leads, and scale their operations through smart digital strategies and robust technology.</p>
+
+                <h2>About WebUtsav India</h2>
+                <p>WebUtsav is a full-service digital marketing and web development company serving businesses across India. We work with startups, small and medium-sized enterprises, and growing brands to help them establish strong digital foundations.</p>
+                <p>Our team has deep knowledge of the Indian market—its competition, customer behavior, and budget realities. This allows us to create solutions that are practical, effective, and scalable. Whether you are launching a new brand or improving an existing digital presence, WebUtsav acts as a long-term digital partner focused on sustainable growth.</p>
+
+                <h2>Our Services in India</h2>
+                <h3>Website Design & Development</h3>
+                <p>We design and develop clean, responsive, and SEO-friendly websites that load fast and deliver a smooth user experience. Our websites are built to look professional while supporting conversions and business goals.</p>
+                
+                <h3>Mobile App Development</h3>
+                <p>As one of the best app development companies in India, we build secure and user-friendly mobile applications for Android and iOS. Each app is designed with performance, usability, and future scalability in mind.</p>
+                
+                <h3>Custom Software Development</h3>
+                <p>Every business has unique workflows. As a reliable software development company, we create custom software solutions that help automate operations, improve efficiency, and support long-term growth.</p>
+                
+                <h3>Digital Marketing</h3>
+                <p>Our digital marketing services are focused on visibility, traffic, and lead generation. As a results-driven digital marketing agency, we offer SEO, paid advertising, social media marketing, and content strategies to help businesses reach the right audience at the right time.</p>
+                
+                <h3>E-commerce Solutions</h3>
+                <p>We provide complete e-commerce development solutions, including online store setup, payment gateway integration, performance optimization, and conversion-focused design to support consistent online sales.</p>
+
+                <h2>Why Choose WebUtsav</h2>
+                <ul>
+                  <li>Clear communication and transparent processes</li>
+                  <li>Solutions tailored specifically for Indian businesses</li>
+                  <li>Honest timelines and realistic commitments</li>
+                  <li>Long-term support beyond project delivery</li>
+                  <li>A practical, results-focused approach to digital growth</li>
+                  <li>Recognized by clients as a best marketing agency for reliability and support</li>
+                </ul>
+
+                <h2>Industries We Work With</h2>
+                <p>We have experience working with businesses across multiple industries, including:</p>
+                <ul>
+                  <li>Startups and SMEs</li>
+                  <li>E-commerce and retail</li>
+                  <li>Education and training institutes</li>
+                  <li>Healthcare and clinics</li>
+                  <li>Real estate and service-based businesses</li>
+                </ul>
+
+                <h2>Work With WebUtsav India</h2>
+                <p>If you are looking for a dependable digital marketing agency or software development company in India, WebUtsav is ready to support your growth. We take the time to understand your business objectives and provide digital solutions that align with your goals and budget.</p>
+                <p>📞 <strong>Contact Number:</strong> +91 8766922792<br />
+                🌐 <strong>Visit:</strong> <a href="https://webutsav.com" className="text-brand-primary-dark hover:underline">webutsav.com</a></p>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="text-center py-8 md:py-12 bg-gradient-to-b from-sky-50 via-indigo-50/40 to-white">
+          <a
+            href="/Contact"
+            className="inline-flex items-center space-x-3 bg-gradient-to-r from-brand-primary-dark to-brand-secondary text-white px-8 md:px-10 py-4 md:py-5 rounded-full shadow-xl hover:shadow-2xl transition-all duration-300"
+          >
+            <span className="font-bold text-lg">Contact Us</span>
+          </a>
+        </section>
+      </main>
+    );
+  }
+
+  if (slug === "uae") {
+    return (
+      <main className="min-h-[70vh] w-full bg-white">
+        <section className="relative py-16 md:py-20 overflow-hidden bg-gradient-to-b from-sky-50 via-indigo-50/60 to-white">
+          <div className="absolute inset-0 pointer-events-none">
+            <div className="absolute top-10 right-10 w-56 h-56 bg-brand-primary/20 rounded-full blur-3xl animate-float" />
+            <div className="absolute bottom-12 left-12 w-44 h-44 bg-brand-secondary/25 rounded-full blur-2xl animate-float" />
             <div className="absolute bottom-1/4 right-1/4 w-28 h-28 border-2 border-white/50 rounded-full opacity-60 animate-float" />
           </div>
           <div className="relative z-10 max-w-4xl mx-auto px-6 text-center">

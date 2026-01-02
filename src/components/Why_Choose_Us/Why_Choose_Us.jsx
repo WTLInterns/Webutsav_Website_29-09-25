@@ -4,7 +4,7 @@ import { Button } from "../../components/ui/button"
 import { motion } from "framer-motion"
 import Link from "next/link"
 
-export default function WhyChooseUs() {
+export default function WhyChooseUs({ onInquiryOpen }) {
   const features = [
     {
       icon: Users2,
@@ -209,27 +209,26 @@ export default function WhyChooseUs() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.8 }}
           >
-            <Link href="/Contact">
-              <motion.button
-                className="px-8 py-4 bg-gradient-to-r from-brand-primary-dark to-brand-secondary text-white font-semibold rounded-full shadow-lg hover:shadow-xl transition-all duration-300 group"
-                whileHover={{ scale: 1.05, y: -2 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                <span className="flex items-center space-x-2">
-                  <span>Start Your Project Today</span>
-                  <motion.svg
-                    className="w-5 h-5"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                    animate={{ x: [0, 5, 0] }}
-                    transition={{ duration: 1.5, repeat: Infinity }}
-                  >
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                  </motion.svg>
-                </span>
-              </motion.button>
-            </Link>
+            <motion.button
+              onClick={onInquiryOpen}
+              className="px-8 py-4 bg-gradient-to-r from-brand-primary-dark to-brand-secondary text-white font-semibold rounded-full shadow-lg hover:shadow-xl transition-all duration-300 group"
+              whileHover={{ scale: 1.05, y: -2 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              <span className="flex items-center space-x-2">
+                <span>Start Your Project Today</span>
+                <motion.svg
+                  className="w-5 h-5"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  animate={{ x: [0, 5, 0] }}
+                  transition={{ duration: 1.5, repeat: Infinity }}
+                >
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                </motion.svg>
+              </span>
+            </motion.button>
           </motion.div>
         </motion.div>
       </div>

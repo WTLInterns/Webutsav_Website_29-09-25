@@ -9,7 +9,7 @@ import { motion } from "framer-motion"
 import Head from "next/head"
 import Image from "next/image";
 
-const Hero = () => {
+const Hero = ({ onInquiryOpen }) => {
   const [videoElement, setVideoElement] = useState(null)
   const [isPlaying, setIsPlaying] = useState(true)
 
@@ -208,9 +208,9 @@ const Hero = () => {
               whileTap="tap"
               className="w-full sm:w-auto"
             >
-              <Link
-                className="group px-6 sm:px-8 py-3 sm:py-4 bg-gradient-to-r from-brand-primary-dark to-brand-secondary hover:from-sky-700 hover:to-indigo-600 text-white font-semibold rounded-full shadow-lg transition-all duration-300 flex items-center justify-center space-x-2 hover-glow text-sm sm:text-base"
-                href="/contact"
+              <button
+                onClick={onInquiryOpen}
+                className="group px-6 sm:px-8 py-3 sm:py-4 bg-gradient-to-r from-brand-primary-dark to-brand-secondary hover:from-sky-700 hover:to-indigo-600 text-white font-semibold rounded-full shadow-lg transition-all duration-300 flex items-center justify-center space-x-2 hover-glow text-sm sm:text-base w-full sm:w-auto"
               >
                 <span>Get Started Today</span>
                 <motion.svg
@@ -223,7 +223,7 @@ const Hero = () => {
                 >
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                 </motion.svg>
-              </Link>
+              </button>
             </motion.div>
 
             <motion.div
@@ -234,7 +234,7 @@ const Hero = () => {
             >
               <Link
                 className="px-6 sm:px-8 py-3 sm:py-4 border-2 border-white/30 text-white font-semibold rounded-full backdrop-blur-sm hover:bg-white/10 transition-all duration-300 flex items-center justify-center space-x-2 text-sm sm:text-base"
-                href="/aboutus"  
+                href="/AboutUs"  
               >
                 <span>Learn more about WebUtsav</span>
               </Link>

@@ -1,7 +1,8 @@
 'use client';
 
 import React, { useEffect, useRef } from 'react';
-import Image from 'next/image'; 
+import Image from 'next/image';
+import Link from 'next/link';
 import { motion } from 'framer-motion';
 import gsap from 'gsap';
 
@@ -10,7 +11,7 @@ const articles = [
     title: 'The Importance of IT Solutions for M...',
     date: '04 Sep 2024',
     views: '3.4K',
-    image: '/Blog/coming-soon-label.webp', 
+    image: '/Blog/blog1.jpg', 
   },
   {
     title: 'How Content Syndication Can Boost...',
@@ -88,8 +89,7 @@ export default function HomePage() {
                 <span>{article.date}</span>
                 <span>{article.views} views</span>
               </p>
-              <motion.a
-                href="#"
+              <motion.div
                 className={`inline-flex items-center font-semibold transition-colors duration-300 ${
                   index % 2 === 0
                     ? "text-brand-primary-dark hover:text-brand-primary-dark"
@@ -97,15 +97,24 @@ export default function HomePage() {
                 }`}
                 whileHover={{ x: 5 }}
               >
-                <span>View Details</span>
-                <motion.span
-                  className="ml-2"
-                  animate={{ x: [0, 5, 0] }}
-                  transition={{ duration: 1.5, repeat: Infinity }}
+                <Link 
+                  href={
+                    index === 0 
+                      ? "/Blog/digital-marketing-kharadi" 
+                      : "#"
+                  }
+                  className="flex items-center"
                 >
-                  →
-                </motion.span>
-              </motion.a>
+                  <span>View Details</span>
+                  <motion.span
+                    className="ml-2"
+                    animate={{ x: [0, 5, 0] }}
+                    transition={{ duration: 1.5, repeat: Infinity }}
+                  >
+                    →
+                  </motion.span>
+                </Link>
+              </motion.div>
             </div>
           </div>
         </motion.div>

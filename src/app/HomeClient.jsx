@@ -1,6 +1,6 @@
 "use client"
 
-import { useEffect } from "react"
+import { useState, useEffect } from "react"
 import { motion } from "framer-motion"
 import Navbar from "../components/Navbar/page.jsx"
 import Hero from "../components/Hero/page.jsx"
@@ -35,6 +35,7 @@ const sectionVariants = {
 }
 
 export default function HomeClient() {
+  const [isInquiryOpen, setIsInquiryOpen] = useState(false)
   useEffect(() => {
     // Smooth scroll behavior
     document.documentElement.style.scrollBehavior = 'smooth'
@@ -69,10 +70,10 @@ export default function HomeClient() {
       initial="initial"
       animate="animate"
     >
-      <Navbar />
+      <Navbar isInquiryOpen={isInquiryOpen} onInquiryOpen={() => setIsInquiryOpen(true)} onInquiryClose={() => setIsInquiryOpen(false)} />
       
       <motion.div variants={sectionVariants}>
-        <Hero />
+        <Hero onInquiryOpen={() => setIsInquiryOpen(true)} />
       </motion.div>
       
       <motion.div variants={sectionVariants} className="section-animate">
@@ -80,7 +81,7 @@ export default function HomeClient() {
       </motion.div>
       
       <motion.div variants={sectionVariants} className="section-animate">
-        <Services />
+        <Services onInquiryOpen={() => setIsInquiryOpen(true)} />
       </motion.div>
 
       {/* Mobile App Screens Showcase is now its own section so you can comment About independently */}
@@ -89,7 +90,7 @@ export default function HomeClient() {
       </motion.div>
       
       <motion.div variants={sectionVariants} className="section-animate">
-        <WhyChooseUs />
+        <WhyChooseUs onInquiryOpen={() => setIsInquiryOpen(true)} />
       </motion.div>
       
       <motion.div variants={sectionVariants} className="section-animate">

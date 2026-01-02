@@ -208,11 +208,19 @@ export default function SocialMediaMarketing() {
         animate={{ opacity: 1 }}
         transition={{ duration: 1 }}
       >
-        {/* Brand Colors Gradient Background */}
-        <div className="absolute inset-0 bg-gradient-to-br from-brand-primary-dark via-brand-primary-dark to-brand-secondary-dark"></div>
-
-        {/* Transparent Overlay for Brand Consistency */}
-        <div className="absolute inset-0 bg-gradient-to-tr from-brand-primary/30 via-transparent to-brand-secondary-dark/20"></div>
+        {/* Background Image with Overlay */}
+        <div className="absolute inset-0">
+          <Image
+            src="/services/SEO.jpg"
+            alt="Search Engine Optimization Services"
+            fill
+            className="object-cover"
+            quality={80}
+            priority
+          />
+          <div className="absolute inset-0 bg-black/60"></div>
+          <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
+        </div>
 
         {/* Floating Brand Color Elements */}
         <motion.div

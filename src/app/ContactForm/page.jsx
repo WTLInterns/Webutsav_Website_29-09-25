@@ -146,7 +146,7 @@ export default function ContactForm() {
               transition={{ duration: 0.8, delay: 0.2 }}
             >
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3782.287409771789!2d73.94191347496397!3d18.561076882540295!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2c1386837ffd5%3A0xcba65bf9ace19de0!2sWTL%20Tourism%20PVT%20LTD!5e0!3m2!1sen!2sin!4v1740069526162!5m2!1sen!2sin"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3782.287409771789!2d73.956568!3d18.5613761!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2b441e6a265eba4b%3A0x525fc006b79f456c!2sWebUtsav%20Pvt%20Ltd!5e0!3m2!1sen!2sin!4v1740069526162!5m2!1sen!2sin"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}
@@ -207,7 +207,7 @@ export default function ContactForm() {
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.5 }}  
+                transition={{ duration: 0.6, delay: 0.5 }}
               >
                 <input
                   type="tel"
@@ -216,7 +216,7 @@ export default function ContactForm() {
                   className="w-full p-4 border border-blue-100/50 rounded-xl focus:border-blue-400 focus:ring-2 focus:ring-blue-100 transition-all duration-300 bg-white/80 backdrop-blur-sm"
                   value={formData.phoneNumber}
                   onChange={handleInputChange}
-                  required         
+                  required
                 />
               </motion.div>
 
@@ -261,11 +261,10 @@ export default function ContactForm() {
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                className={`p-4 rounded-xl text-sm font-medium ${
-                  submitStatus.type === 'success' 
-                    ? 'bg-green-50 text-green-700 border border-green-200' 
+                className={`p-4 rounded-xl text-sm font-medium ${submitStatus.type === 'success'
+                    ? 'bg-green-50 text-green-700 border border-green-200'
                     : 'bg-red-50 text-red-700 border border-red-200'
-                }`}
+                  }`}
               >
                 {submitStatus.message}
               </motion.div>

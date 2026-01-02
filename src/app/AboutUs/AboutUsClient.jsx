@@ -1,6 +1,8 @@
 ﻿"use client"
 import { useState, useEffect, useRef } from "react"
+import { useRouter } from "next/navigation"
 import Image from "next/image"
+import Link from "next/link"
 import gsap from "gsap"
 import { motion, useScroll, useTransform, useAnimation } from "framer-motion"
 import { FaUserTie, FaCogs, FaCheckCircle, FaLightbulb } from "react-icons/fa"
@@ -256,28 +258,28 @@ export default function AboutUs() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.8 }}
             >
-              <motion.button
-                className="px-8 py-4 bg-white/95 backdrop-blur-sm text-brand-primary-dark font-bold text-lg rounded-full shadow-xl hover:shadow-2xl transition-all duration-300 group border border-indigo-200/50"
-                whileHover={{ scale: 1.05, y: -2 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                <span className="flex items-center space-x-2">
-                  <span className="bg-gradient-to-r from-brand-primary-dark to-brand-secondary bg-clip-text text-transparent">Discover Our Journey</span>
-                  <motion.svg
-                    className="w-5 h-5 text-brand-primary/30"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                    animate={{ x: [0, 5, 0] }}
-                    transition={{ duration: 1.5, repeat: Infinity }}
-                  >
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
-                  </motion.svg>
-                </span>
-              </motion.button>
-            
-  
-</motion.div>
+              <Link href="/contact" passHref>
+                <motion.button
+                  className="px-8 py-4 bg-white/95 backdrop-blur-sm text-brand-primary-dark font-bold text-lg rounded-full shadow-xl hover:shadow-2xl transition-all duration-300 group border border-indigo-200/50"
+                  whileHover={{ scale: 1.05, y: -2 }}
+                  whileTap={{ scale: 0.95 }}
+                >
+                  <span className="flex items-center space-x-2">
+                    <span className="bg-gradient-to-r from-brand-primary-dark to-brand-secondary bg-clip-text text-transparent">Discover Our Journey</span>
+                    <motion.svg
+                      className="w-5 h-5 text-brand-primary/30"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                      animate={{ x: [0, 5, 0] }}
+                      transition={{ duration: 1.5, repeat: Infinity }}
+                    >
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+                    </motion.svg>
+                  </span>
+                </motion.button>
+              </Link>
+            </motion.div>
           </div>
           {/* Hero bottom wavy divider: white wave intruding into next section, sky color remains above */}
           <div className="pointer-events-none absolute bottom-0 left-0 w-full z-[1]">
@@ -791,26 +793,27 @@ export default function AboutUs() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
             >
-              <motion.a
-                href="tel:+918766922792"
-                className="inline-block px-10 py-5 bg-white/95 backdrop-blur-sm font-bold text-xl rounded-full shadow-2xl hover:shadow-3xl transition-all duration-300 group border border-blue-200/30"
-                whileHover={{ scale: 1.05, y: -2 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                <span className="flex items-center space-x-3">
-                  <span className="bg-gradient-to-r from-brand-primary-dark to-brand-secondary bg-clip-text text-transparent">Book Your Free Session Now</span>
-                  <motion.svg
-                    className="w-6 h-6 text-sky-400"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                    animate={{ x: [0, 5, 0] }}
-                    transition={{ duration: 1.5, repeat: Infinity }}
-                  >
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                  </motion.svg>
-                </span>
-              </motion.a>
+              <Link href="/Contact" passHref>
+                <motion.button
+                  className="inline-block px-10 py-5 bg-white/95 backdrop-blur-sm font-bold text-xl rounded-full shadow-2xl hover:shadow-3xl transition-all duration-300 group border border-blue-200/30"
+                  whileHover={{ scale: 1.05, y: -2 }}
+                  whileTap={{ scale: 0.95 }}
+                >
+                  <span className="flex items-center space-x-3">
+                    <span className="bg-gradient-to-r from-brand-primary-dark to-brand-secondary bg-clip-text text-transparent">Book Your Free Session Now</span>
+                    <motion.svg
+                      className="w-6 h-6 text-sky-400"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                      animate={{ x: [0, 5, 0] }}
+                      transition={{ duration: 1.5, repeat: Infinity }}
+                    >
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                    </motion.svg>
+                  </span>
+                </motion.button>
+              </Link>
             </motion.div>
                
           </div>

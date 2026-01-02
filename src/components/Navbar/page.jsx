@@ -8,12 +8,22 @@ import { ChevronDown, Menu, X, Mail, Phone, User, Globe, MessageSquare } from "l
 import { motion, AnimatePresence } from "framer-motion"
 import { Button } from "../../components/ui/button"
 
-const Navbar = () => {
+const Navbar = ({
+  isInquiryOpen: propIsInquiryOpen,
+  onInquiryOpen: propOnInquiryOpen,
+  onInquiryClose: propOnInquiryClose
+}) => {
+  // Local state for modal if not controlled via props
+  const [localIsInquiryOpen, setLocalIsInquiryOpen] = useState(false)
+  
+  // Use props if provided, otherwise use local state
+  const isInquiryOpen = propIsInquiryOpen !== undefined ? propIsInquiryOpen : localIsInquiryOpen
+  const onInquiryOpen = propOnInquiryOpen || (() => setLocalIsInquiryOpen(true))
+  const onInquiryClose = propOnInquiryClose || (() => setLocalIsInquiryOpen(false))
   const [isServicesOpen, setIsServicesOpen] = useState(false)
   const [isCountryOpen, setIsCountryOpen] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
   const [isScrolled, setIsScrolled] = useState(false)
-  const [isInquiryOpen, setIsInquiryOpen] = useState(false)
   const pathname = usePathname()
   const servicesRef = useRef(null)
   const countryRef = useRef(null)
@@ -116,13 +126,12 @@ const Navbar = () => {
             <NavLink href="/Career" isScrolled={isScrolled}>
               Careers
             </NavLink>
-            <button
-              onClick={() => setIsInquiryOpen(true)}
-              className={`${isScrolled ? 'text-gray-900' : 'text-white'} hover:text-indigo-600 transition-colors duration-200 relative group`}
+            <Button 
+              onClick={onInquiryOpen}
+              className="hidden md:flex items-center gap-2 bg-gradient-to-r from-brand-primary to-brand-secondary hover:from-brand-primary-dark hover:to-brand-secondary-dark text-white font-semibold px-6 py-2.5 rounded-full transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105"
             >
               Inquiry
-              <span className={`absolute left-0 bottom-0 w-full h-0.5 bg-sky-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300`}></span>
-            </button>
+            </Button>
           </div>
 
           {/* Client Login Button */}
@@ -203,7 +212,7 @@ const Navbar = () => {
                 </MobileNavLink>
                 <button
                   onClick={() => {
-                    setIsInquiryOpen(true)
+                    onInquiryOpen()
                     closeMobileMenu()
                   }}
                   className="block w-full text-left px-3 py-2 text-base font-medium text-gray-800 hover:text-amber-500 hover:bg-gray-50 rounded-md transition-colors duration-200"
@@ -227,10 +236,7 @@ const Navbar = () => {
     {/* Inquiry Modal */}
     <AnimatePresence>
       {isInquiryOpen && (
-        <InquiryModal 
-          isOpen={isInquiryOpen} 
-          onClose={() => setIsInquiryOpen(false)} 
-        />
+        <InquiryModal isOpen={isInquiryOpen} onClose={onInquiryClose} />
       )}
     </AnimatePresence>
     </>
